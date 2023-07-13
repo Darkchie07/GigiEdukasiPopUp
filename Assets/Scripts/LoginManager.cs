@@ -9,14 +9,15 @@ using UnityGoogleDrive;
 
 public class LoginManager : MonoBehaviour
 {
-    public VideoPlayer video;
-    public VideoClip _VideoClip;
-    [System.Serializable]
-    public class PageLanjut
-    {
-        public Button btnLanjut;
-        public GameObject page;
-    }
+    // public VideoPlayer video;
+    // public VideoClip _VideoClip;
+    // [System.Serializable]
+
+    // public class PageLanjut
+    // {
+    //     public Button btnLanjut;
+    //     public GameObject page;
+    // }
 
     [System.Serializable]
     public class PageLogin
@@ -24,19 +25,18 @@ public class LoginManager : MonoBehaviour
         public GameObject page;
         public TMP_InputField inputNama;
         public TMP_InputField inputUmur;
-        public TMP_InputField inputSekolah;
         public TMP_Dropdown inputJenisKelamin;
         public Button btnMasuk;
     }
 
-    public PageLanjut lanjut;
+    // public PageLanjut lanjut;
     public PageLogin login;
     bool canClick = true;
 
-    [SerializeField] private GameObject PageLoading;
-    [SerializeField] private GameObject txtPrefab;
-    [SerializeField] private Transform contentParentTxt;
-    [SerializeField] private Canvas canvas;
+    // [SerializeField] private GameObject PageLoading;
+    private GameObject txtPrefab;
+    private Transform contentParentTxt;
+    private Canvas canvas;
 
     private IEnumerator Start()
     {
@@ -46,21 +46,21 @@ public class LoginManager : MonoBehaviour
         yield return new WaitUntil(() => RespondenData.Instance.doneLoadData);
         CheckInfo();
 
-        lanjut.btnLanjut.onClick.AddListener(() =>
-        {
-            //cek data
-            if (string.IsNullOrEmpty(RespondenData.Instance.currentDataSelected.nama)) // kalau data baru
-            {
-                lanjut.page.SetActive(false);
-                login.page.SetActive(true);
-                video.clip = _VideoClip;
-            }
-            else
-            {
-                // pindah scene ke menu;
-                Helper.GoToHomeMenu();
-            }
-        });
+        // lanjut.btnLanjut.onClick.AddListener(() =>
+        // {
+        //     //cek data
+        //     if (string.IsNullOrEmpty(RespondenData.Instance.currentDataSelected.nama)) // kalau data baru
+        //     {
+        //         lanjut.page.SetActive(false);
+        //         login.page.SetActive(true);
+        //         // video.clip = _VideoClip;
+        //     }
+        //     else
+        //     {
+        //         // pindah scene ke menu;
+        //         Helper.GoToHomeMenu();
+        //     }
+        // });
 
         login.btnMasuk.onClick.AddListener(() =>
         {
@@ -82,7 +82,7 @@ public class LoginManager : MonoBehaviour
             // isi current data
             RespondenData.Instance.currentDataSelected.SetDataAwal(login.inputNama.text.Trim(),
                 login.inputUmur.text.Trim(),
-                login.inputSekolah.text.Trim(),
+                // login.inputSekolah.text.Trim(),
                 (login.inputJenisKelamin.value).ToString());
 
             // insert the data to list
@@ -96,36 +96,36 @@ public class LoginManager : MonoBehaviour
             StartCoroutine(Helper.CoroutineUploadFormRespondenData(
                 RespondenData.Instance.currentDataSelected.nama,
                 RespondenData.Instance.currentDataSelected.umur,
-                RespondenData.Instance.currentDataSelected.sekolah,
                 (RespondenData.Instance.currentDataSelected.jenisKelamin == "0") ? "Laki-laki" : "Perempuan"
                 ,
                 SuccessUploadFormRespondenData,
                 ErrorUploadFileResponden
                 ));
+            Debug.Log("Berhasil");
         });
     }
 
     void SuccessUploadFormRespondenData()
     {
-        CloseLoading();
+        // CloseLoading();
         canClick = true;
         Helper.GoToHomeMenu();
     }
 
     void ErrorUploadFileResponden()
     {
-        CloseLoading();
+        // CloseLoading();
         SetTextMessage("Gagal Melakukan Login");
         canClick = true;
     }
-    public void ShowLoading()
-    {
-        PageLoading.SetActive(true);
-    }
-    public void CloseLoading()
-    {
-        PageLoading.SetActive(false);
-    }
+    // public void ShowLoading()
+    // {
+    //     PageLoading.SetActive(true);
+    // }
+    // public void CloseLoading()
+    // {
+    //     PageLoading.SetActive(false);
+    // }
     public void SetTextMessage(string _txt = "")
     {
         GameObject msg = Instantiate(txtPrefab, contentParentTxt);

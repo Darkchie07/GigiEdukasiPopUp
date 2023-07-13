@@ -43,7 +43,6 @@ public class RespondenData : MonoBehaviour
     {
         public string nama;
         public string umur;
-        public string sekolah;
         public string jenisKelamin;
         //public List<GambarGigi> daftarGambargigi = new List<GambarGigi>(7);
         public string status; // 0 = still in, 1 = already logout
@@ -53,11 +52,10 @@ public class RespondenData : MonoBehaviour
             status = "0";
         }
 
-        public void SetDataAwal(string _nama, string _umur, string _sekolah, string _jenisKelamin)
+        public void SetDataAwal(string _nama, string _umur, string _jenisKelamin)
         {
             nama = _nama;
             umur = _umur;
-            sekolah = _sekolah;
             jenisKelamin = _jenisKelamin;
         }
 
@@ -198,7 +196,7 @@ public class RespondenData : MonoBehaviour
         string _fileName = Application.persistentDataPath + "/dataSiswa.csv";
         if (File.Exists(_fileName))
         {
-            if (CheckData($"{currentDataSelected.nama},{currentDataSelected.sekolah},{currentDataSelected.umur}," +
+            if (CheckData($"{currentDataSelected.nama},{currentDataSelected.umur}," +
                 $"{(currentDataSelected.jenisKelamin == "0" ? "Laki-laki" : "Perempuan")}")) //jika ada data kembar, return
             {
                 return;
@@ -214,14 +212,14 @@ public class RespondenData : MonoBehaviour
     void WriteDataCsv(string _fileName)
     {
         TextWriter tw = new StreamWriter(_fileName, false);
-        tw.WriteLine("Nama, Sekolah, Umur, Jenis Kelamin");
+        tw.WriteLine("Nama, Umur, Jenis Kelamin");
         tw.Close();
 
         tw = new StreamWriter(_fileName, true);
 
         foreach (var a in dataResponden.listResponden)
         {
-            tw.WriteLine($"{a.nama},{a.sekolah},{a.umur},{(a.jenisKelamin == "0" ? "Laki-laki" : "Perempuan")}");
+            tw.WriteLine($"{a.nama},{a.umur},{(a.jenisKelamin == "0" ? "Laki-laki" : "Perempuan")}");
         }
         tw.Close();
 

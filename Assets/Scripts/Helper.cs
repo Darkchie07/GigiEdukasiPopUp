@@ -112,7 +112,7 @@ public static class Helper
 
     public static void GoToHomeMenu()
     {
-        ChangeScene("Scenes/HomeMenu/HomeMenu");
+        ChangeScene("Scenes/Home");
     }
     // public static void GoToMateri()
     // {
@@ -130,7 +130,7 @@ public static class Helper
     #region METHOD TO UPLOAD FORM RESPONDEN DATA
     private static string UrlFormRespondenData = "https://docs.google.com/forms/d/e/1FAIpQLSc_Hfnf6n4BCZvrl_UhE_qf3XGIGTnIsWo7yLMVJbXlqCZYtg/formResponse";
     private static string UrlFormRespondenDataDebris = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSdBZn60DLRpN5TZ25y5k8KllpqyAVmdcOUJTL7l6jbURBlDcA/formResponse";
-    public static IEnumerator CoroutineUploadFormRespondenData(string _nama, string _umur, string _sekolah, string _jnsKelamin, Action _success, Action _error)
+    public static IEnumerator CoroutineUploadFormRespondenData(string _nama, string _umur, string _jnsKelamin, Action _success, Action _error)
     {
         WWWForm form = new WWWForm();
         form.AddField("entry.1368113041", _nama);
@@ -161,7 +161,6 @@ public static class Helper
         WWWForm form = new WWWForm();
         form.AddField("entry.477203861", RespondenData.Instance.currentDataSelected.nama);
         form.AddField("entry.878239228", RespondenData.Instance.currentDataSelected.umur);
-        form.AddField("entry.1975705036", RespondenData.Instance.currentDataSelected.sekolah);
         form.AddField("entry.275371160", (RespondenData.Instance.currentDataSelected.jenisKelamin == "0") ? "Laki-Laki" : "Perempuan");
         form.AddField("entry.1655155096", _grahamKananAtas);
         form.AddField("entry.1777940349", _depanAtas);
@@ -193,13 +192,13 @@ public static class Helper
     #region DRIVE FUNCTION TO UPLOAD IMAGE
 
     public static string UserAccount = "fatikhamaulidiah@gmail.com";
-    public static string Client_id = "1013018033444-antp0beoo82t23g240fghmsgsjidk9ph.apps.googleusercontent.com";
-    public static string Client_secret = "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";
-    public static string CachedAccessToken = "ya29.a0Aa4xrXOhmVkzknr9dCZtIA3IU2tkJoNTGQwpBQ0tHW8N0HoKs-qP4gmb7hBVhA72nD7-JQtE96xiGKJTbeuXKzDTyym42RfNeKBZLwix2nAi46droinRjUmRuJf3WlUzPoAXdnYnRmckhBm2P9W1UvnH8WCDaCgYKATASARMSFQEjDvL9Uea5hK5p395kZEsF25Fibw0163";
-    public static string CachedRefreshToken = "1//0gLxPXpRxErx2CgYIARAAGBASNwF-L9Irc6WR-UdNo3n2JKuG11WtAeujX4MFgosbRhpbiCRL8mVJTL0lG-q4hdkwFEoG12wAjzI";
-    public static string ParentFolderImageHarianRespondenPagi = "1UGHoGkLvRH_L9xA3P5xq6QxH1VP2hKx4";
-    public static string ParentFolderImageHarianRespondenMalam = "1UhVAs02LZ_JRB4yR1Ghl7cXe2JfvgDfI";
-    public static string ParentFolderImageFormGigiResponden = "1DK-POf0-XeD8ggPVq29zG2GL4v9bQThq";
+    public static string Client_id = "59673991759-2rr5pslqilh0vdv35qts6ur89q3kh1gt.apps.googleusercontent.com";
+    public static string Client_secret = "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";
+    public static string CachedAccessToken = "ya29.a0AbVbY6NfRLNz2xvCzqDsOBekBP-3Ca969m0mKWkTD9g2u8y20Kaer0kU7GApt8QTksiOzPM0U5JQNDjupURZTfBx8W4DaoFOsbW5L1XXUC4L_9zcswT5Tpa-nBQjdsbD46lobyqQpzYrhYW3Nx6WO5AwG-JKaCgYKAYgSARASFQFWKvPl7pDAR2LivkLp_FTYv7rx-A0163";
+    public static string CachedRefreshToken = "1//0grYz56SccvFlCgYIARAAGBASNwF-L9IrSqcLIxViKSmqpAbpJk4OY43SvH6Pa7yYoSIYvGjudhBoIFXKMGJ_TGMn88ApeY0qd54";
+    public static string ParentFolderImageHarianRespondenPagi = "1mMx3_IAlHblyWlAPseA4gn3fPlZPlrBg";
+    public static string ParentFolderImageHarianRespondenMalam = "147yGkGVmdYkMvqplHPBN6huA8tJjNeMA";
+    public static string ParentFolderImageFormGigiResponden = "1In_jbAcsnA1wl5feAz474eh_g24OdphE";
     public enum ImageUploadType
     {
         ImageHarian,
@@ -275,7 +274,7 @@ public static class Helper
 
     public static string NamaDanSekolah()
     {
-        return $"{RespondenData.Instance.currentDataSelected.nama}-{RespondenData.Instance.currentDataSelected.sekolah}";
+        return $"{RespondenData.Instance.currentDataSelected.nama}";
     }
 
 
