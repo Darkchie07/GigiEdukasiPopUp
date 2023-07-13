@@ -45,6 +45,7 @@ public class LoginManager : MonoBehaviour
         yield return new WaitUntil(() => RespondenData.Instance != null);
         yield return new WaitUntil(() => RespondenData.Instance.doneLoadData);
         CheckInfo();
+        Debug.Log("test");
 
         // lanjut.btnLanjut.onClick.AddListener(() =>
         // {
