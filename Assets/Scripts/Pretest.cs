@@ -22,18 +22,27 @@ public class Pretest : MonoBehaviour
     [Header("Soal")]
     public List<SoalSikap> listSoal = new List<SoalSikap>();
 
-    public GameObject[] yes;
-    public GameObject[] no;
+    GameObject[] yes;
+    GameObject[] no;
+    GameObject[] drop;
 
     [Header("Mount")]
     public Button NextButton;
     public Button PrevButton;
     public List<GameObject> listtxtSoal;
     public List<string> listJawaban = new List<string>();
-    public List<int> listJawabanYa = new List<int>();
-    public List<int> listJawabanNo = new List<int>();
+    private List<int> listJawabanYa = new List<int>();
+    private List<int> listJawabanNo = new List<int>();
     public int Answered;
     public int skor;
+    public string next;
+    public string prev;
+
+    [Header("Kontrol")]
+    public List<Sprite> image = new List<Sprite>();
+    public GameObject totalText;
+    public int nilai;
+    public List<int> listnilai = new List<int>();
 
     void Awake()
     {
@@ -51,6 +60,7 @@ public class Pretest : MonoBehaviour
         DuplicateField(parent);
         yes = GameObject.FindGameObjectsWithTag("Ya");
         no = GameObject.FindGameObjectsWithTag("Tidak");
+        drop = GameObject.FindGameObjectsWithTag("Dropdown");
         Debug.Log(listSoal.Count);
         Debug.Log(yes.Length);
         SetSoal();
@@ -64,16 +74,26 @@ public class Pretest : MonoBehaviour
             if (isDone())
             {
                 FillJawaban();
-                Debug.Log(skor);
-                SceneManager.LoadScene("Home");
+                SceneManager.LoadScene(next);
             }
             else
                 Debug.Log("Masih ada yg kurang");
         });
         PrevButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("Pengetahuan");
+            SceneManager.LoadScene(prev);
         });
+        if (content.CompareTag("Kontrol"))
+        {
+            for (int i = 0; i < drop.Length; i++)
+            {
+                drop[i].GetComponent<TMP_Dropdown>().onValueChanged.AddListener((value) =>
+                {
+
+                });
+
+            }
+        }
     }
 
     #region Set Soal Awal
@@ -81,7 +101,15 @@ public class Pretest : MonoBehaviour
     {
         for (int i = 0; i < listtxtSoal.Count; i++)
         {
+            int no = i + 1;
+            listtxtSoal[i].transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = no.ToString();
             listtxtSoal[i].transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = listSoal[i].soal;
+        }
+
+        if (content.CompareTag("Kontrol"))
+        {
+            for (int i = 0; i < listtxtSoal.Count; i++)
+                listtxtSoal[i].transform.GetChild(1).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = image[i];
         }
     }
     #endregion
@@ -92,12 +120,12 @@ public class Pretest : MonoBehaviour
     {
         for (int i = 0; i < listJawabanNo.Count; i++)
         {
-            listJawaban[listJawabanNo[i]] = "1";
+            listJawaban[listJawabanNo[i]] = "0";
         }
         for (int i = 0; i < listJawabanYa.Count; i++)
         {
-            listJawaban[listJawabanYa[i]] = "0";
-        } 
+            listJawaban[listJawabanYa[i]] = "1";
+        }
     }
     #endregion
 

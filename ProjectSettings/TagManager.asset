@@ -7,6 +7,9 @@ TagManager:
   - Sikap
   - Ya
   - Tidak
+  - Tindakan
+  - Kontrol
+  - Dropdown
   layers:
   - Default
   - TransparentFX

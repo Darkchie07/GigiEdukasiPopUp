@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Pengetahuan.unity
+    guid: 58b5c27fa1909234499d1b1a1750fd3d
+  - enabled: 1
+    path: Assets/Scenes/Sikap.unity
+    guid: c9a38a87e6f14314eaabd063f2b96665
+  - enabled: 1
+    path: Assets/Scenes/Tindakan.unity
+    guid: 1d9701af25b803847a253b85fc2798df
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: b32dcf06e094ba7428443a5ed6670b5e
+  - enabled: 1
+    path: Assets/Scenes/Games.unity
+    guid: 4525fffe348aa104db633b95011186f0
+  - enabled: 1
+    path: Assets/Scenes/Kontrol.unity
+    guid: 34755625c96ad72478d1d42da41efcee
+  - enabled: 1
+    path: Assets/Scenes/PemeliharaanGigi.unity
+    guid: 2755022ec6329964fbc6fe4ecf124e03
   m_configObjects: {}
