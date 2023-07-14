@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,7 +25,7 @@ public class Pretest : MonoBehaviour
 
     GameObject[] yes;
     GameObject[] no;
-    GameObject[] drop;
+    public GameObject[] drop;
 
     [Header("Mount")]
     public Button NextButton;
@@ -33,6 +34,7 @@ public class Pretest : MonoBehaviour
     public List<string> listJawaban = new List<string>();
     private List<int> listJawabanYa = new List<int>();
     private List<int> listJawabanNo = new List<int>();
+    public List<int> listSkorDebris = new List<int>();
     public int Answered;
     public int skor;
     public string next;
@@ -56,11 +58,11 @@ public class Pretest : MonoBehaviour
         field = content.transform.GetChild(0).gameObject;
         Transform parent = content.transform;
 
-        GantiSoal();
         DuplicateField(parent);
         yes = GameObject.FindGameObjectsWithTag("Ya");
         no = GameObject.FindGameObjectsWithTag("Tidak");
         drop = GameObject.FindGameObjectsWithTag("Dropdown");
+        GantiSoal();
         Debug.Log(listSoal.Count);
         Debug.Log(yes.Length);
         SetSoal();
@@ -87,13 +89,29 @@ public class Pretest : MonoBehaviour
         {
             for (int i = 0; i < drop.Length; i++)
             {
-                drop[i].GetComponent<TMP_Dropdown>().onValueChanged.AddListener((value) =>
-                {
-
-                });
-
+                drop[i].GetComponent<TMP_Dropdown>().onValueChanged.AddListener(delegate {changeSkor();});
             }
         }
+    }
+
+    public void changeSkor()
+    {
+        int temp = 0;
+        for (int i = 0; i < drop.Length; i++)
+        {
+            if (drop[i].GetComponent<TMP_Dropdown>().value != 0)
+            {
+                int valtemp = drop[i].GetComponent<TMP_Dropdown>().value - 1;
+                temp += valtemp;
+            }
+            else
+            {
+                int valtemp = drop[i].GetComponent<TMP_Dropdown>().value;
+                temp += valtemp;
+            }
+        }
+        skor = temp;
+        totalText.GetComponent<TMP_Text>().text = skor.ToString();
     }
 
     #region Set Soal Awal
