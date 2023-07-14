@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,385 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: kontrol_debris_ui_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2488
+        width: 1936
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817318c0e90540a43b0cc646a9ea7be8
+      internalID: -310088413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2131
+        width: 233
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaae5dccae121746899d62256b57ab6
+      internalID: -889189007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_2
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 2059
+        width: 662
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaf8b0669205ea4cb0203a1541ba0a4
+      internalID: -788633075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_3
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 2167
+        width: 260
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1f424f099951942af99b45a1962059
+      internalID: -983057673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_4
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 2266
+        width: 113
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5302542db03fd499914fd5066772b4
+      internalID: 1447024798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1611
+        width: 310
+        height: 423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7cf1a6315303c488bdc833d8e9ab28
+      internalID: -462982830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_6
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 2022
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c937857e62e8c13499aaa98b650dfd3e
+      internalID: -1169290039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2033
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bab7140b94de24a96f00b5b845fa46
+      internalID: -138835166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_8
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1611
+        width: 277
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde27dd0ce59e6c48b3169467fee698b
+      internalID: 791855096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_9
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1611
+        width: 309
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2eecf06dd632846904118dc90527c4
+      internalID: 61653891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_10
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1611
+        width: 277
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fc1587ef92cb14ba60873e8df274a4
+      internalID: -442630996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1050
+        width: 403
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311f3d3229334274f8ead09ad0bb35ed
+      internalID: -1171943205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_12
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1037
+        width: 515
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fa3bd803b45734fb336ac146e60a60
+      internalID: -313846314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_13
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1050
+        width: 403
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c56c06cd9a5ef943bc1bf01f4846c88
+      internalID: -2013110864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_14
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 544
+        width: 403
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f811a23e9eaab34478c79f13771cb331
+      internalID: 1712277910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_15
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 531
+        width: 515
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6ae7ab6c98960498c45d60f873e95a
+      internalID: 940475846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_16
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 544
+        width: 403
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3de43ec50d240d4a95c5ed1750aa5eb
+      internalID: -943498770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kontrol_debris_ui_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1936
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fad2876d70bdee4dbb8a274c1360f99
+      internalID: 945486852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -137,7 +515,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kontrol_debris_ui_1: -889189007
+      kontrol_debris_ui_3: -983057673
+      kontrol_debris_ui_4: 1447024798
+      kontrol_debris_ui_9: 61653891
+      kontrol_debris_ui_10: -442630996
+      kontrol_debris_ui_17: 945486852
+      kontrol_debris_ui_8: 791855096
+      kontrol_debris_ui_12: -313846314
+      kontrol_debris_ui_14: 1712277910
+      kontrol_debris_ui_5: -462982830
+      kontrol_debris_ui_13: -2013110864
+      kontrol_debris_ui_0: -310088413
+      kontrol_debris_ui_15: 940475846
+      kontrol_debris_ui_7: -138835166
+      kontrol_debris_ui_11: -1171943205
+      kontrol_debris_ui_6: -1169290039
+      kontrol_debris_ui_2: -788633075
+      kontrol_debris_ui_16: -943498770
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

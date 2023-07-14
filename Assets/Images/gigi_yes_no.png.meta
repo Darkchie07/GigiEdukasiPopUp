@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60515203b228bc649a96b14602b7a323
+guid: 8ed867eefadf5a54dba8fb575e40cd1d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -112,143 +112,68 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: monitoring_button_0
+      name: gigi_yes_no_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2175
-        width: 1903
-        height: 201
+        x: 159
+        y: 1055
+        width: 13
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34bbf89c7bab5c54dbebe47eb1f3a421
-      internalID: 1063785810
+      spriteID: 711d35f8e1d4ff04893e5163d993dbbd
+      internalID: -266715128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monitoring_button_1
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 1659
-        width: 627
-        height: 323
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f020904a7277724b97531064078e678
-      internalID: 1710587755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monitoring_button_2
-      rect:
-        serializedVersion: 2
-        x: 1503
-        y: 1659
-        width: 626
-        height: 323
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67bcb22ee663a2b47ac2e0e82e33139b
-      internalID: -2068569367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monitoring_button_3
+      name: gigi_yes_no_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1107
-        height: 321
+        y: 653
+        width: 784
+        height: 413
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37934ca8603096f4cbde4eb1c1aeaf61
-      internalID: 631784753
+      spriteID: 94e46c24ff070ff43b9a40ab9510946f
+      internalID: -403775516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monitoring_button_4
+      name: gigi_yes_no_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 514
-        width: 1037
-        height: 1003
+        y: 3
+        width: 784
+        height: 413
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ce643b0811713f48af710b52765606f
-      internalID: 1468586161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monitoring_button_5
-      rect:
-        serializedVersion: 2
-        x: 1247
-        y: 515
-        width: 1138
-        height: 1002
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11fc0eeaaa9d1ef4c98a19f935457003
-      internalID: -1498161800
+      spriteID: 0765f658b1e9ddf4491e89f758612c0d
+      internalID: -1341622662
       vertices: []
       indices: 
       edges: []
@@ -256,7 +181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: dcbefc111ad215245a3ebda9779c2a92
     internalID: 0
     vertices: []
     indices: 
@@ -264,12 +189,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monitoring_button_5: -1498161800
-      monitoring_button_0: 1063785810
-      monitoring_button_4: 1468586161
-      monitoring_button_2: -2068569367
-      monitoring_button_1: 1710587755
-      monitoring_button_3: 631784753
+      gigi_yes_no_6: -1330265433
+      gigi_yes_no_0: 248923644
+      gigi_yes_no_2: -403775516
+      gigi_yes_no_5: -1341622662
+      gigi_yes_no_3: -1767166077
+      gigi_yes_no_1: -266715128
+      gigi_yes_no_4: 1759924534
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
