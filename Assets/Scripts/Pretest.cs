@@ -15,19 +15,24 @@ public class Pretest : MonoBehaviour
     public class SoalSikap
     {
         public string soal;
-        public Button yes;
-        public Button no;
+        // public Button yes;
+        // public Button no;
     }
 
     [Header("Soal")]
     public List<SoalSikap> listSoal = new List<SoalSikap>();
+
+    public GameObject[] yes;
+    public GameObject[] no;
 
     [Header("Mount")]
     public Button NextButton;
     public Button PrevButton;
     public List<GameObject> listtxtSoal;
     public List<string> listJawaban = new List<string>();
-    public List<string> listJawabanBenar = new List<string>();
+    public List<int> listJawabanYa = new List<int>();
+    public List<int> listJawabanNo = new List<int>();
+    public int Answered;
     public int skor;
 
     void Awake()
@@ -44,8 +49,12 @@ public class Pretest : MonoBehaviour
 
         GantiSoal();
         DuplicateField(parent);
+        yes = GameObject.FindGameObjectsWithTag("Ya");
+        no = GameObject.FindGameObjectsWithTag("Tidak");
+        Debug.Log(listSoal.Count);
+        Debug.Log(yes.Length);
         SetSoal();
-        FillJawaban();
+        // FillJawaban();
     }
 
     public void GantiSoal()
@@ -54,8 +63,8 @@ public class Pretest : MonoBehaviour
         {
             if (isDone())
             {
-                SetJawaban();
-                CheckJawaban();
+                FillJawaban();
+                Debug.Log(skor);
                 SceneManager.LoadScene("Home");
             }
             else
@@ -79,45 +88,16 @@ public class Pretest : MonoBehaviour
 
     #region SetJawaban
 
-    public void SetJawaban()
-    {
-        for (int i = 0; i < listtxtSoal.Count; i++)
-        {
-            var isOn = listtxtSoal[i].gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<Toggle>().isOn;
-            if (isOn)
-            {
-                listJawaban[i] = "1";
-            }
-            else
-            {
-                listJawaban[i] = "0";
-            }
-            Debug.Log(listJawaban[i]);
-        }
-    }
-
-    public void CheckJawaban()
-    {
-        for (int i = 0; i < listSoal.Count; i++)
-        {
-            if (listJawabanBenar[i] == listJawaban[i])
-            {
-                skor += 1;
-            }
-        }
-        Debug.Log(skor);
-    }
-
     public void FillJawaban()
     {
-        for (int i = 0; i < listSoal.Count; i++)
+        for (int i = 0; i < listJawabanNo.Count; i++)
         {
-            listJawaban.Add("-");
+            listJawaban[listJawabanNo[i]] = "1";
         }
-        for (int i = 0; i < listSoal.Count; i++)
+        for (int i = 0; i < listJawabanYa.Count; i++)
         {
-            listJawabanBenar.Add("1");
-        }
+            listJawaban[listJawabanYa[i]] = "0";
+        } 
     }
     #endregion
 
@@ -133,10 +113,27 @@ public class Pretest : MonoBehaviour
 
     private bool isDone()
     {
-        if (listJawaban.Contains("-"))
+        for (int i = 0; i < yes.Length; i++)
         {
-            return false;
+            if (yes[i].GetComponent<Toggle>().isOn)
+            {
+                Answered += 1;
+                listJawabanYa.Add(i);
+            }
         }
-        return true;
+        for (int i = 0; i < no.Length; i++)
+        {
+            if (no[i].GetComponent<Toggle>().isOn)
+            {
+                Answered += 1;
+                listJawabanNo.Add(i);
+            }
+        }
+        if (Answered == listSoal.Count)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
