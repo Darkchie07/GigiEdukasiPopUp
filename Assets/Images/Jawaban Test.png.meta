@@ -1,0 +1,714 @@
+fileFormatVersion: 2
+guid: a59b0ce97a1788c47ad1a4d7adacfe51
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jawaban Test_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8051
+        width: 1203
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3fb2065d865bd4aaa8c92a0417b669
+      internalID: -1800488801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 7337
+        width: 894
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620f7df50d8f51c46a8760287c8b4d33
+      internalID: 823814215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_5
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 7338
+        width: 893
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db54bf818eb8b649b88759ff60947d9
+      internalID: 733465859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_6
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 6697
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff7e5bd9e2d9484eba163204e004a50
+      internalID: -1025752304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_8
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 6694
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccd2cbbcc7d74343ab7af0b07cce14a
+      internalID: -1340050364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 6023
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8177ecb364fad4a9108ee099722af0
+      internalID: -256972349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_11
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 6023
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602cbfd4d2bb18b4480a85f50e8a91c1
+      internalID: -1406129849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 5351
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddacf4f3b877c074288a3abd8f572942
+      internalID: -1443434096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_14
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 5351
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd3bf2f7c671d34493be1623c1619f8
+      internalID: -1787064039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 4683
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c42a69949d3ca46a21af506d0c8e2e
+      internalID: -980157107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_16
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 4680
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa14376277473f479c9b4eadc5161be
+      internalID: -432907498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_18
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 4033
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b355e3b3eecba4595b6041b3eb40a7
+      internalID: 547920454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_19
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 4033
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0be15cbe4d87540a0221b9403b3300
+      internalID: 1435950607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_22
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 3385
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4940aa96c523443b699b8ade0b0151
+      internalID: -1381976918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_24
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 3385
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a125c8f211039040afc792b77065cb9
+      internalID: -1284313667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_25
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2723
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e81b91c9005cc4fba95d20a4ee92c6
+      internalID: -177215352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_27
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 2723
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb2090661280484ba06b9aa75487a6b
+      internalID: -1344158366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_28
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 2061
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8a1771a9c9c574089e38d9d82d546a
+      internalID: -621108094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_30
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 2061
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa950f0cd377f5545a462524ce8c3541
+      internalID: -1350387630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_31
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1373
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2ea8009711fa54d95fd4bdfaae3580
+      internalID: 105047858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_32
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1373
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b848574dc8f7a4c9423c4723a14099
+      internalID: -223476077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_35
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 686
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ad6cf9e49542149a074ea384b7b513
+      internalID: 523617342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_37
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 687
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd252cc01fbb64441b84a1a8353f8acd
+      internalID: -118041285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_40
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 5
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8080f6a2c2630946a96cab5870f231d
+      internalID: -1594817962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jawaban Test_42
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 0
+        width: 800
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f54d65507f11a64c990c114bb07c995
+      internalID: 861609574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jawaban Test_19: 1435950607
+      Jawaban Test_40: -1594817962
+      Jawaban Test_10: -256972349
+      Jawaban Test_5: 733465859
+      Jawaban Test_17: -1574284287
+      Jawaban Test_9: 136414748
+      Jawaban Test_33: -1292704906
+      Jawaban Test_20: -994469197
+      Jawaban Test_32: -223476077
+      Jawaban Test_23: 1524788178
+      Jawaban Test_4: 823814215
+      Jawaban Test_18: 547920454
+      Jawaban Test_26: 2059591156
+      Jawaban Test_35: 523617342
+      Jawaban Test_41: 1725114426
+      Jawaban Test_36: -734311161
+      Jawaban Test_27: -1344158366
+      Jawaban Test_14: -1787064039
+      Jawaban Test_38: -783535505
+      Jawaban Test_16: -432907498
+      Jawaban Test_13: -1443434096
+      Jawaban Test_24: -1284313667
+      Jawaban Test_6: -1025752304
+      Jawaban Test_11: -1406129849
+      Jawaban Test_12: 786494843
+      Jawaban Test_30: -1350387630
+      Jawaban Test_15: -980157107
+      Jawaban Test_1: -1880767190
+      Jawaban Test_2: 1891641085
+      Jawaban Test_25: -177215352
+      Jawaban Test_3: 2001278203
+      Jawaban Test_28: -621108094
+      Jawaban Test_29: -154444196
+      Jawaban Test_31: 105047858
+      Jawaban Test_8: -1340050364
+      Jawaban Test_21: -904863196
+      Jawaban Test_0: -1800488801
+      Jawaban Test_39: -2141791571
+      Jawaban Test_22: -1381976918
+      Jawaban Test_34: -1278828688
+      Jawaban Test_7: 1741382521
+      Jawaban Test_42: 861609574
+      Jawaban Test_37: -118041285
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
