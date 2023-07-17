@@ -9,6 +9,9 @@ using UnityEngine.UI;
 
 public class Pretest : MonoBehaviour
 {
+    public static GameObject JawabanInstance;
+    public GameObject jawaban;
+    
     GameObject field;
     GameObject content;
 
@@ -39,6 +42,8 @@ public class Pretest : MonoBehaviour
     public int skor;
     public string next;
     public string prev;
+    private bool isSikap;
+    private bool isTindakan;
 
     [Header("Kontrol")]
     public List<Sprite> image = new List<Sprite>();
@@ -48,10 +53,28 @@ public class Pretest : MonoBehaviour
 
     void Awake()
     {
+        if (JawabanInstance != null)
+        {
+            Destroy(this.jawaban.gameObject);
+            jawaban = JawabanInstance;
+        }
+        else
+        {
+            JawabanInstance = jawaban;
+                jawaban.transform.SetParent(null);
+            DontDestroyOnLoad(jawaban.gameObject);
+        }
+
         if (GameObject.FindGameObjectWithTag("Sikap") != null)
+        {
             content = GameObject.FindGameObjectWithTag("Sikap").gameObject;
+            isSikap = true;
+        }
         else if (GameObject.FindGameObjectWithTag("Tindakan") != null)
+        {
             content = GameObject.FindGameObjectWithTag("Tindakan").gameObject;
+            isTindakan = true;
+        }
         else if (GameObject.FindGameObjectWithTag("Kontrol") != null)
             content = GameObject.FindGameObjectWithTag("Kontrol").gameObject;
 
@@ -143,6 +166,14 @@ public class Pretest : MonoBehaviour
         for (int i = 0; i < listJawabanYa.Count; i++)
         {
             listJawaban[listJawabanYa[i]] = "1";
+        }
+
+        if (isSikap)
+        {
+            JawabanInstance.GetComponent<Jawaban>().jawabanSikap = listJawaban;
+        }else if (isTindakan)
+        {
+            JawabanInstance.GetComponent<Jawaban>().jawabanTindakan = listJawaban;
         }
     }
     #endregion

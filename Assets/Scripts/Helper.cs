@@ -79,9 +79,6 @@ public static class Helper
         return readableText;
     }
 
-
-
-
     /// <summary>
     /// LOGOUT SYSTEM
     /// </summary>
@@ -130,6 +127,7 @@ public static class Helper
     #region METHOD TO UPLOAD FORM RESPONDEN DATA
     private static string UrlFormRespondenData = "https://docs.google.com/forms/d/e/1FAIpQLSc_Hfnf6n4BCZvrl_UhE_qf3XGIGTnIsWo7yLMVJbXlqCZYtg/formResponse";
     private static string UrlFormRespondenDataDebris = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSdBZn60DLRpN5TZ25y5k8KllpqyAVmdcOUJTL7l6jbURBlDcA/formResponse";
+    private static string UrlFormRespondenDataPreTest = "https://docs.google.com/forms/d/e/1FAIpQLSchp39ZkG6SlrpdLSkpOtsxZhQgLUMybrB2-QGDxFEt9ZJO6A/formResponse";
     public static IEnumerator CoroutineUploadFormRespondenData(string _nama, string _umur, string _jnsKelamin, Action _success, Action _error)
     {
         WWWForm form = new WWWForm();
@@ -170,6 +168,90 @@ public static class Helper
         form.AddField("entry.1743842660", _grahamKananBawah);
 
         UnityWebRequest www = UnityWebRequest.Post(UrlFormRespondenDataDebris, form);
+
+
+        yield return www.SendWebRequest();
+
+
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log(www.error);
+            _error(www);
+            yield break;
+        }
+
+        _success();
+        www.Dispose();
+        yield break;
+    }
+    public static IEnumerator CoroutineUploadFormPreTest(string _pengetahuan1, string _pengetahuan2, string _pengetahuan3, string _pengetahuan4, string _pengetahuan5, string _pengetahuan6,
+                                                        string _pengetahuan7, string _pengetahuan8, string _pengetahuan9, string _pengetahuan10, string _pengetahuan11, string _pengetahuan12, 
+                                                        string _sikap1, string _sikap2, string _sikap3, string _sikap4, string _sikap5, string _sikap6, string _sikap7, string _sikap8, 
+                                                        string _tindakan1, string _tindakan2, string _tindakan3, string _tindakan4, string _tindakan5, string _tindakan6, string _tindakan7, string _tindakan8,
+                                                        string _tindakan9, string _tindakan10, string _tindakan11, string _tindakan12, string _tindakan13, string _tindakan14, string _tindakan15, string _tindakan16,
+                                                        string _tindakan17, string _tindakan18, string _tindakan19, string _tindakan20, string _tindakan21, string _tindakan22, string _tindakan23, string _tindakan24, 
+                                                        string _tindakan25, string _tindakan26, string _tindakan27, string _tindakan28, string _tindakan29, string _tindakan30, string _tindakan31, string _tindakan32 ,Action _success, Action<UnityWebRequest> _error)
+    {
+        WWWForm form = new WWWForm();
+
+        #region EntryData
+        form.AddField("entry.2090106226", RespondenData.Instance.currentDataSelected.nama);
+        form.AddField("entry.878239228", RespondenData.Instance.currentDataSelected.umur);
+        form.AddField("entry.1833602308", (RespondenData.Instance.currentDataSelected.jenisKelamin == "0") ? "Laki-Laki" : "Perempuan");
+        form.AddField("entry.2100938278", _pengetahuan1);
+        form.AddField("entry.837371701", _pengetahuan2);
+        form.AddField("entry.1362153481", _pengetahuan3);
+        form.AddField("entry.1127202448", _pengetahuan4);
+        form.AddField("entry.279951024", _pengetahuan5);
+        form.AddField("entry.664603987", _pengetahuan6);
+        form.AddField("entry.721356871", _pengetahuan7);
+        form.AddField("entry.978669919", _pengetahuan8);
+        form.AddField("entry.1226997330", _pengetahuan9);
+        form.AddField("entry.583309290", _pengetahuan10);
+        form.AddField("entry.431328431", _pengetahuan11);
+        form.AddField("entry.570387217", _pengetahuan12);
+        form.AddField("entry.910949830", _sikap1);
+        form.AddField("entry.2011470571", _sikap2);
+        form.AddField("entry.361603915", _sikap3);
+        form.AddField("entry.1048673223", _sikap4);
+        form.AddField("entry.2085149457", _sikap5);
+        form.AddField("entry.1201301539", _sikap6);
+        form.AddField("entry.224518184", _sikap7);
+        form.AddField("entry.260950119", _sikap8);
+        form.AddField("entry.1691236629", _tindakan1);
+        form.AddField("entry.1385134067", _tindakan2);
+        form.AddField("entry.1679978618", _tindakan3);
+        form.AddField("entry.789305853", _tindakan4);
+        form.AddField("entry.1059004287", _tindakan5);
+        form.AddField("entry.344694610", _tindakan6);
+        form.AddField("entry.1304675278", _tindakan7);
+        form.AddField("entry.1748246718", _tindakan8);
+        form.AddField("entry.364769532", _tindakan9);
+        form.AddField("entry.1634564735", _tindakan10);
+        form.AddField("entry.985489738", _tindakan11);
+        form.AddField("entry.208158559", _tindakan12);
+        form.AddField("entry.1978627484", _tindakan13);
+        form.AddField("entry.371407211", _tindakan14);
+        form.AddField("entry.578440197", _tindakan15);
+        form.AddField("entry.1525702822", _tindakan16);
+        form.AddField("entry.902173960", _tindakan17);
+        form.AddField("entry.1940953245", _tindakan18);
+        form.AddField("entry.977291987", _tindakan19);
+        form.AddField("entry.517928041", _tindakan20);
+        form.AddField("entry.1824944191", _tindakan21);
+        form.AddField("entry.1232260164", _tindakan22);
+        form.AddField("entry.1916570429", _tindakan24);
+        form.AddField("entry.1992423842", _tindakan25);
+        form.AddField("entry.235286155", _tindakan26);
+        form.AddField("entry.1655155096", _tindakan27);
+        form.AddField("entry.1655155096", _tindakan28);
+        form.AddField("entry.1655155096", _tindakan29);
+        form.AddField("entry.1655155096", _tindakan30);
+        form.AddField("entry.1655155096", _tindakan31);
+        form.AddField("entry.1655155096", _tindakan32);
+        #endregion
+
+        UnityWebRequest www = UnityWebRequest.Post(UrlFormRespondenDataPreTest, form);
 
 
         yield return www.SendWebRequest();

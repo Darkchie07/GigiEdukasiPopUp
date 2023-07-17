@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Pengetahuan : MonoBehaviour
 {
+	public static GameObject JawabanInstance;
+	public GameObject jawaban;
 	[System.Serializable]
 	public class SoalPengetahuan
 	{
@@ -35,6 +37,17 @@ public class Pengetahuan : MonoBehaviour
 
 	void Start()
 	{
+		if (JawabanInstance != null)
+		{
+			Destroy(this.jawaban.gameObject);
+			jawaban = JawabanInstance;
+		}
+		else
+		{
+			JawabanInstance = jawaban;
+			jawaban.transform.SetParent(null);
+			DontDestroyOnLoad(jawaban.gameObject);
+		}
 		GenerateSoal(idxSoal);
 		GantiSoal();
 		AddJawaban();
@@ -59,7 +72,8 @@ public class Pengetahuan : MonoBehaviour
 					if (isDone())
 					{
 						CheckJawaban();
-					   SceneManager.LoadScene("Sikap"); 
+						JawabanInstance.GetComponent<Jawaban>().jawabanPengetahuan = listJawaban;
+						SceneManager.LoadScene("Sikap"); 
 					}
 					else
 						Debug.Log("Masih ada yg kurang");
@@ -189,4 +203,10 @@ public class Pengetahuan : MonoBehaviour
 		return true;
 	}
 	#endregion
+
+	public string ConvertDataToJson()
+	{
+		string json = JsonUtility.ToJson(listJawaban);
+		return json;
+	}
 }

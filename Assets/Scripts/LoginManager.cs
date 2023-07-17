@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using UnityGoogleDrive;
 
@@ -45,7 +47,10 @@ public class LoginManager : MonoBehaviour
         yield return new WaitUntil(() => RespondenData.Instance != null);
         yield return new WaitUntil(() => RespondenData.Instance.doneLoadData);
         CheckInfo();
-        Debug.Log("test");
+        if (!string.IsNullOrEmpty(RespondenData.Instance.currentDataSelected.nama))
+        {
+            SceneManager.LoadScene("Pengetahuan");
+        }
 
         // lanjut.btnLanjut.onClick.AddListener(() =>
         // {
