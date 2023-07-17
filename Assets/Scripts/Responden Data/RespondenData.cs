@@ -113,7 +113,7 @@ public class RespondenData : MonoBehaviour
     void CheckingDataFirst()
     {
         LoadFile();
-
+        Debug.Log(dataResponden.listResponden[dataResponden.listResponden.Count - 1].status == "1");
         if (dataResponden.listResponden.Count == 0) // jika kosong
         {
             print("data belum ada");

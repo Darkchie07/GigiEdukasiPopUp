@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -705,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c066b93e75b995e48a6cfeb6d8e844fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jawaban: {fileID: 6914699303064802241, guid: 6cf86a7b02a24f04f8ad471af4e47f57, type: 3}
   listSoal:
   - soal: Saya rajin menggosok gigi supaya gigi saya bersih
   - soal: Ketika bulu sikat saya melebar, saya tetap memakainya
@@ -717,8 +718,7 @@ MonoBehaviour:
   - soal: Jika saya sakit gigi saya tidak pergi ke poli gigi/ klinik gigi
   - soal: Ketika malam hari saya langsung tidur tanpa menggosok gigi
   - soal: Memeriksa gigi minimal 6 bulan sekali secara berkala
-  yes: []
-  no: []
+  drop: []
   NextButton: {fileID: 1940868842}
   PrevButton: {fileID: 1631628564}
   listtxtSoal:
@@ -739,10 +739,15 @@ MonoBehaviour:
   - '-'
   - '-'
   - '-'
+  listSkorDebris: 
   Answered: 0
   skor: 0
   next: Tindakan
   prev: Pengetahuan
+  image: []
+  totalText: {fileID: 0}
+  nilai: 0
+  listnilai: 
 --- !u!4 &287130760
 Transform:
   m_ObjectHideFlags: 0
