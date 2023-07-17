@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class Pretest : MonoBehaviour
 {
-    public static GameObject JawabanInstance;
+    // public static GameObject JawabanInstance;
     public GameObject jawaban;
     
     GameObject field;
@@ -53,18 +53,7 @@ public class Pretest : MonoBehaviour
 
     void Awake()
     {
-        if (JawabanInstance != null)
-        {
-            Destroy(this.jawaban.gameObject);
-            jawaban = JawabanInstance;
-        }
-        else
-        {
-            JawabanInstance = jawaban;
-                jawaban.transform.SetParent(null);
-            DontDestroyOnLoad(jawaban.gameObject);
-        }
-
+        jawaban = GameObject.FindGameObjectWithTag("Jawaban");
         if (GameObject.FindGameObjectWithTag("Sikap") != null)
         {
             content = GameObject.FindGameObjectWithTag("Sikap").gameObject;
@@ -99,10 +88,17 @@ public class Pretest : MonoBehaviour
             if (isDone())
             {
                 FillJawaban();
-                SceneManager.LoadScene(next);
+                if (isTindakan)
+                {
+                    jawaban.GetComponent<Jawaban>().UploadDataToDrive();
+                }
+                else
+                {
+                    SceneManager.LoadScene(next);
+                }
             }
             else
-                Debug.Log("Masih ada yg kurang");
+                Debug.Log("Masih ada yg kurang" + Answered.ToString());
         });
         PrevButton.onClick.AddListener(() =>
         {
@@ -170,10 +166,10 @@ public class Pretest : MonoBehaviour
 
         if (isSikap)
         {
-            JawabanInstance.GetComponent<Jawaban>().jawabanSikap = listJawaban;
+            jawaban.GetComponent<Jawaban>().jawabanSikap = listJawaban;
         }else if (isTindakan)
         {
-            JawabanInstance.GetComponent<Jawaban>().jawabanTindakan = listJawaban;
+            jawaban.GetComponent<Jawaban>().jawabanTindakan = listJawaban;
         }
     }
     #endregion

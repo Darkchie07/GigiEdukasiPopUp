@@ -10,6 +10,7 @@ TagManager:
   - Tindakan
   - Kontrol
   - Dropdown
+  - Jawaban
   layers:
   - Default
   - TransparentFX

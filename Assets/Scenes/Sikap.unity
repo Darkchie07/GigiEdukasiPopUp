@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c066b93e75b995e48a6cfeb6d8e844fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jawaban: {fileID: 6914699303064802241, guid: 6cf86a7b02a24f04f8ad471af4e47f57, type: 3}
+  jawaban: {fileID: 0}
   listSoal:
   - soal: Saya rajin menggosok gigi supaya gigi saya bersih
   - soal: Ketika bulu sikat saya melebar, saya tetap memakainya

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class Pengetahuan : MonoBehaviour
 {
-	public static GameObject JawabanInstance;
 	public GameObject jawaban;
 	[System.Serializable]
 	public class SoalPengetahuan
@@ -37,17 +36,7 @@ public class Pengetahuan : MonoBehaviour
 
 	void Start()
 	{
-		if (JawabanInstance != null)
-		{
-			Destroy(this.jawaban.gameObject);
-			jawaban = JawabanInstance;
-		}
-		else
-		{
-			JawabanInstance = jawaban;
-			jawaban.transform.SetParent(null);
-			DontDestroyOnLoad(jawaban.gameObject);
-		}
+		jawaban = GameObject.FindGameObjectWithTag("Jawaban");
 		GenerateSoal(idxSoal);
 		GantiSoal();
 		AddJawaban();
@@ -72,7 +61,7 @@ public class Pengetahuan : MonoBehaviour
 					if (isDone())
 					{
 						CheckJawaban();
-						JawabanInstance.GetComponent<Jawaban>().jawabanPengetahuan = listJawaban;
+						jawaban.GetComponent<Jawaban>().jawabanPengetahuan = listJawaban;
 						SceneManager.LoadScene("Sikap"); 
 					}
 					else

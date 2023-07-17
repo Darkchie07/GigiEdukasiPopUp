@@ -190,7 +190,7 @@ public static class Helper
                                                         string _tindakan1, string _tindakan2, string _tindakan3, string _tindakan4, string _tindakan5, string _tindakan6, string _tindakan7, string _tindakan8,
                                                         string _tindakan9, string _tindakan10, string _tindakan11, string _tindakan12, string _tindakan13, string _tindakan14, string _tindakan15, string _tindakan16,
                                                         string _tindakan17, string _tindakan18, string _tindakan19, string _tindakan20, string _tindakan21, string _tindakan22, string _tindakan23, string _tindakan24, 
-                                                        string _tindakan25, string _tindakan26, string _tindakan27, string _tindakan28, string _tindakan29, string _tindakan30, string _tindakan31, string _tindakan32 ,Action _success, Action<UnityWebRequest> _error)
+                                                        string _tindakan25, string _tindakan26, string _tindakan27, string _tindakan28, string _tindakan29, string _tindakan30, string _tindakan31, string _tindakan32 ,Action _success, Action _error)
     {
         WWWForm form = new WWWForm();
 
@@ -243,12 +243,12 @@ public static class Helper
         form.AddField("entry.1916570429", _tindakan24);
         form.AddField("entry.1992423842", _tindakan25);
         form.AddField("entry.235286155", _tindakan26);
-        form.AddField("entry.1655155096", _tindakan27);
-        form.AddField("entry.1655155096", _tindakan28);
-        form.AddField("entry.1655155096", _tindakan29);
-        form.AddField("entry.1655155096", _tindakan30);
-        form.AddField("entry.1655155096", _tindakan31);
-        form.AddField("entry.1655155096", _tindakan32);
+        form.AddField("entry.47780327", _tindakan27);
+        form.AddField("entry.2033476838", _tindakan28);
+        form.AddField("entry.1005873312", _tindakan29);
+        form.AddField("entry.917032371", _tindakan30);
+        form.AddField("entry.196733131", _tindakan31);
+        form.AddField("entry.1666715522", _tindakan32);
         #endregion
 
         UnityWebRequest www = UnityWebRequest.Post(UrlFormRespondenDataPreTest, form);
@@ -260,7 +260,6 @@ public static class Helper
         if (!string.IsNullOrEmpty(www.error))
         {
             Debug.Log(www.error);
-            _error(www);
             yield break;
         }
 
