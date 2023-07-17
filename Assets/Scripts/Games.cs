@@ -12,6 +12,7 @@ public class Games : MonoBehaviour
     {
         public string soal;
         public GameObject gambarSoal;
+        public List<string> simpanListJawaban = new List<string>();
     }
 
     [Header("Soal")]
@@ -24,23 +25,32 @@ public class Games : MonoBehaviour
     public int idxSoal;
 
     [Header("Jawaban")]
+    public List<string> listJawaban = new List<string>();
     public List<string> listJawabanBenar = new List<string>();
     bool isCorrect = false;
+    bool isAnswered = false;
 
     [Header("Button")]
     public List<Button> buttonList;
     private string buttonValue;
     bool isClicked;
 
+    [Header("Save Load")]
+    private int SaveListCount;
+
     void Start()
     {
-        GenerateSoal(idxSoal);
+        LoadList();
         GantiSoal();
         AddJawaban();
-        PrevButton.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("IdxLevel") == 0)
+            PrevButton.gameObject.SetActive(false);
+
+        if (PlayerPrefs.HasKey("IdxLevel"))
+            HighlightJawaban();
     }
 
-    private void GenerateSoal(int idx)
+    public void GenerateSoal(int idx)
     {
         isCorrect = false;
         txtSoal.text = listGambarSoal[idx].soal;
@@ -52,6 +62,13 @@ public class Games : MonoBehaviour
     {
         NextButton.onClick.AddListener(() =>
         {
+            SaveList();
+
+            if (listJawaban[idxSoal] == listJawabanBenar[idxSoal])
+            {
+                isCorrect = true;
+            }
+
             if (isCorrect == true)
             {
                 listGambarSoal[idxSoal].gambarSoal.SetActive(false);
@@ -68,14 +85,17 @@ public class Games : MonoBehaviour
                 {
                     idxSoal += 1;
                     GenerateSoal(idxSoal);
+                    ResetHighlight();
                 }
                 else if (idxSoal == 0)
                 {
                     idxSoal += 1;
                     GenerateSoal(idxSoal);
+                    ResetHighlight();
                     PrevButton.gameObject.SetActive(true);
                 }
             }
+            PlayerPrefs.SetInt("IdxLevel", idxSoal);
         });
 
         PrevButton.onClick.AddListener(() =>
@@ -86,19 +106,69 @@ public class Games : MonoBehaviour
             {
                 idxSoal -= 1;
                 GenerateSoal(idxSoal);
+                HighlightJawaban();
             }
             else if (2 <= idxSoal && idxSoal < listGambarSoal.Count)
             {
                 idxSoal -= 1;
                 GenerateSoal(idxSoal);
+                HighlightJawaban();
             }
             else if (idxSoal == 1)
             {
                 idxSoal -= 1;
                 GenerateSoal(idxSoal);
+                HighlightJawaban();
                 PrevButton.gameObject.SetActive(false);
             }
+            PlayerPrefs.SetInt("IdxLevel", idxSoal);
         });
+    }
+    #endregion
+
+    #region Highlight Jawaban Ketika Ganti Soal
+    public void HighlightJawaban()
+    {
+        for (int i = 0; i < buttonList.Count; i++)
+        {
+            var buttonClick = buttonList[i];
+            var colorsHighlight = buttonClick.GetComponent<Button>().colors;
+
+            if (listJawaban[idxSoal] == buttonList[i].gameObject.tag)
+            {
+                colorsHighlight.normalColor = Color.green;
+                buttonClick.GetComponent<Button>().colors = colorsHighlight;
+            }
+
+            if (buttonList[i].gameObject.tag != listJawaban[idxSoal])
+            {
+                colorsHighlight.normalColor = Color.white;
+                buttonClick.GetComponent<Button>().colors = colorsHighlight;
+            }
+        }
+    }
+    #endregion
+
+    #region Reset Highlight Jawaban Ketika Ganti Soal
+    public void ResetHighlight()
+    {
+        for (int i = 0; i < buttonList.Count; i++)
+        {
+            var buttonClick = buttonList[i];
+            var colorsHighlight = buttonClick.GetComponent<Button>().colors;
+
+            if (listJawaban[idxSoal] == buttonList[i].gameObject.tag)
+            {
+                colorsHighlight.normalColor = Color.green;
+                buttonClick.GetComponent<Button>().colors = colorsHighlight;
+            }
+
+            if (buttonList[i].gameObject.tag != listJawaban[idxSoal])
+            {
+                colorsHighlight.normalColor = Color.white;
+                buttonClick.GetComponent<Button>().colors = colorsHighlight;
+            }
+        }
     }
     #endregion
 
@@ -147,7 +217,7 @@ public class Games : MonoBehaviour
                         ButtonHighLight(buttonClick);
                     }
                 }
-                CheckJawaban();
+                CheckJawaban(buttonValue);
                 Debug.Log("Button value " + buttonValue);
             });
         }
@@ -155,11 +225,14 @@ public class Games : MonoBehaviour
     #endregion
 
     #region Check Jawaban setelah semua soal
-    public void CheckJawaban()
+    public void CheckJawaban(string buttonValue)
     {
+        listJawaban[idxSoal] = buttonValue;
+
         if (buttonValue == listJawabanBenar[idxSoal])
         {
             isCorrect = true;
+            // listJawaban[idxSoal] = buttonValue;
         }
         Debug.Log("isCorrect " + isCorrect);
     }
@@ -189,6 +262,37 @@ public class Games : MonoBehaviour
         {
             colorsHighlight.selectedColor = Color.green;
             buttonClick.GetComponent<Button>().colors = colorsHighlight;
+        }
+    }
+
+    public void SaveList()
+    {
+        for (int i = 0; i < listJawaban.Count; i++)
+        {
+            PlayerPrefs.SetString("Jawaban" + i, listJawaban[i]);
+        }
+        PlayerPrefs.SetInt("Count", listJawaban.Count);
+    }
+
+    public void LoadList()
+    {
+        SaveListCount = PlayerPrefs.GetInt("Count");
+
+        if (PlayerPrefs.HasKey("IdxLevel"))
+        {
+            idxSoal = PlayerPrefs.GetInt("IdxLevel");
+            GenerateSoal(idxSoal);
+        }
+        else
+        {
+            idxSoal = 0;
+            GenerateSoal(idxSoal);
+        }
+
+        for (int i = 0; i < SaveListCount; i++)
+        {
+            string jawaban = PlayerPrefs.GetString("Jawaban" + i);
+            listJawaban[i] = jawaban;
         }
     }
 }
