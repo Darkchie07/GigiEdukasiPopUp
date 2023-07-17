@@ -11,6 +11,9 @@ TagManager:
   - Kontrol
   - Dropdown
   - Jawaban
+  - Field
+  - SubField
+  - Foto
   layers:
   - Default
   - TransparentFX

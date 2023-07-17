@@ -9,4 +9,8 @@ public class GoHome : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+    public void PostTest()
+    {
+        SceneManager.LoadScene("Pengetahuan");
+    }
 }

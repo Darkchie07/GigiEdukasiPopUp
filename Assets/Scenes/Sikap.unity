@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jawaban: {fileID: 0}
+  index: []
   listSoal:
   - soal: Saya rajin menggosok gigi supaya gigi saya bersih
   - soal: Ketika bulu sikat saya melebar, saya tetap memakainya
@@ -718,7 +719,7 @@ MonoBehaviour:
   - soal: Jika saya sakit gigi saya tidak pergi ke poli gigi/ klinik gigi
   - soal: Ketika malam hari saya langsung tidur tanpa menggosok gigi
   - soal: Memeriksa gigi minimal 6 bulan sekali secara berkala
-  drop: []
+  foto: []
   NextButton: {fileID: 1940868842}
   PrevButton: {fileID: 1631628564}
   listtxtSoal:
@@ -748,6 +749,11 @@ MonoBehaviour:
   totalText: {fileID: 0}
   nilai: 0
   listnilai: 
+  subField: {fileID: 0}
+  liststringFoto: []
+  listpathFoto: []
+  PanelImage: {fileID: 0}
+  sprData: []
 --- !u!4 &287130760
 Transform:
   m_ObjectHideFlags: 0
@@ -2390,7 +2396,7 @@ GameObject:
   - component: {fileID: 1408275570}
   m_Layer: 5
   m_Name: Field
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
