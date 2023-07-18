@@ -19,9 +19,9 @@ public class Data : MonoBehaviour
 
     public class Test
     {
-        public string Pengetahuan;
-        public string Sikap;
-        public string Tindakan;
+        public string[] Pengetahuan;
+        public string[] Sikap;
+        public string[] Tindakan;
     }
 
     public class TestFile

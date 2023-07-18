@@ -37,9 +37,10 @@ public class Pengetahuan : MonoBehaviour
     public static Pengetahuan Instance;
 
     void Start()
-    {
+    {if (Instance == null)
+            Instance = this;
         TestScript.Instance.TagGObjects();
-        TestScript.Instance.LoadData();
+        // TestScript.Instance.LoadData();
         jawaban = GameObject.FindGameObjectWithTag("Jawaban");
         GenerateSoal(idxSoal);
         GantiSoal();

@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 using System.IO;
 using UnityEngine.Networking;
 
@@ -66,7 +67,7 @@ public class TestScript : MonoBehaviour
 
     void Start()
     {
-        if (Instance = null)
+        if (Instance == null)
             Instance = this;
 
         TagGObjects();
@@ -305,39 +306,45 @@ public class TestScript : MonoBehaviour
 
     public void SaveData()
     {
+        Data.Instance = new Data();
         Data.Instance.dataTest = new Data.TestFile();
+        Data.Instance.dataTest.preTest = new Data.Pretest();
         Data.Instance.dataTest.preTest.listPreTest = new List<Data.Test>();
         if (isPengetahuan)
         {
-            foreach (var a in Pengetahuan.Instance.listJawaban)
+            Data.Test d = new Data.Test();
+            d.Pengetahuan = new string[Pengetahuan.Instance.listJawaban.Count]; // Instantiate the Sikap array
+            for (int i = 0; i < Pengetahuan.Instance.listJawaban.Count; i++)
             {
-                Data.Test d = new Data.Test();
-                d.Pengetahuan = a;
-                Data.Instance.dataTest.preTest.listPreTest.Add(d);
+                d.Pengetahuan[i] = Pengetahuan.Instance.listJawaban[i];
             }
+            Data.Instance.dataTest.preTest.listPreTest.Add(d);
             Data.Instance.statusPengetahuan = "1";
         }
         if (isSikap)
         {
-            foreach (var a in listJawaban)
+            Data.Test d = new Data.Test();
+            d.Sikap = new string[listJawaban.Count]; // Instantiate the Sikap array
+            for (int i = 0; i < listJawaban.Count; i++)
             {
-                Data.Test d = new Data.Test();
-                d.Sikap = a;
-                Data.Instance.dataTest.preTest.listPreTest.Add(d);
+                d.Sikap[i] = listJawaban[i];
             }
+            Data.Instance.dataTest.preTest.listPreTest.Add(d);
             Data.Instance.statusSikap = "1";
         }
         else if (isTindakan)
         {
-            foreach (var a in listJawaban)
+            Data.Test d = new Data.Test();
+            d.Tindakan = new string[listJawaban.Count]; // Instantiate the Sikap array
+            for (int i = 0; i < listJawaban.Count; i++)
             {
-                Data.Test d = new Data.Test();
-                d.Tindakan = a;
-                Data.Instance.dataTest.preTest.listPreTest.Add(d);
+                d.Tindakan[i] = listJawaban[i];
             }
-            Data.Instance.statusTindakan = "1";
+            Data.Instance.dataTest.preTest.listPreTest.Add(d);
+            Data.Instance.statusSikap = "1";
         }
-        string json = JsonUtility.ToJson(Data.Instance.dataTest);
+        string json = JsonConvert.SerializeObject(Data.Instance.dataTest);
+        Debug.Log(Application.persistentDataPath);
         Data.Instance.SaveTest(json);
     }
 
@@ -346,17 +353,17 @@ public class TestScript : MonoBehaviour
         if (isPengetahuan && Data.Instance.statusPengetahuan == "1")
             for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
             {
-                Pengetahuan.Instance.listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Pengetahuan;
+                Pengetahuan.Instance.listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Pengetahuan[i];
             }
         else if (isSikap && Data.Instance.statusSikap == "1")
             for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
             {
-                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Sikap;
+                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Sikap[i];
             }
         else if (isTindakan && Data.Instance.statusTindakan == "1")
             for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
             {
-                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Tindakan;
+                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Tindakan[i];
             }
         else
             return;
