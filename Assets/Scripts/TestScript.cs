@@ -9,9 +9,9 @@ using UnityEngine.UI;
 using System.IO;
 using UnityEngine.Networking;
 
-public class Pretest : MonoBehaviour
+public class TestScript : MonoBehaviour
 {
-    // public static GameObject JawabanInstance;
+    public static TestScript Instance;
     public GameObject jawaban;
     public GameObject[] index;
 
@@ -45,6 +45,7 @@ public class Pretest : MonoBehaviour
     public int skor;
     public string next;
     public string prev;
+    private bool isPengetahuan;
     private bool isSikap;
     private bool isTindakan;
 
@@ -63,10 +64,41 @@ public class Pretest : MonoBehaviour
     public GameObject PanelImage;
     public List<Sprite> sprData = new List<Sprite>();
 
-    void Awake()
+    void Start()
+    {
+        if (Instance = null)
+            Instance = this;
+
+        TagGObjects();
+        LoadData();
+        if (!isPengetahuan)
+        {
+            field = content.transform.GetChild(0).gameObject;
+            Transform parent = content.transform;
+
+            DuplicateField(parent);
+            index = GameObject.FindGameObjectsWithTag("Field");
+            yes = GameObject.FindGameObjectsWithTag("Ya");
+            no = GameObject.FindGameObjectsWithTag("Tidak");
+            drop = GameObject.FindGameObjectsWithTag("Dropdown");
+            foto = GameObject.FindGameObjectsWithTag("Foto");
+
+            GantiSoal();
+            SetSoal();
+        }
+
+        // FillJawaban();
+    }
+
+    public void TagGObjects()
     {
         jawaban = GameObject.FindGameObjectWithTag("Jawaban");
-        if (GameObject.FindGameObjectWithTag("Sikap") != null)
+        if (GameObject.FindGameObjectWithTag("Pengetahuan") != null)
+        {
+            content = GameObject.FindGameObjectWithTag("Pengetahuan").gameObject;
+            isPengetahuan = true;
+        }
+        else if (GameObject.FindGameObjectWithTag("Sikap") != null)
         {
             content = GameObject.FindGameObjectWithTag("Sikap").gameObject;
             isSikap = true;
@@ -77,21 +109,10 @@ public class Pretest : MonoBehaviour
             isTindakan = true;
         }
         else if (GameObject.FindGameObjectWithTag("Kontrol") != null)
+        {
             content = GameObject.FindGameObjectWithTag("Kontrol").gameObject;
-
-        field = content.transform.GetChild(0).gameObject;
-        Transform parent = content.transform;
-
-        DuplicateField(parent);
-        index = GameObject.FindGameObjectsWithTag("Field");
-        yes = GameObject.FindGameObjectsWithTag("Ya");
-        no = GameObject.FindGameObjectsWithTag("Tidak");
-        drop = GameObject.FindGameObjectsWithTag("Dropdown");
-        foto = GameObject.FindGameObjectsWithTag("Foto");
-
-        GantiSoal();
-        SetSoal();
-        // FillJawaban();
+            isTindakan = true;
+        }
     }
 
     public void GantiSoal()
@@ -101,9 +122,10 @@ public class Pretest : MonoBehaviour
             if (isDone())
             {
                 FillJawaban();
+                SaveData();
                 if (isTindakan)
                 {
-                    jawaban.GetComponent<Jawaban>().UploadDataToDrive();
+                    Jawaban.Instance.UploadDataToDrive();
                 }
                 else
                 {
@@ -203,11 +225,11 @@ public class Pretest : MonoBehaviour
 
         if (isSikap)
         {
-            jawaban.GetComponent<Jawaban>().jawabanSikap = listJawaban;
+            Jawaban.Instance.jawabanSikap = listJawaban;
         }
         else if (isTindakan)
         {
-            jawaban.GetComponent<Jawaban>().jawabanTindakan = listJawaban;
+            Jawaban.Instance.jawabanTindakan = listJawaban;
         }
     }
     #endregion
@@ -279,6 +301,65 @@ public class Pretest : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void SaveData()
+    {
+        Data.Instance.dataTest = new Data.TestFile();
+        Data.Instance.dataTest.preTest.listPreTest = new List<Data.Test>();
+        if (isPengetahuan)
+        {
+            foreach (var a in Pengetahuan.Instance.listJawaban)
+            {
+                Data.Test d = new Data.Test();
+                d.Pengetahuan = a;
+                Data.Instance.dataTest.preTest.listPreTest.Add(d);
+            }
+            Data.Instance.statusPengetahuan = "1";
+        }
+        if (isSikap)
+        {
+            foreach (var a in listJawaban)
+            {
+                Data.Test d = new Data.Test();
+                d.Sikap = a;
+                Data.Instance.dataTest.preTest.listPreTest.Add(d);
+            }
+            Data.Instance.statusSikap = "1";
+        }
+        else if (isTindakan)
+        {
+            foreach (var a in listJawaban)
+            {
+                Data.Test d = new Data.Test();
+                d.Tindakan = a;
+                Data.Instance.dataTest.preTest.listPreTest.Add(d);
+            }
+            Data.Instance.statusTindakan = "1";
+        }
+        string json = JsonUtility.ToJson(Data.Instance.dataTest);
+        Data.Instance.SaveTest(json);
+    }
+
+    public void LoadData()
+    {
+        if (isPengetahuan && Data.Instance.statusPengetahuan == "1")
+            for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+            {
+                Pengetahuan.Instance.listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Pengetahuan;
+            }
+        else if (isSikap && Data.Instance.statusSikap == "1")
+            for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+            {
+                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Sikap;
+            }
+        else if (isTindakan && Data.Instance.statusTindakan == "1")
+            for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+            {
+                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Tindakan;
+            }
+        else
+            return;
     }
 
     #region Foto
