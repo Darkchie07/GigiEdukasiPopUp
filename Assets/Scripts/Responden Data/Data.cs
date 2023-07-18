@@ -12,24 +12,19 @@ public class Data : MonoBehaviour
     public string statusPengetahuan;
     public string statusSikap;
     public string statusTindakan;
-    public class Pretest
-    {
-        public List<Test> listPreTest = new List<Test>();
-    }
 
-    public class Test
+    public class PreTestPengetahuan
     {
         public string[] Pengetahuan;
+    }
+    public class PreTestSikap
+    {
         public string[] Sikap;
+    }
+    public class PreTestTindakan
+    {
         public string[] Tindakan;
     }
-
-    public class TestFile
-    {
-        public Pretest preTest = new Pretest();
-    }
-
-    public TestFile dataTest = new TestFile();
 
     private void Awake()
     {
@@ -42,27 +37,65 @@ public class Data : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        LoadFile();
+        // LoadFile();
     }
 
-    public void LoadFile()
-    {
-        string _testPath = Application.persistentDataPath + "/saveTest.json";
-        if (File.Exists(_testPath))
-        {
-            string _data = File.ReadAllText(_testPath);
+    // public void LoadFile()
+    // {
+    //     string _testPath = Application.persistentDataPath + "/saveTest.json";
+    //     if (File.Exists(_testPath))
+    //     {
+    //         string _data = File.ReadAllText(_testPath);
+    //
+    //         dataTest = JsonUtility.FromJson<TestFile>(_data);
+    //     }
+    //     else
+    //     {
+    //         dataTest = new TestFile();
+    //     }
+    // }
 
-            dataTest = JsonUtility.FromJson<TestFile>(_data);
-        }
-        else
+    public void SaveTest(string test, string json)
+    {
+        if (test == "Pengetahuan")
         {
-            dataTest = new TestFile();
+            string _path = Application.persistentDataPath + "/saveTestPengetahuan.json";
+            File.WriteAllText(_path, json);
+        }else if (test == "Sikap")
+        {
+            string _path = Application.persistentDataPath + "/saveTestSikap.json";
+            File.WriteAllText(_path, json);
+        }else if (test == "Tindakan")
+        {
+            string _path = Application.persistentDataPath + "/saveTestTindakan.json";
+            File.WriteAllText(_path, json);
         }
     }
 
-    public void SaveTest(string json)
+    public bool HasFile(string test)
     {
-        string _path = Application.persistentDataPath + "/saveTest.json";
-        File.WriteAllText(_path, json);
+        if (test == "Pengetahuan")
+        {
+            string _path = Application.persistentDataPath + "/saveTestPengetahuan.json";
+            if (File.Exists(_path))
+            {
+                return true;
+            }
+        }else if (test == "Sikap")
+        {
+            string _path = Application.persistentDataPath + "/saveTestSikap.json";
+            if (File.Exists(_path))
+            {
+                return true;
+            }
+        }else if (test == "Tindakan")
+        {
+            string _path = Application.persistentDataPath + "/saveTestTindakan.json";
+            if (File.Exists(_path))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

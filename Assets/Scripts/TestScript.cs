@@ -29,8 +29,8 @@ public class TestScript : MonoBehaviour
 
     [Header("Soal")]
     public List<SoalSikap> listSoal = new List<SoalSikap>();
-    GameObject[] yes;
-    GameObject[] no;
+    public GameObject[] yes;
+    public GameObject[] no;
     GameObject[] drop;
     public GameObject[] foto;
 
@@ -65,13 +65,13 @@ public class TestScript : MonoBehaviour
     public GameObject PanelImage;
     public List<Sprite> sprData = new List<Sprite>();
 
-    void Start()
+    void Awake()
     {
         if (Instance == null)
             Instance = this;
 
         TagGObjects();
-        LoadData();
+        // LoadData();
         if (!isPengetahuan)
         {
             field = content.transform.GetChild(0).gameObject;
@@ -89,6 +89,24 @@ public class TestScript : MonoBehaviour
         }
 
         // FillJawaban();
+    }
+
+    private void Start()
+    {
+        if (isSikap)
+        {
+            if (Data.Instance.HasFile("Sikap"))
+            {
+                HighlightJawaban();
+            }
+        }else if (isTindakan)
+        {
+            if (Data.Instance.HasFile("Tindakan"))
+            {
+                HighlightJawaban();
+            }
+        }
+        Debug.Log(Data.Instance.HasFile("Sikap"));
     }
 
     public void TagGObjects()
@@ -306,69 +324,77 @@ public class TestScript : MonoBehaviour
 
     public void SaveData()
     {
-        Data.Instance = new Data();
-        Data.Instance.dataTest = new Data.TestFile();
-        Data.Instance.dataTest.preTest = new Data.Pretest();
-        Data.Instance.dataTest.preTest.listPreTest = new List<Data.Test>();
-        if (isPengetahuan)
-        {
-            Data.Test d = new Data.Test();
-            d.Pengetahuan = new string[Pengetahuan.Instance.listJawaban.Count]; // Instantiate the Sikap array
-            for (int i = 0; i < Pengetahuan.Instance.listJawaban.Count; i++)
-            {
-                d.Pengetahuan[i] = Pengetahuan.Instance.listJawaban[i];
-            }
-            Data.Instance.dataTest.preTest.listPreTest.Add(d);
-            Data.Instance.statusPengetahuan = "1";
-        }
+        // Data.Instance = new Data();
+        // Data.Test d;
+        // Data.Instance.dataTest = new Data.TestFile();
+        // Data.Instance.dataTest.preTest = new Data.Pretest();
+        // Data.Instance.dataTest.preTest.listPreTest = new List<Data.Test>();
         if (isSikap)
         {
-            Data.Test d = new Data.Test();
-            d.Sikap = new string[listJawaban.Count]; // Instantiate the Sikap array
-            for (int i = 0; i < listJawaban.Count; i++)
-            {
-                d.Sikap[i] = listJawaban[i];
-            }
-            Data.Instance.dataTest.preTest.listPreTest.Add(d);
-            Data.Instance.statusSikap = "1";
+            string json = JsonConvert.SerializeObject(listJawaban.ToArray());
+            Data.Instance.SaveTest("Sikap", json);
         }
         else if (isTindakan)
         {
-            Data.Test d = new Data.Test();
-            d.Tindakan = new string[listJawaban.Count]; // Instantiate the Sikap array
-            for (int i = 0; i < listJawaban.Count; i++)
-            {
-                d.Tindakan[i] = listJawaban[i];
-            }
-            Data.Instance.dataTest.preTest.listPreTest.Add(d);
-            Data.Instance.statusSikap = "1";
+            string json = JsonConvert.SerializeObject(listJawaban.ToArray());
+            Data.Instance.SaveTest("Tindakan", json);
         }
-        string json = JsonConvert.SerializeObject(Data.Instance.dataTest);
-        Debug.Log(Application.persistentDataPath);
-        Data.Instance.SaveTest(json);
+        // Jaga jaga
+        // d.Sikap = new string[listJawaban.Count]; // Instantiate the Sikap array
+        // for (int i = 0; i < listJawaban.Count; i++)
+        // {
+        //     d.Sikap[i] = listJawaban[i];
+        // }
+        // Data.Instance.dataTest.preTest.listPreTest.Add(d);
+        // Data.Instance.statusSikap = "1";
     }
 
-    public void LoadData()
+    // public void LoadData()
+    // {
+    //     if (isPengetahuan && Data.Instance.statusPengetahuan == "1")
+    //         for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+    //         {
+    //             Pengetahuan.Instance.listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Pengetahuan[i];
+    //         }
+    //     else if (isSikap && Data.Instance.statusSikap == "1")
+    //         for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+    //         {
+    //             listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Sikap[i];
+    //         }
+    //     else if (isTindakan && Data.Instance.statusTindakan == "1")
+    //         for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+    //         {
+    //             listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Tindakan[i];
+    //         }
+    //     else
+    //         return;
+    // }
+
+    public void HighlightJawaban()
     {
-        if (isPengetahuan && Data.Instance.statusPengetahuan == "1")
-            for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+        string filePath = "";
+        if (isSikap)
+        {
+            filePath = Application.persistentDataPath + "/saveTestSikap.json";
+        }else if (isTindakan)
+        {
+            filePath = Application.persistentDataPath + "/saveTestTindakan.json";
+        }
+        string json = File.ReadAllText(filePath);
+        List<string> jsonArray = JsonConvert.DeserializeObject<List<string>>(json);
+        listJawaban = jsonArray;
+        for (int i = 0; i < listJawaban.Count; i++)
+        {
+            if (listJawaban[i] == "0")
             {
-                Pengetahuan.Instance.listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Pengetahuan[i];
-            }
-        else if (isSikap && Data.Instance.statusSikap == "1")
-            for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
+                no[i].GetComponent<Toggle>().isOn = true;
+            }else if (listJawaban[i] == "1")
             {
-                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Sikap[i];
+                yes[i].GetComponent<Toggle>().isOn = true;
             }
-        else if (isTindakan && Data.Instance.statusTindakan == "1")
-            for (int i = 0; i < Data.Instance.dataTest.preTest.listPreTest.Count; i++)
-            {
-                listJawaban[i] = Data.Instance.dataTest.preTest.listPreTest[i].Tindakan[i];
-            }
-        else
-            return;
+        }
     }
-
+    
     #region Foto
     private void OpenGallery(int i)
     {

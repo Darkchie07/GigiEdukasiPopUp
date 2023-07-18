@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public class Pengetahuan : MonoBehaviour
 {
@@ -36,8 +39,15 @@ public class Pengetahuan : MonoBehaviour
 
     public static Pengetahuan Instance;
 
+
     void Start()
-    {if (Instance == null)
+    {
+        if (Data.Instance.HasFile("Pengetahuan"))
+        {
+             loadJawaban();
+             HighlightJawaban();
+        }
+        if (Instance == null)
             Instance = this;
         TestScript.Instance.TagGObjects();
         // TestScript.Instance.LoadData();
@@ -67,6 +77,8 @@ public class Pengetahuan : MonoBehaviour
                     {
                         CheckJawaban();
                         jawaban.GetComponent<Jawaban>().jawabanPengetahuan = listJawaban;
+                        string json = JsonConvert.SerializeObject(listJawaban.ToArray());
+                        Data.Instance.SaveTest("Pengetahuan", json);
                         SceneManager.LoadScene("Sikap");
                     }
                     else
@@ -179,6 +191,14 @@ public class Pengetahuan : MonoBehaviour
     }
     #endregion
 
+    public void loadJawaban()
+    {
+        string filePath = Application.persistentDataPath + "/saveTestPengetahuan.json";
+        string json = File.ReadAllText(filePath);
+        List<string> jsonArray = JsonConvert.DeserializeObject<List<string>>(json);
+        listJawaban = jsonArray;
+    }
+    
     #region Check Jawaban setelah semua soal
     public void CheckJawaban()
     {
