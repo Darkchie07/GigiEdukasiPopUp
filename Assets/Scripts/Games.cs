@@ -17,6 +17,7 @@ public class Games : MonoBehaviour
 
     [Header("Soal")]
     public List<TBGames> listGambarSoal = new List<TBGames>();
+    public List<GameObject> listGambarSikat = new List<GameObject>();
 
     [Header("Mount")]
     public TMP_Text txtSoal;
@@ -32,6 +33,7 @@ public class Games : MonoBehaviour
 
     [Header("Button")]
     public List<Button> buttonList;
+    private Animator animSikat;
     private string buttonValue;
     bool isClicked;
 
@@ -180,6 +182,11 @@ public class Games : MonoBehaviour
     }
     #endregion
 
+    private void Update()
+    {
+        animSikat = listGambarSikat[idxSoal].GetComponent<Animator>();
+    }
+
     #region Ketika menjawab atau mengubah jawaban
     public void AddJawaban()
     {
@@ -197,35 +204,41 @@ public class Games : MonoBehaviour
                     if (buttonClick.name == "MencungkilAtas")
                     {
                         buttonValue = "A";
+                        animSikat.Play("MencungkilAtas");
                         ButtonHighLight(buttonClick);
                     }
                     else if (buttonClick.name == "Memutar")
                     {
                         buttonValue = "B";
+                        animSikat.Play("Memutar");
                         ButtonHighLight(buttonClick);
                     }
                     else if (buttonClick.name == "MajuMundur")
                     {
                         buttonValue = "C";
+                        animSikat.Play("MajuMundur");
                         ButtonHighLight(buttonClick);
                     }
                     else if (buttonClick.name == "KeLuar")
                     {
                         buttonValue = "D";
+                        animSikat.Play("KeLuar");
                         ButtonHighLight(buttonClick);
                     }
                     else if (buttonClick.name == "AtasBawah")
                     {
                         buttonValue = "E";
+                        animSikat.Play("AtasBawah");
                         ButtonHighLight(buttonClick);
                     }
                     else if (buttonClick.name == "MencungkilBawah")
                     {
                         buttonValue = "F";
+                        animSikat.Play("MencungkilBawah");
                         ButtonHighLight(buttonClick);
                     }
+                    CheckJawaban(buttonValue);
                 }
-                CheckJawaban(buttonValue);
                 Debug.Log("Button value " + buttonValue);
             });
         }
@@ -252,10 +265,14 @@ public class Games : MonoBehaviour
     {
         listJawaban[idxSoal] = buttonValue;
 
-        if (buttonValue == listJawabanBenar[idxSoal])
+        if (listJawaban[idxSoal] == listJawabanBenar[idxSoal])
         {
             isCorrect = true;
             // listJawaban[idxSoal] = buttonValue;
+        }
+        else
+        {
+            isCorrect = false;
         }
         Debug.Log("isCorrect " + isCorrect);
     }
