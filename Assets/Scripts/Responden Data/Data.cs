@@ -26,6 +26,19 @@ public class Data : MonoBehaviour
         public string[] Tindakan;
     }
 
+    public class FotoTindakan
+    {
+        public string[] StringFoto;
+        public string[] PathFoto;
+    }
+
+    public class FotoFile
+    {
+        public FotoTindakan foto = new FotoTindakan();
+    }
+
+    public FotoFile dataFoto = new FotoFile();
+
     private void Awake()
     {
         if (Instance)
@@ -55,42 +68,60 @@ public class Data : MonoBehaviour
     //     }
     // }
 
-    public void SaveTest(string test, string json)
+    public void SaveData(string data, string json)
     {
-        if (test == "Pengetahuan")
+        if (data == "Pengetahuan")
         {
             string _path = Application.persistentDataPath + "/saveTestPengetahuan.json";
             File.WriteAllText(_path, json);
-        }else if (test == "Sikap")
+        }
+        else if (data == "Sikap")
         {
             string _path = Application.persistentDataPath + "/saveTestSikap.json";
             File.WriteAllText(_path, json);
-        }else if (test == "Tindakan")
+        }
+        else if (data == "Tindakan")
         {
             string _path = Application.persistentDataPath + "/saveTestTindakan.json";
             File.WriteAllText(_path, json);
         }
+        else if (data == "FotoTindakan")
+        {
+            string _path = Application.persistentDataPath + "/saveFotoTindakan.json";
+            Debug.Log(_path);
+            File.WriteAllText(_path, json);
+        }
     }
 
-    public bool HasFile(string test)
+    public bool HasFile(string data)
     {
-        if (test == "Pengetahuan")
+        if (data == "Pengetahuan")
         {
             string _path = Application.persistentDataPath + "/saveTestPengetahuan.json";
             if (File.Exists(_path))
             {
                 return true;
             }
-        }else if (test == "Sikap")
+        }
+        else if (data == "Sikap")
         {
             string _path = Application.persistentDataPath + "/saveTestSikap.json";
             if (File.Exists(_path))
             {
                 return true;
             }
-        }else if (test == "Tindakan")
+        }
+        else if (data == "Tindakan")
         {
             string _path = Application.persistentDataPath + "/saveTestTindakan.json";
+            if (File.Exists(_path))
+            {
+                return true;
+            }
+        }
+        else if (data == "FotoTindakan")
+        {
+            string _path = Application.persistentDataPath + "/saveFotoTindakan.json";
             if (File.Exists(_path))
             {
                 return true;

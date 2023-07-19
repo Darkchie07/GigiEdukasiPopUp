@@ -44,8 +44,8 @@ public class Pengetahuan : MonoBehaviour
     {
         if (Data.Instance.HasFile("Pengetahuan"))
         {
-             loadJawaban();
-             HighlightJawaban();
+            LoadJawaban();
+            HighlightJawaban();
         }
         if (Instance == null)
             Instance = this;
@@ -76,9 +76,9 @@ public class Pengetahuan : MonoBehaviour
                     if (isDone())
                     {
                         CheckJawaban();
-                        jawaban.GetComponent<Jawaban>().jawabanPengetahuan = listJawaban;
+                        Jawaban.Instance.jawabanPengetahuan = listJawaban;
                         string json = JsonConvert.SerializeObject(listJawaban.ToArray());
-                        Data.Instance.SaveTest("Pengetahuan", json);
+                        Data.Instance.SaveData("Pengetahuan", json);
                         SceneManager.LoadScene("Sikap");
                     }
                     else
@@ -191,14 +191,14 @@ public class Pengetahuan : MonoBehaviour
     }
     #endregion
 
-    public void loadJawaban()
+    public void LoadJawaban()
     {
         string filePath = Application.persistentDataPath + "/saveTestPengetahuan.json";
         string json = File.ReadAllText(filePath);
         List<string> jsonArray = JsonConvert.DeserializeObject<List<string>>(json);
         listJawaban = jsonArray;
     }
-    
+
     #region Check Jawaban setelah semua soal
     public void CheckJawaban()
     {

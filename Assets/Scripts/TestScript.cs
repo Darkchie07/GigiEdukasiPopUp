@@ -97,13 +97,18 @@ public class TestScript : MonoBehaviour
         {
             if (Data.Instance.HasFile("Sikap"))
             {
-                HighlightJawaban();
+                LoadJawaban();
             }
-        }else if (isTindakan)
+        }
+        else if (isTindakan)
         {
             if (Data.Instance.HasFile("Tindakan"))
             {
-                HighlightJawaban();
+                LoadJawaban();
+            }
+            if (Data.Instance.HasFile("FotoTindakan"))
+            {
+                LoadFoto();
             }
         }
         Debug.Log(Data.Instance.HasFile("Sikap"));
@@ -141,22 +146,31 @@ public class TestScript : MonoBehaviour
             if (isDone())
             {
                 FillJawaban();
-                SaveData();
+                SaveTest();
                 if (isTindakan)
                 {
+                    SaveFoto();
                     Jawaban.Instance.UploadDataToDrive();
                 }
-                else
-                {
-                    SceneManager.LoadScene(next);
-                }
+                SceneManager.LoadScene(next);
             }
             else
-                Debug.Log("Masih ada yg kurang" + Answered.ToString());
+                Debug.Log("Masih ada yg kurang " + Answered.ToString());
         });
         PrevButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(prev);
+            if (isDone())
+            {
+                FillJawaban();
+                SaveTest();
+                if (isTindakan)
+                {
+                    SaveFoto();
+                }
+                SceneManager.LoadScene(prev);
+            }
+            else
+                Debug.Log("Masih ada yg kurang " + Answered.ToString());
         });
         if (content.CompareTag("Tindakan"))
         {
@@ -322,7 +336,7 @@ public class TestScript : MonoBehaviour
         return false;
     }
 
-    public void SaveData()
+    public void SaveTest()
     {
         // Data.Instance = new Data();
         // Data.Test d;
@@ -332,12 +346,12 @@ public class TestScript : MonoBehaviour
         if (isSikap)
         {
             string json = JsonConvert.SerializeObject(listJawaban.ToArray());
-            Data.Instance.SaveTest("Sikap", json);
+            Data.Instance.SaveData("Sikap", json);
         }
         else if (isTindakan)
         {
             string json = JsonConvert.SerializeObject(listJawaban.ToArray());
-            Data.Instance.SaveTest("Tindakan", json);
+            Data.Instance.SaveData("Tindakan", json);
         }
         // Jaga jaga
         // d.Sikap = new string[listJawaban.Count]; // Instantiate the Sikap array
@@ -370,13 +384,14 @@ public class TestScript : MonoBehaviour
     //         return;
     // }
 
-    public void HighlightJawaban()
+    public void LoadJawaban()
     {
         string filePath = "";
         if (isSikap)
         {
             filePath = Application.persistentDataPath + "/saveTestSikap.json";
-        }else if (isTindakan)
+        }
+        else if (isTindakan)
         {
             filePath = Application.persistentDataPath + "/saveTestTindakan.json";
         }
@@ -388,13 +403,14 @@ public class TestScript : MonoBehaviour
             if (listJawaban[i] == "0")
             {
                 no[i].GetComponent<Toggle>().isOn = true;
-            }else if (listJawaban[i] == "1")
+            }
+            else if (listJawaban[i] == "1")
             {
                 yes[i].GetComponent<Toggle>().isOn = true;
             }
         }
     }
-    
+
     #region Foto
     private void OpenGallery(int i)
     {
@@ -418,38 +434,63 @@ public class TestScript : MonoBehaviour
 
     public void ImagePicked(Texture2D _tex, int i, string _path = "")
     {
-        string stringFoto;
-        string pathFoto;
         print($"Creating image from {_path}");
-        stringFoto = _path;
-        listpathFoto[i] = stringFoto;
-        pathFoto = Helper.TextureToBase64(_tex);
-        liststringFoto[i] = pathFoto;
+        listpathFoto[i] = _path;
+        liststringFoto[i] = Helper.TextureToBase64(_tex);
         var a = i;
         CreateSprite(_tex, a);
     }
     private void CreateSprite(Texture2D _tex, int i)
     {
         //create sprite
-        // txtButtonFoto.text = "Lihat Foto";
-        Sprite spriteFoto = Helper.TextureToSprite(_tex);
-        sprData[i] = spriteFoto;
+        if (_tex != null)
+        {
+            foto[i].GetComponent<Button>().image.color = Color.red;
+            Sprite spriteFoto = Helper.TextureToSprite(_tex);
+            sprData[i] = spriteFoto;
+        }
     }
 
-    // public void LoadData()
-    // {
-    //     for (int i = 0; i < foto.Length; i++)
-    //     {
-    //         liststringFoto[i] = .stringFoto;
-    //         listpathFoto[i] = RespondenData.Instance.dataDebris.debris.listDebris[i].pathFoto;
+    public void SaveFoto()
+    {
+        if (isTindakan)
+        {
+            Data.Instance.dataFoto.foto.StringFoto = liststringFoto.ToArray();
+            Data.Instance.dataFoto.foto.PathFoto = listpathFoto.ToArray();
+            string json = JsonConvert.SerializeObject(Data.Instance.dataFoto.foto);
+            Data.Instance.SaveData("FotoTindakan", json);
+        }
+    }
 
-    //         //create sprite
-    //         Texture2D tex = Helper.Base64ToTexture(listDataGigiDebris[i].stringFoto);
-    //         listDataGigiDebris[i].ImagePicked(tex);
-    //     }
-    //     btnSimpan.gameObject.SetActive(false);
+    public void LoadFoto()
+    {
+        string filePath = "";
+        if (isTindakan)
+        {
+            filePath = Application.persistentDataPath + "/saveFotoTindakan.json";
+        }
+        string json = File.ReadAllText(filePath);
+        Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.FotoTindakan>(json);
+        liststringFoto = Data.Instance.dataFoto.foto.StringFoto.ToList();
+        listpathFoto = Data.Instance.dataFoto.foto.PathFoto.ToList();
+
+        for (int i = 0; i < liststringFoto.Count; i++)
+        {
+            //create sprite
+            Texture2D tex = Helper.Base64ToTexture(liststringFoto[i]);
+            ImagePicked(tex, i, listpathFoto[i]);
+        }
 
 
-    // }
+        // for (int i = 0; i < foto.Length; i++)
+        // {
+        //     liststringFoto[i] = .stringFoto;
+        //     listpathFoto[i] = RespondenData.Instance.dataDebris.debris.listDebris[i].pathFoto;
+
+
+
+        // }
+        // btnSimpan.gameObject.SetActive(false);
+    }
     #endregion
 }
