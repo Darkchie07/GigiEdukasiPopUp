@@ -126,7 +126,7 @@ public class Games : MonoBehaviour
     }
     #endregion
 
-    #region Highlight Jawaban Ketika Ganti Soal
+    #region Highlight Jawaban Ketika Ganti Soal dan Load Save
     public void HighlightJawaban()
     {
         for (int i = 0; i < buttonList.Count; i++)
@@ -134,17 +134,20 @@ public class Games : MonoBehaviour
             var buttonClick = buttonList[i];
             var colorsHighlight = buttonClick.GetComponent<Button>().colors;
 
-            if (listJawaban[idxSoal] == buttonList[i].gameObject.tag)
+            if (listJawaban[idxSoal] == buttonList[i].gameObject.tag && listJawaban[idxSoal] == listJawabanBenar[idxSoal])
             {
                 colorsHighlight.normalColor = Color.green;
                 buttonClick.GetComponent<Button>().colors = colorsHighlight;
             }
-
-            if (buttonList[i].gameObject.tag != listJawaban[idxSoal])
+            else
             {
                 colorsHighlight.normalColor = Color.white;
                 buttonClick.GetComponent<Button>().colors = colorsHighlight;
             }
+
+            // if (buttonList[i].gameObject.tag != listJawaban[idxSoal])
+            // {
+            // }
         }
     }
     #endregion
@@ -157,17 +160,22 @@ public class Games : MonoBehaviour
             var buttonClick = buttonList[i];
             var colorsHighlight = buttonClick.GetComponent<Button>().colors;
 
-            if (listJawaban[idxSoal] == buttonList[i].gameObject.tag)
+            if (listJawaban[idxSoal] == buttonList[i].gameObject.tag && listJawaban[idxSoal] == listJawabanBenar[idxSoal])
             {
                 colorsHighlight.normalColor = Color.green;
                 buttonClick.GetComponent<Button>().colors = colorsHighlight;
             }
-
-            if (buttonList[i].gameObject.tag != listJawaban[idxSoal])
+            else
             {
                 colorsHighlight.normalColor = Color.white;
                 buttonClick.GetComponent<Button>().colors = colorsHighlight;
             }
+
+            // if (buttonList[i].gameObject.tag != listJawaban[idxSoal])
+            // {
+            //     colorsHighlight.normalColor = Color.white;
+            //     buttonClick.GetComponent<Button>().colors = colorsHighlight;
+            // }
         }
     }
     #endregion
@@ -224,6 +232,21 @@ public class Games : MonoBehaviour
     }
     #endregion
 
+    public void GoWhite()
+    {
+        for (int i = 0; i < buttonList.Count; i++)
+        {
+            var buttonClick = buttonList[i];
+            var colorsHighlight = buttonClick.GetComponent<Button>().colors;
+
+            if (buttonList[i].colors.normalColor.Equals(Color.green))
+            {
+                colorsHighlight.normalColor = Color.white;
+                buttonList[i].GetComponent<Button>().colors = colorsHighlight;
+            }
+        }
+    }
+
     #region Check Jawaban setelah semua soal
     public void CheckJawaban(string buttonValue)
     {
@@ -249,6 +272,8 @@ public class Games : MonoBehaviour
 
     private void ButtonHighLight(Button buttonClick)
     {
+        GoWhite();
+
         var colorsHighlight = buttonClick.GetComponent<Button>().colors;
 
         colorsHighlight.selectedColor = Color.green;
