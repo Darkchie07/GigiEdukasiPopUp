@@ -40,6 +40,9 @@ public class Games : MonoBehaviour
     [Header("Save Load")]
     private int SaveListCount;
 
+    [Header("Particle")]
+    ParticleSystem bubble;
+
     void Start()
     {
         LoadList();
@@ -56,6 +59,7 @@ public class Games : MonoBehaviour
     {
         isCorrect = false;
         txtSoal.text = listGambarSoal[idx].soal;
+        bubble = listGambarSikat[idx].transform.GetChild(0).GetComponent<ParticleSystem>();
         listGambarSoal[idx].gambarSoal.SetActive(true);
     }
 
@@ -201,6 +205,8 @@ public class Games : MonoBehaviour
 
                 if (isClicked)
                 {
+                    bubble.Play();
+
                     if (buttonClick.name == "MencungkilAtas")
                     {
                         buttonValue = "A";
