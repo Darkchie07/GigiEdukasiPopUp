@@ -293,8 +293,9 @@ public class TestScript : MonoBehaviour
         else if (isKontrol)
         {
             Debris.Instance.jawabanKontrol = listJawaban;
-            Debris.Instance.jawabanKontrol.Add(listSkorDebris[6].ToString());
+            Debris.Instance.skorKontrol = listSkorDebris;
         }
+
     }
     #endregion
 
@@ -433,7 +434,7 @@ public class TestScript : MonoBehaviour
         }
         else if (isKontrol)
         {
-            filePath = Application.persistentDataPath + "/saveTestKontrol.json";
+            filePath = Application.persistentDataPath + "/saveDebris.json";
         }
         string json = File.ReadAllText(filePath);
         List<string> jsonArray = JsonConvert.DeserializeObject<List<string>>(json);

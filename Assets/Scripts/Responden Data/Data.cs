@@ -84,7 +84,7 @@ public class Data : MonoBehaviour
 		}
 		else if (data == "Kontrol")
 		{
-			string _path = Application.persistentDataPath + "/saveTestKontrol.json";
+			string _path = Application.persistentDataPath + "/saveDebris.json";
 			File.WriteAllText(_path, json);
 		}
 		else if (data == "FotoKontrol")
@@ -137,7 +137,7 @@ public class Data : MonoBehaviour
 		}
 		else if (data == "Kontrol")
 		{
-			string _path = Application.persistentDataPath + "/saveTestKontrol.json";
+			string _path = Application.persistentDataPath + "/saveDebris.json";
 			if (File.Exists(_path))
 			{
 				return true;

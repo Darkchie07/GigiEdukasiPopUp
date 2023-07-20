@@ -8,6 +8,7 @@ public class Debris : MonoBehaviour
 {
     public static Debris Instance { get; set; }
     public List<string> jawabanKontrol;
+    public List<int> skorKontrol;
     void Awake()
     {
         if (Instance)
@@ -28,12 +29,18 @@ public class Debris : MonoBehaviour
         string _grahamKiriBawah = (jawabanKontrol[3] == "1") ? "Ada" : "Tidak ada";
         string _depanBawah = (jawabanKontrol[4] == "1") ? "Ada" : "Tidak ada";
         string _grahamKananBawah = (jawabanKontrol[5] == "1") ? "Ada" : "Tidak ada";
-        string _skor = jawabanKontrol[6];
+        string _skorgrahamKananAtas = skorKontrol[0].ToString();
+        string _skordepanAtas = skorKontrol[1].ToString();
+        string _skorgrahamKiriAtas = skorKontrol[2].ToString();
+        string _skorgrahamKananBawah = skorKontrol[3].ToString();
+        string _skordepanBawah = skorKontrol[4].ToString();
+        string _skorgrahamKiriBawah = skorKontrol[5].ToString();
+        string _skor = skorKontrol[6].ToString();
 
         //API FORM
         StartCoroutine(Helper.CoroutineUploadFormGigiResponden(
-        _grahamKananAtas, _depanAtas, _grahamKiriAtas, _grahamKiriBawah, _depanBawah, _grahamKananBawah, _skor
-        , SuccessUploadFormRespondenDebris, ErrorUploadFileResponden
+        _grahamKananAtas, _depanAtas, _grahamKiriAtas, _grahamKiriBawah, _depanBawah, _grahamKananBawah, _skorgrahamKananAtas, _skordepanAtas, _skorgrahamKiriAtas,
+        _skorgrahamKananBawah, _skordepanBawah, _skorgrahamKiriBawah, _skor, SuccessUploadFormRespondenDebris, ErrorUploadFileResponden
        ));
     }
 

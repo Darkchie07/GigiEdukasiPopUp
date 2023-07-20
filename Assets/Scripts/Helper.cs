@@ -126,7 +126,7 @@ public static class Helper
 
 	#region METHOD TO UPLOAD FORM RESPONDEN DATA
 	private static string UrlFormRespondenData = "https://docs.google.com/forms/d/e/1FAIpQLSc_Hfnf6n4BCZvrl_UhE_qf3XGIGTnIsWo7yLMVJbXlqCZYtg/formResponse";
-	private static string UrlFormRespondenDataDebris = "";
+	private static string UrlFormRespondenDataDebris = "https://docs.google.com/forms/d/e/1FAIpQLSdwEdTuCAw0QkdWN1REdNxVW6Mi9F6RZ6GCleX25aCe5fVhWw/formResponse";
 	private static string UrlFormRespondenDataPreTest = "https://docs.google.com/forms/d/e/1FAIpQLScC3sjO61fwPuDZlnV2pZfHzDoAqKjuCt1rVRxfgFYJRajp8w/formResponse";
 	public static IEnumerator CoroutineUploadFormRespondenData(string _nama, string _umur, string _jnsKelamin, Action _success, Action _error)
 	{
@@ -154,19 +154,26 @@ public static class Helper
 
 	}
 
-	public static IEnumerator CoroutineUploadFormGigiResponden(string _grahamKananAtas, string _depanAtas, string _grahamKiriAtas, string _grahamKiriBawah, string _depanBawah, string _grahamKananBawah, string _skor, Action _success, Action _error)
+	public static IEnumerator CoroutineUploadFormGigiResponden(string _grahamKananAtas, string _depanAtas, string _grahamKiriAtas, string _grahamKiriBawah, string _depanBawah, string _grahamKananBawah,
+		string _skorgrahamKananAtas, string _skordepanAtas, string _skorgrahamKiriAtas, string _skorgrahamKiriBawah, string _skordepanBawah, string _skorgrahamKananBawah, string _skorTotal, Action _success, Action _error)
 	{
 		WWWForm form = new WWWForm();
-		form.AddField("entry.477203861", RespondenData.Instance.currentDataSelected.nama);
-		form.AddField("entry.878239228", RespondenData.Instance.currentDataSelected.umur);
-		form.AddField("entry.275371160", (RespondenData.Instance.currentDataSelected.jenisKelamin == "0") ? "Laki-Laki" : "Perempuan");
-		form.AddField("entry.1655155096", _grahamKananAtas);
-		form.AddField("entry.1777940349", _depanAtas);
-		form.AddField("entry.1459528608", _grahamKiriAtas);
-		form.AddField("entry.812763402", _grahamKiriBawah);
-		form.AddField("entry.924637615", _depanBawah);
-		form.AddField("entry.1743842660", _grahamKananBawah);
-		form.AddField("entry.1743842660", _skor);
+		form.AddField("entry.1088436913", RespondenData.Instance.currentDataSelected.nama);
+		form.AddField("entry.983827928", RespondenData.Instance.currentDataSelected.umur);
+		form.AddField("entry.2108389131", (RespondenData.Instance.currentDataSelected.jenisKelamin == "0") ? "Laki-Laki" : "Perempuan");
+		form.AddField("entry.1402146777", _grahamKananAtas);
+		form.AddField("entry.1578178223", _depanAtas);
+		form.AddField("entry.1196549055", _grahamKiriAtas);
+		form.AddField("entry.1454885654", _grahamKiriBawah);
+		form.AddField("entry.2075621295", _depanBawah);
+		form.AddField("entry.1238623945", _grahamKananBawah);
+		form.AddField("entry.50668979", _skorgrahamKananAtas);
+		form.AddField("entry.1828658984", _skordepanAtas);
+		form.AddField("entry.1073350272", _skorgrahamKiriAtas);
+		form.AddField("entry.1234534435", _skorgrahamKiriBawah);
+		form.AddField("entry.1789352277", _skordepanBawah);
+		form.AddField("entry.1913966691", _skorgrahamKananBawah);
+		form.AddField("entry.780479308", _skorTotal);
 
 		UnityWebRequest www = UnityWebRequest.Post(UrlFormRespondenDataDebris, form);
 

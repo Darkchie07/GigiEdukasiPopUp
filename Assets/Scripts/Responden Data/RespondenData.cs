@@ -307,7 +307,7 @@ public class RespondenData : MonoBehaviour
         }
 
         //load debris
-        string _debrisPath = Application.persistentDataPath + "/saveDebris.json";
+        string _debrisPath = Application.persistentDataPath + "/saveBomba.json";
         if (File.Exists(_debrisPath))
         {
             string _data = File.ReadAllText(_debrisPath);
