@@ -49,12 +49,11 @@ public class TestScript : MonoBehaviour
     private bool isPengetahuan;
     private bool isSikap;
     private bool isTindakan;
+    private bool isKontrol;
 
     [Header("Kontrol")]
     public List<Sprite> image = new List<Sprite>();
     public GameObject totalText;
-    public int nilai;
-    public List<int> listnilai = new List<int>();
 
     [Header("Tindakan")]
     public GameObject subField;
@@ -118,6 +117,17 @@ public class TestScript : MonoBehaviour
                 LoadFoto();
             }
         }
+        else if (isKontrol)
+        {
+            if (Data.Instance.HasFile("Kontrol"))
+            {
+                LoadJawaban();
+            }
+            if (Data.Instance.HasFile("FotoKontrol"))
+            {
+                LoadFoto();
+            }
+        }
         Debug.Log(Data.Instance.HasFile("Sikap"));
     }
 
@@ -142,7 +152,7 @@ public class TestScript : MonoBehaviour
         else if (GameObject.FindGameObjectWithTag("Kontrol") != null)
         {
             content = GameObject.FindGameObjectWithTag("Kontrol").gameObject;
-            isTindakan = true;
+            isKontrol = true;
         }
     }
 
@@ -159,8 +169,13 @@ public class TestScript : MonoBehaviour
                     SaveFoto();
                     Jawaban.Instance.UploadDataToDrive();
                 }
-                SceneManager.LoadScene(next);
-
+                if (!isKontrol)
+                    SceneManager.LoadScene(next);
+                else
+                {
+                    SaveFoto();
+                    Debris.Instance.UploadDebrisToDrive();
+                }
             }
             else
                 Debug.Log("Masih ada yg kurang " + Answered.ToString());
@@ -221,6 +236,7 @@ public class TestScript : MonoBehaviour
             if (drop[i].GetComponent<TMP_Dropdown>().value != 0)
             {
                 int valtemp = drop[i].GetComponent<TMP_Dropdown>().value - 1;
+                listSkorDebris[i] = valtemp;
                 temp += valtemp;
             }
             else
@@ -230,7 +246,9 @@ public class TestScript : MonoBehaviour
             }
         }
         skor = temp;
+        listSkorDebris[6] = skor;
         totalText.GetComponent<TMP_Text>().text = skor.ToString();
+        SaveSkor();
     }
 
     #region Set Soal Awal
@@ -271,6 +289,11 @@ public class TestScript : MonoBehaviour
         else if (isTindakan)
         {
             Jawaban.Instance.jawabanTindakan = listJawaban;
+        }
+        else if (isKontrol)
+        {
+            Debris.Instance.jawabanKontrol = listJawaban;
+            Debris.Instance.jawabanKontrol.Add(listSkorDebris[6].ToString());
         }
     }
     #endregion
@@ -361,6 +384,11 @@ public class TestScript : MonoBehaviour
             string json = JsonConvert.SerializeObject(listJawaban.ToArray());
             Data.Instance.SaveData("Tindakan", json);
         }
+        else if (isKontrol)
+        {
+            string json = JsonConvert.SerializeObject(listJawaban.ToArray());
+            Data.Instance.SaveData("Kontrol", json);
+        }
         // Jaga jaga
         // d.Sikap = new string[listJawaban.Count]; // Instantiate the Sikap array
         // for (int i = 0; i < listJawaban.Count; i++)
@@ -403,6 +431,10 @@ public class TestScript : MonoBehaviour
         {
             filePath = Application.persistentDataPath + "/saveTestTindakan.json";
         }
+        else if (isKontrol)
+        {
+            filePath = Application.persistentDataPath + "/saveTestKontrol.json";
+        }
         string json = File.ReadAllText(filePath);
         List<string> jsonArray = JsonConvert.DeserializeObject<List<string>>(json);
         listJawaban = jsonArray;
@@ -416,6 +448,15 @@ public class TestScript : MonoBehaviour
             {
                 yes[i].GetComponent<Toggle>().isOn = true;
             }
+        }
+    }
+
+    public void SaveSkor()
+    {
+        if (isKontrol)
+        {
+            string json = JsonConvert.SerializeObject(listSkorDebris.ToArray());
+            Data.Instance.SaveData("SkorKontrol", json);
         }
     }
 
@@ -468,6 +509,13 @@ public class TestScript : MonoBehaviour
             string json = JsonConvert.SerializeObject(Data.Instance.dataFoto.foto);
             Data.Instance.SaveData("FotoTindakan", json);
         }
+        else if (isKontrol)
+        {
+            Data.Instance.dataFoto.foto.StringFoto = liststringFoto.ToArray();
+            Data.Instance.dataFoto.foto.PathFoto = ListpathFoto.ToArray();
+            string json = JsonConvert.SerializeObject(Data.Instance.dataFoto.foto);
+            Data.Instance.SaveData("FotoKontrol", json);
+        }
     }
 
     public void LoadFoto()
@@ -476,9 +524,16 @@ public class TestScript : MonoBehaviour
         if (isTindakan)
         {
             filePath = Application.persistentDataPath + "/saveFotoTindakan.json";
+            string json = File.ReadAllText(filePath);
+            Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.FotoTindakan>(json);
         }
-        string json = File.ReadAllText(filePath);
-        Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.FotoTindakan>(json);
+        else if (isKontrol)
+        {
+            filePath = Application.persistentDataPath + "/saveFotoKontrol.json";
+            string json = File.ReadAllText(filePath);
+            Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.FotoTindakan>(json);
+        }
+
         liststringFoto = Data.Instance.dataFoto.foto.StringFoto.ToList();
         ListpathFoto = Data.Instance.dataFoto.foto.PathFoto.ToList();
 
