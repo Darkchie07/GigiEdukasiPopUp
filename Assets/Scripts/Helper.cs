@@ -281,10 +281,12 @@ public static class Helper
     public static string ParentFolderImageHarianRespondenPagi = "1mMx3_IAlHblyWlAPseA4gn3fPlZPlrBg";
     public static string ParentFolderImageHarianRespondenMalam = "147yGkGVmdYkMvqplHPBN6huA8tJjNeMA";
     public static string ParentFolderImageFormGigiResponden = "1In_jbAcsnA1wl5feAz474eh_g24OdphE";
+    public static string ParentFolderImageFormTindakanGigiResponden = "1r5Gd3Go48Y0FUVsn0U7jPJJFNarynyLs";
     public enum ImageUploadType
     {
         ImageHarian,
-        ImageJenisGigi
+        ImageDebrisGigi,
+        ImageTindakan
     }
 
     public static void SetTokenDrive()
@@ -349,6 +351,29 @@ public static class Helper
                 _onDoneAction.Invoke(File);
             else
                 UploadFotoDebris(_onDoneAction, indx);
+        };
+    }
+    
+    public static void UploadImageTindakanResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, int indx)
+    {
+        Debug.Log(TestScript.Instance.ListpathFoto.Count);
+        var content = File.ReadAllBytes(TestScript.Instance.ListpathFoto[indx]);
+        if (content == null) return;
+        string _fileName = $"{RespondenData.Instance.currentDataSelected.nama}" + "Tindakan" + indx;
+        var file = new UnityGoogleDrive.Data.File() { Name = _fileName, Content = content };
+
+        file.Parents = new List<string> { ParentFolderImageFormTindakanGigiResponden };
+
+        GoogleDriveFiles.CreateRequest request;
+        request = GoogleDriveFiles.Create(file);
+        request.Fields = new List<string> { "id", "name", "size", "createdTime" };
+        request.Send().OnDone += (File) =>
+        {
+            if (request.IsError)
+            {
+                Debug.Log(request.Error);
+            }
+            _onDoneAction(File);
         };
     }
 

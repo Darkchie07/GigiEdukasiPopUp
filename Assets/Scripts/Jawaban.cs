@@ -90,8 +90,12 @@ public class Jawaban : MonoBehaviour
 
     void SuccessUploadFormRespondenData()
     {
-        // CloseLoading();
-        SceneManager.LoadScene("Home");
+        Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, 0);
+    }
+    
+    private void _onDoneAction()
+    {
+        Debug.Log("Selesai");
     }
     
     void ErrorUploadFileResponden()

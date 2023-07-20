@@ -61,9 +61,16 @@ public class TestScript : MonoBehaviour
 
     [Header("Foto")]
     public List<string> liststringFoto = new List<string>();
-    public List<string> listpathFoto = new List<string>();
+    private List<string> listpathFoto = new List<string>();
     public GameObject PanelImage;
     public List<Sprite> sprData = new List<Sprite>();
+
+    public List<string> ListpathFoto
+    {
+        get => listpathFoto;
+        set => listpathFoto = value;
+    }
+
 
     void Awake()
     {
@@ -151,8 +158,10 @@ public class TestScript : MonoBehaviour
                 {
                     SaveFoto();
                     Jawaban.Instance.UploadDataToDrive();
+                }else if (isSikap)
+                {
+                    SceneManager.LoadScene(next);
                 }
-                SceneManager.LoadScene(next);
             }
             else
                 Debug.Log("Masih ada yg kurang " + Answered.ToString());
@@ -435,7 +444,7 @@ public class TestScript : MonoBehaviour
     public void ImagePicked(Texture2D _tex, int i, string _path = "")
     {
         print($"Creating image from {_path}");
-        listpathFoto[i] = _path;
+        ListpathFoto[i] = _path;
         liststringFoto[i] = Helper.TextureToBase64(_tex);
         var a = i;
         CreateSprite(_tex, a);
@@ -456,7 +465,7 @@ public class TestScript : MonoBehaviour
         if (isTindakan)
         {
             Data.Instance.dataFoto.foto.StringFoto = liststringFoto.ToArray();
-            Data.Instance.dataFoto.foto.PathFoto = listpathFoto.ToArray();
+            Data.Instance.dataFoto.foto.PathFoto = ListpathFoto.ToArray();
             string json = JsonConvert.SerializeObject(Data.Instance.dataFoto.foto);
             Data.Instance.SaveData("FotoTindakan", json);
         }
@@ -472,13 +481,13 @@ public class TestScript : MonoBehaviour
         string json = File.ReadAllText(filePath);
         Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.FotoTindakan>(json);
         liststringFoto = Data.Instance.dataFoto.foto.StringFoto.ToList();
-        listpathFoto = Data.Instance.dataFoto.foto.PathFoto.ToList();
+        ListpathFoto = Data.Instance.dataFoto.foto.PathFoto.ToList();
 
         for (int i = 0; i < liststringFoto.Count; i++)
         {
             //create sprite
             Texture2D tex = Helper.Base64ToTexture(liststringFoto[i]);
-            ImagePicked(tex, i, listpathFoto[i]);
+            ImagePicked(tex, i, ListpathFoto[i]);
         }
 
 
