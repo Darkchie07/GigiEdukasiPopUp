@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Jawaban : MonoBehaviour
 {
-    public static Jawaban Instance { get; private set; }
+    public static Jawaban Instance { get; set; }
     public List<string> jawabanPengetahuan;
     public List<string> jawabanSikap;
     public List<string> jawabanTindakan;
-    
+
     void Awake()
     {
         if (Instance)
@@ -26,7 +26,7 @@ public class Jawaban : MonoBehaviour
 
     public void UploadDataToDrive()
     {
-        //API FORM
+        //API FORM 
         string _pengetahuan1 = jawabanPengetahuan[0];
         string _pengetahuan2 = jawabanPengetahuan[1];
         string _pengetahuan3 = jawabanPengetahuan[2];
@@ -90,14 +90,17 @@ public class Jawaban : MonoBehaviour
 
     void SuccessUploadFormRespondenData()
     {
-        Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, 0);
+        for (int i = 0; i < TestScript.Instance.ListpathFoto.Count; i++)
+        {
+            Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, i);
+        }
     }
-    
+
     private void _onDoneAction()
     {
         Debug.Log("Selesai");
     }
-    
+
     void ErrorUploadFileResponden()
     {
         // CloseLoading();

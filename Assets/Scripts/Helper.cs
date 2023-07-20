@@ -276,8 +276,8 @@ public static class Helper
     public static string UserAccount = "fatikhamaulidiah@gmail.com";
     public static string Client_id = "59673991759-2rr5pslqilh0vdv35qts6ur89q3kh1gt.apps.googleusercontent.com";
     public static string Client_secret = "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";
-    public static string CachedAccessToken = "ya29.a0AbVbY6NfRLNz2xvCzqDsOBekBP-3Ca969m0mKWkTD9g2u8y20Kaer0kU7GApt8QTksiOzPM0U5JQNDjupURZTfBx8W4DaoFOsbW5L1XXUC4L_9zcswT5Tpa-nBQjdsbD46lobyqQpzYrhYW3Nx6WO5AwG-JKaCgYKAYgSARASFQFWKvPl7pDAR2LivkLp_FTYv7rx-A0163";
-    public static string CachedRefreshToken = "1//0grYz56SccvFlCgYIARAAGBASNwF-L9IrSqcLIxViKSmqpAbpJk4OY43SvH6Pa7yYoSIYvGjudhBoIFXKMGJ_TGMn88ApeY0qd54";
+    public static string CachedAccessToken = "ya29.a0AbVbY6OvA2tW1oUwSW-bS9DhZGUflYHOCSsklM0nWcqYdy3_yuSfHlMhb3HtFvaakstc-NlW1D9qBbZJ6g6eshQ6x3SFIzpIXqyQlmA8JZfQPUsU8G8lWXF4lX3LzN7hOSQ719UZTUKYfWybuqfRvzZm6TWuaCgYKAX4SARASFQFWKvPl0lWqKFf79ywAFVQ-qo574w0163";
+    public static string CachedRefreshToken = "1//0gbHtJgRUJi6uCgYIARAAGBASNwF-L9Ir276lZUaDLG8k1Y8MGEd6dYY1s1WPHE8OEI2Yh_8kEuA7qbfZj9G9NL2-rS3r2GKLK3g";
     public static string ParentFolderImageHarianRespondenPagi = "1mMx3_IAlHblyWlAPseA4gn3fPlZPlrBg";
     public static string ParentFolderImageHarianRespondenMalam = "147yGkGVmdYkMvqplHPBN6huA8tJjNeMA";
     public static string ParentFolderImageFormGigiResponden = "1In_jbAcsnA1wl5feAz474eh_g24OdphE";
@@ -353,13 +353,13 @@ public static class Helper
                 UploadFotoDebris(_onDoneAction, indx);
         };
     }
-    
+
     public static void UploadImageTindakanResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, int indx)
     {
-        Debug.Log(TestScript.Instance.ListpathFoto.Count);
         var content = File.ReadAllBytes(TestScript.Instance.ListpathFoto[indx]);
+        Debug.Log(TestScript.Instance.ListpathFoto.Count);
         if (content == null) return;
-        string _fileName = $"{RespondenData.Instance.currentDataSelected.nama}" + "Tindakan" + indx;
+        string _fileName = $"{RespondenData.Instance.currentDataSelected.nama} - " + "Tindakan - " + indx;
         var file = new UnityGoogleDrive.Data.File() { Name = _fileName, Content = content };
 
         file.Parents = new List<string> { ParentFolderImageFormTindakanGigiResponden };

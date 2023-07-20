@@ -3689,6 +3689,8 @@ MonoBehaviour:
   - soal: Kumur dengan air bersih sebanyak 1 kali
   - soal: Membersihkan sikat gigi
   - soal: Meletakkan kepala sikat gigi di atas/berdiri
+  yes: []
+  no: []
   foto: []
   NextButton: {fileID: 1940868842}
   PrevButton: {fileID: 1631628564}

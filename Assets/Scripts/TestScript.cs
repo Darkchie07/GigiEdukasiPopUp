@@ -158,10 +158,9 @@ public class TestScript : MonoBehaviour
                 {
                     SaveFoto();
                     Jawaban.Instance.UploadDataToDrive();
-                }else if (isSikap)
-                {
-                    SceneManager.LoadScene(next);
                 }
+                SceneManager.LoadScene(next);
+
             }
             else
                 Debug.Log("Masih ada yg kurang " + Answered.ToString());
