@@ -60,15 +60,9 @@ public class TestScript : MonoBehaviour
 
     [Header("Foto")]
     public List<string> liststringFoto = new List<string>();
-    private List<string> listpathFoto = new List<string>();
+    public List<string> listpathFoto = new List<string>();
     public GameObject PanelImage;
     public List<Sprite> sprData = new List<Sprite>();
-
-    public List<string> ListpathFoto
-    {
-        get => listpathFoto;
-        set => listpathFoto = value;
-    }
 
 
     void Awake()
@@ -160,42 +154,45 @@ public class TestScript : MonoBehaviour
     {
         NextButton.onClick.AddListener(() =>
         {
+            if (isTindakan || isKontrol)
+            {
+                SaveFoto();
+            }
             if (isDone())
             {
                 FillJawaban();
                 SaveTest();
                 if (isTindakan)
                 {
-                    SaveFoto();
                     Jawaban.Instance.UploadDataToDrive();
                 }
                 if (!isKontrol)
                     SceneManager.LoadScene(next);
                 else
                 {
-                    SaveFoto();
                     Debris.Instance.UploadDebrisToDrive();
                 }
             }
             else
                 Debug.Log("Masih ada yg kurang " + Answered.ToString());
+
         });
         PrevButton.onClick.AddListener(() =>
         {
+            if (isTindakan || isKontrol)
+            {
+                SaveFoto();
+            }
             if (isDone())
             {
                 FillJawaban();
                 SaveTest();
-                if (isTindakan)
-                {
-                    SaveFoto();
-                }
                 SceneManager.LoadScene(prev);
             }
             else
                 Debug.Log("Masih ada yg kurang " + Answered.ToString());
         });
-        if (content.CompareTag("Tindakan"))
+        if (isTindakan)
         {
             for (int i = 0; i < foto.Length; i++)
             {
@@ -207,11 +204,20 @@ public class TestScript : MonoBehaviour
             }
         }
 
-        if (content.CompareTag("Kontrol"))
+        if (isKontrol)
         {
             for (int i = 0; i < drop.Length; i++)
             {
                 drop[i].GetComponent<TMP_Dropdown>().onValueChanged.AddListener(delegate { changeSkor(); });
+            }
+            for (int i = 0; i < foto.Length; i++)
+            {
+                var a = i;
+                foto[i].GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    takePic(a);
+                });
+
             }
         }
     }
@@ -220,6 +226,8 @@ public class TestScript : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(liststringFoto[i]))
         {
+            Texture2D tex = Helper.Base64ToTexture(liststringFoto[i]);
+            ImagePicked(tex, i, listpathFoto[i]);
             PanelImage.SetActive(true);
             PanelImage.transform.GetChild(1).GetComponent<Image>().sprite = sprData[i];
             // PemeliharaanSikatGigiManager.Instance.OrientationToAuto();
@@ -485,7 +493,7 @@ public class TestScript : MonoBehaviour
     public void ImagePicked(Texture2D _tex, int i, string _path = "")
     {
         print($"Creating image from {_path}");
-        ListpathFoto[i] = _path;
+        listpathFoto[i] = _path;
         liststringFoto[i] = Helper.TextureToBase64(_tex);
         var a = i;
         CreateSprite(_tex, a);
@@ -506,14 +514,14 @@ public class TestScript : MonoBehaviour
         if (isTindakan)
         {
             Data.Instance.dataFoto.foto.StringFoto = liststringFoto.ToArray();
-            Data.Instance.dataFoto.foto.PathFoto = ListpathFoto.ToArray();
+            Data.Instance.dataFoto.foto.PathFoto = listpathFoto.ToArray();
             string json = JsonConvert.SerializeObject(Data.Instance.dataFoto.foto);
             Data.Instance.SaveData("FotoTindakan", json);
         }
         else if (isKontrol)
         {
             Data.Instance.dataFoto.foto.StringFoto = liststringFoto.ToArray();
-            Data.Instance.dataFoto.foto.PathFoto = ListpathFoto.ToArray();
+            Data.Instance.dataFoto.foto.PathFoto = listpathFoto.ToArray();
             string json = JsonConvert.SerializeObject(Data.Instance.dataFoto.foto);
             Data.Instance.SaveData("FotoKontrol", json);
         }
@@ -536,16 +544,15 @@ public class TestScript : MonoBehaviour
         }
 
         liststringFoto = Data.Instance.dataFoto.foto.StringFoto.ToList();
-        ListpathFoto = Data.Instance.dataFoto.foto.PathFoto.ToList();
+        listpathFoto = Data.Instance.dataFoto.foto.PathFoto.ToList();
 
-        for (int i = 0; i < liststringFoto.Count; i++)
+        for (int i = 0; i < foto.Length; i++)
         {
-            //create sprite
-            Texture2D tex = Helper.Base64ToTexture(liststringFoto[i]);
-            ImagePicked(tex, i, ListpathFoto[i]);
+            if (!string.IsNullOrEmpty(liststringFoto[i]))
+                foto[i].GetComponent<Button>().image.color = Color.red;
+            else
+                return;
         }
-
-
         // for (int i = 0; i < foto.Length; i++)
         // {
         //     liststringFoto[i] = .stringFoto;
