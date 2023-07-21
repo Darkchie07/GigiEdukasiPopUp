@@ -115,12 +115,12 @@ public class PageFotoScript : MonoBehaviour
         string _fileName = "";
         string _time = (statusTime == StatusFotoGigi.PAGI) ? "Pagi" : "Malam";
         bool _pagi = (statusTime == StatusFotoGigi.PAGI) ? true : false;
-        // _fileName = $"{Helper.NamaDanSekolah()}-{_time}-{RespondenData.Instance.dataGambarGigi.listImageGigiPagi.Count + 1}";
+        _fileName = $"{Helper.NamaDanSekolah()}-{_time}-{RespondenData.Instance.dataGambarGigi.listImageGigiPagi.Count + 1}";
 
         Helper.UploadImageHarianResponden((file) =>
         {
             CreateImage(_tex, true);
-        }, () => {  }, _path, _fileName, _pagi);
+        }, () => { Debug.Log("Error"); }, _path, _fileName, _pagi);
         //StartCoroutine(UploadImageHarianResponden(
         //    () =>
         //    {

@@ -390,4 +390,9 @@ public static class Helper
 	#region VIDEO INDEX
 	static public int videoMateriIndx;
 	#endregion
+
+	public static string NamaDanSekolah()
+	{
+		return $"{RespondenData.Instance.currentDataSelected.nama}-{RespondenData.Instance.currentDataSelected.umur}";
+	}
 }

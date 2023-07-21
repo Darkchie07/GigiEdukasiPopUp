@@ -69,14 +69,14 @@ public class RespondenData : MonoBehaviour
     {
         public List<string> listImageGigiPagi = new List<string>();
         public List<string> listImageGigiMalam = new List<string>();
-        // public void SaveGambar(string _strImage, PageFotoScript.StatusFotoGigi _status)
-        // {
-        //     if (_status == PageFotoScript.StatusFotoGigi.PAGI)
-        //         listImageGigiPagi.Add(_strImage);
-        //     else
-        //         listImageGigiMalam.Add(_strImage);
-        //     Instance.SaveGambarGigi();
-        // }
+        public void SaveGambar(string _strImage, PageFotoScript.StatusFotoGigi _status)
+        {
+            if (_status == PageFotoScript.StatusFotoGigi.PAGI)
+                listImageGigiPagi.Add(_strImage);
+            else
+                listImageGigiMalam.Add(_strImage);
+            Instance.SaveGambarGigi();
+        }
     }
     #endregion
 
