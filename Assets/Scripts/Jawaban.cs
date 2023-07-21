@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class Jawaban : MonoBehaviour
 	public List<string> jawabanPengetahuan;
 	public List<string> jawabanSikap;
 	public List<string> jawabanTindakan;
+	public List<string> listFotoTindakan = new List<string>();
 
 	void Awake()
 	{
@@ -90,8 +92,11 @@ public class Jawaban : MonoBehaviour
 	
 	void SuccessUploadFormRespondenTest()
 	{
-		for (int i = 0; i < TestScript.Instance.listpathFoto.Count; i++)
+		listFotoTindakan = Data.Instance.dataFoto.foto.PathFoto.ToList();
+		Debug.Log(listFotoTindakan.Count);
+		for (int i = 0; i < listFotoTindakan.Count; i++)
 		{
+			Debug.Log("foto" + i);
 			Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, i);
 		}
 	}

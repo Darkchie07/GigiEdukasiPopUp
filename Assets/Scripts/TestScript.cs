@@ -12,7 +12,7 @@ using UnityEngine.Networking;
 
 public class TestScript : MonoBehaviour
 {
-    public static TestScript Instance;
+    public static TestScript Instance { get; set; }
     public GameObject jawaban;
     public GameObject[] index;
 
@@ -164,6 +164,7 @@ public class TestScript : MonoBehaviour
                 SaveTest();
                 if (isTindakan)
                 {
+                    Debug.Log("Upload weh");
                     Jawaban.Instance.UploadDataToDrive();
                 }
                 if (!isKontrol)

@@ -363,7 +363,7 @@ public static class Helper
 
 	public static void UploadImageTindakanResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, int indx)
 	{
-		var content = File.ReadAllBytes(TestScript.Instance.listpathFoto[indx]);
+		var content = File.ReadAllBytes(Jawaban.Instance.listFotoTindakan[indx]);
 		Debug.Log(TestScript.Instance.listpathFoto.Count);
 		if (content == null) return;
 		string _fileName = $"{RespondenData.Instance.currentDataSelected.nama} - " + "Tindakan - " + indx;
