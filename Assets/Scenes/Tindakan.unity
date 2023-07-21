@@ -842,10 +842,10 @@ RectTransform:
   m_Father: {fileID: 117981440}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 800}
+  m_SizeDelta: {x: -280, y: -1120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171159118
 MonoBehaviour:
@@ -867,9 +867,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3767,8 +3767,6 @@ MonoBehaviour:
   prev: Sikap
   image: []
   totalText: {fileID: 0}
-  nilai: 0
-  listnilai: 
   subField: {fileID: 2367809950697934749, guid: 9f8797911393a034d85a32085243c07a, type: 3}
   liststringFoto:
   - 
@@ -4974,9 +4972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e93de5b867624daff372896665e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statusPengetahuan: 
-  statusSikap: 
-  statusTindakan: 
 --- !u!1 &2068036685
 GameObject:
   m_ObjectHideFlags: 0
