@@ -46,7 +46,7 @@ public class Debris : MonoBehaviour
 
     void SuccessUploadFormRespondenDebris()
     {
-        for (int i = 0; i < TestScript.Instance.ListpathFoto.Count; i++)
+        for (int i = 0; i < TestScript.Instance.listpathFoto.Count; i++)
         {
             Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, i);
         }
