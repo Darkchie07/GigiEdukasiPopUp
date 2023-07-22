@@ -29,7 +29,7 @@ public class Games : MonoBehaviour
     public List<string> listJawaban = new List<string>();
     public List<string> listJawabanBenar = new List<string>();
     bool isCorrect = false;
-    bool isAnswered = false;
+    // bool isAnswered = false;
 
     [Header("Button")]
     public List<Button> buttonList;
