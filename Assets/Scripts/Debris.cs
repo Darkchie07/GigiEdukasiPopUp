@@ -1,14 +1,16 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class Debris : MonoBehaviour
 {
     public static Debris Instance { get; set; }
     public List<string> jawabanKontrol;
     public List<int> skorKontrol;
+    public List<string> listFotoKontrol = new List<string>();
     void Awake()
     {
         if (Instance)
@@ -46,9 +48,11 @@ public class Debris : MonoBehaviour
 
     void SuccessUploadFormRespondenDebris()
     {
-        for (int i = 0; i < TestScript.Instance.listpathFoto.Count; i++)
+        listFotoKontrol = Data.Instance.dataFoto.foto.PathFoto.ToList();
+        Debug.Log(listFotoKontrol.Count);
+        for (int i = 0; i < listFotoKontrol.Count; i++)
         {
-            Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, i);
+            Helper.UploadImageKontrolResponden((file) => { _onDoneAction(); }, i);
         }
     }
 

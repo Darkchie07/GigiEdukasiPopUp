@@ -10,24 +10,15 @@ public class Data : MonoBehaviour
 {
 	public static Data Instance;
 
-	public class FotoTindakan
+	public class Foto
 	{
 		public string[] StringFoto;
 		public string[] PathFoto;
 	}
-
-	public class FotoKontrol
-	{
-		public string[] StringFoto;
-		public string[] PathFoto;
-	}
-
 	public class FotoFile
 	{
-		public FotoTindakan foto = new FotoTindakan();
-		public FotoKontrol foto1 = new FotoKontrol();
+		public Foto foto = new Foto();
 	}
-
 	public FotoFile dataFoto = new FotoFile();
 
 	private void Awake()

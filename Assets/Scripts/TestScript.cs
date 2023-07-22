@@ -535,13 +535,13 @@ public class TestScript : MonoBehaviour
         {
             filePath = Application.persistentDataPath + "/saveFotoTindakan.json";
             string json = File.ReadAllText(filePath);
-            Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.FotoTindakan>(json);
+            Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.Foto>(json);
         }
         else if (isKontrol)
         {
             filePath = Application.persistentDataPath + "/saveFotoKontrol.json";
             string json = File.ReadAllText(filePath);
-            Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.FotoTindakan>(json);
+            Data.Instance.dataFoto.foto = JsonConvert.DeserializeObject<Data.Foto>(json);
         }
 
         liststringFoto = Data.Instance.dataFoto.foto.StringFoto.ToList();
