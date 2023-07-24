@@ -15,9 +15,9 @@ public class WindowGraph : MonoBehaviour
     private RectTransform dashTemplateX;
     private RectTransform dashTemplateY;
 
-    public List<int> SkorPengetahuan = new List<int>();
-    public List<int> SkorSikap = new List<int>();
-    public List<int> SkorTindakan = new List<int>();
+    public List<double> SkorPengetahuan = new List<double>();
+    public List<double> SkorSikap = new List<double>();
+    public List<double> SkorTindakan = new List<double>();
     public List<int> SkorKontrol = new List<int>();
 
     private void Awake()
@@ -106,4 +106,17 @@ public class WindowGraph : MonoBehaviour
         rectTransform.anchoredPosition = dotPositionA + dir * distance * 0.5f;
         rectTransform.localEulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(dir));
     }
+
+    public void loadSkor()
+    {
+        Jawaban.Instance.LoadSkor();
+        for (int i = 0; i < Jawaban.Instance.skorResponden.Count; i+=3)
+        {
+            SkorPengetahuan.Add(Convert.ToDouble(Jawaban.Instance.skorResponden[i]));
+            SkorSikap.Add(Convert.ToDouble(Jawaban.Instance.skorResponden[i+1]));
+            SkorTindakan.Add(Convert.ToDouble(Jawaban.Instance.skorResponden[i+2]));
+        }
+    }
+    
+    
 }
