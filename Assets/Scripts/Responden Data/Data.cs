@@ -19,6 +19,7 @@ public class Data : MonoBehaviour
 	{
 		public Foto foto = new Foto();
 	}
+
 	public FotoFile dataFoto = new FotoFile();
 
 	private void Awake()

@@ -5,6 +5,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using UnityEditor;
+using UnityEditor.MemoryProfiler;
 
 public class RespondenData : MonoBehaviour
 {
@@ -97,7 +98,6 @@ public class RespondenData : MonoBehaviour
     public bool doneLoadData = false;
 
     public bool isDicari;
-
     private void Awake()
     {
         if (Instance == null)

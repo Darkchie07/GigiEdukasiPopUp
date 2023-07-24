@@ -834,6 +834,8 @@ MonoBehaviour:
   jawaban: {fileID: 0}
   index: []
   listSoal: []
+  yes: []
+  no: []
   foto: []
   NextButton: {fileID: 0}
   PrevButton: {fileID: 0}
@@ -846,8 +848,6 @@ MonoBehaviour:
   prev: 
   image: []
   totalText: {fileID: 0}
-  nilai: 0
-  listnilai: 
   subField: {fileID: 0}
   liststringFoto: []
   listpathFoto: []
@@ -1001,6 +1001,15 @@ MonoBehaviour:
   jawabanPengetahuan: []
   jawabanSikap: []
   jawabanTindakan: []
+  skorPengetahuan: 
+  skorSikap: 
+  skorTindakan: 
+  listFotoTindakan: []
+  skorResponden: []
+  skorTest:
+  - 
+  - 
+  - 
 --- !u!4 &1066195302
 Transform:
   m_ObjectHideFlags: 0
@@ -1793,9 +1802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e93de5b867624daff372896665e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statusPengetahuan: 
-  statusSikap: 
-  statusTindakan: 
 --- !u!4 &1634576444
 Transform:
   m_ObjectHideFlags: 0
@@ -1826,6 +1832,8 @@ MonoBehaviour:
   jawaban: {fileID: 0}
   index: []
   listSoal: []
+  yes: []
+  no: []
   foto: []
   NextButton: {fileID: 0}
   PrevButton: {fileID: 0}
@@ -1838,8 +1846,6 @@ MonoBehaviour:
   prev: 
   image: []
   totalText: {fileID: 0}
-  nilai: 0
-  listnilai: 
   subField: {fileID: 0}
   liststringFoto: []
   listpathFoto: []

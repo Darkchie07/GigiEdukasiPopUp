@@ -166,6 +166,7 @@ public class TestScript : MonoBehaviour
                 {
                     Debug.Log("Upload weh");
                     Jawaban.Instance.UploadDataToDrive();
+                    Jawaban.Instance.SaveSkor();
                 }
                 if (!isKontrol)
                     SceneManager.LoadScene(next);
@@ -293,10 +294,17 @@ public class TestScript : MonoBehaviour
 
         if (isSikap)
         {
+            Jawaban.Instance.skorSikap = listJawabanYa.Count.ToString();
+            Data.Instance.SaveData("Skor", listJawabanYa.Count.ToString());
             Jawaban.Instance.jawabanSikap = listJawaban;
+            Jawaban.Instance.skorTest[1] = listJawabanYa.Count.ToString();
         }
         else if (isTindakan)
         {
+            float temp = (listJawabanYa.Count / 32f) * 10f;
+            Jawaban.Instance.skorTindakan = temp.ToString("F2");
+            Data.Instance.SaveData("Skor", temp.ToString("F2"));
+            Jawaban.Instance.skorTest[2] = temp.ToString("F2");
             Jawaban.Instance.jawabanTindakan = listJawaban;
         }
         else if (isKontrol)

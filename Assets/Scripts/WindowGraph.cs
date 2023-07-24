@@ -28,7 +28,7 @@ public class WindowGraph : MonoBehaviour
         dashTemplateX = graphContainer.Find("dashTemplateX").GetComponent<RectTransform>();
         dashTemplateY = graphContainer.Find("dashTemplateY").GetComponent<RectTransform>();
 
-        List<int> value = new List<int>() { 8, 8, 8, 6, 8 };
+        List<float> value = new List<float>() { 5.64f, 8, 8, 6, 8 };
         ShowGraph(value);
     }
 
@@ -45,7 +45,7 @@ public class WindowGraph : MonoBehaviour
         return gameObject;
     }
 
-    private void ShowGraph(List<int> valueList)
+    private void ShowGraph(List<float> valueList)
     {
         float graphHeight = graphContainer.sizeDelta.y;
         float yMaximum = 10f;

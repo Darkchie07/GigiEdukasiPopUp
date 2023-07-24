@@ -77,8 +77,10 @@ public class Pengetahuan : MonoBehaviour
                     {
                         CheckJawaban();
                         Jawaban.Instance.jawabanPengetahuan = listJawaban;
+                        Jawaban.Instance.skorPengetahuan = skor.ToString();
                         string json = JsonConvert.SerializeObject(listJawaban.ToArray());
                         Data.Instance.SaveData("Pengetahuan", json);
+                        Jawaban.Instance.skorTest[0] = skor.ToString();
                         SceneManager.LoadScene("Sikap");
                     }
                     else

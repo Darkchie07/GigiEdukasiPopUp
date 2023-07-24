@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -11,7 +13,12 @@ public class Jawaban : MonoBehaviour
 	public List<string> jawabanPengetahuan;
 	public List<string> jawabanSikap;
 	public List<string> jawabanTindakan;
+	public string skorPengetahuan;
+	public string skorSikap;
+	public string skorTindakan;
 	public List<string> listFotoTindakan = new List<string>();
+	public List<string> skorResponden;
+	public List<string> skorTest = new List<string>(3);
 
 	void Awake()
 	{
@@ -81,12 +88,16 @@ public class Jawaban : MonoBehaviour
 		string _tindakan30 = (jawabanTindakan[29] == "0") ? "Tidak" : "Ya";
 		string _tindakan31 = (jawabanTindakan[30] == "0") ? "Tidak" : "Ya";
 		string _tindakan32 = (jawabanTindakan[31] == "0") ? "Tidak" : "Ya";
+		string _skorPengetahuan = skorPengetahuan;
+		string _skorSikap = skorSikap;
+		string _skorTindakan = skorTindakan;
 
 		StartCoroutine(Helper.CoroutineUploadFormTest(
 			_pengetahuan1, _pengetahuan2, _pengetahuan3, _pengetahuan4, _pengetahuan5, _pengetahuan6, _pengetahuan7, _pengetahuan8, _pengetahuan9, _pengetahuan10,
 			_pengetahuan11, _pengetahuan12, _sikap1, _sikap2, _sikap3, _sikap4, _sikap5, _sikap6, _sikap7, _sikap8, _tindakan1, _tindakan2, _tindakan3, _tindakan4, _tindakan5,
 			_tindakan6, _tindakan7, _tindakan8, _tindakan9, _tindakan10, _tindakan11, _tindakan12, _tindakan13, _tindakan14, _tindakan15, _tindakan16, _tindakan17, _tindakan18,
-			_tindakan19, _tindakan20, _tindakan21, _tindakan22, _tindakan23, _tindakan24, _tindakan25, _tindakan26, _tindakan27, _tindakan28, _tindakan29, _tindakan30, _tindakan31, _tindakan32, SuccessUploadFormRespondenTest, ErrorUploadFileResponden
+			_tindakan19, _tindakan20, _tindakan21, _tindakan22, _tindakan23, _tindakan24, _tindakan25, _tindakan26, _tindakan27, _tindakan28, _tindakan29, _tindakan30, _tindakan31, _tindakan32
+			, _skorPengetahuan, _skorSikap, _skorTindakan, SuccessUploadFormRespondenTest, ErrorUploadFileResponden
 		));
 	}
 	
@@ -110,5 +121,30 @@ public class Jawaban : MonoBehaviour
 	{
 		// CloseLoading();
 		Debug.Log("isi kuota deck");
+	}
+
+	public void LoadSkor()
+	{
+		string filePath = Application.persistentDataPath + "/saveSkor.json";
+		if (File.Exists(filePath))
+		{
+			string json = File.ReadAllText(filePath);
+			List<string> jsonArray = JsonConvert.DeserializeObject<List<string>>(json);
+			skorResponden = jsonArray;
+		}
+	}
+
+	public void SaveSkor()
+	{
+		LoadSkor();
+		string _path = Application.persistentDataPath + "/saveSkor.json";
+		Debug.Log(_path);
+		foreach (var a in skorTest)
+		{
+			skorResponden.Add(a);
+		}
+		string json = JsonConvert.SerializeObject(skorResponden.ToArray());
+		File.WriteAllText(_path, json);
+		skorTest.Clear();
 	}
 }

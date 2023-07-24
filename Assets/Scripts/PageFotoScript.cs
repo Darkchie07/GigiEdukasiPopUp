@@ -164,6 +164,7 @@ public class PageFotoScript : MonoBehaviour
         if (save)
         {
             string _imageSaved = Helper.TextureToBase64(_tex);
+            RespondenData.Instance.dataGambarGigi.SaveGambar(_imageSaved, statusTime);
         }
     }
 

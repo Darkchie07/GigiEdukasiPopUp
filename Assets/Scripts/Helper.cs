@@ -197,7 +197,8 @@ public static class Helper
                                                         string _tindakan1, string _tindakan2, string _tindakan3, string _tindakan4, string _tindakan5, string _tindakan6, string _tindakan7, string _tindakan8,
                                                         string _tindakan9, string _tindakan10, string _tindakan11, string _tindakan12, string _tindakan13, string _tindakan14, string _tindakan15, string _tindakan16,
                                                         string _tindakan17, string _tindakan18, string _tindakan19, string _tindakan20, string _tindakan21, string _tindakan22, string _tindakan23, string _tindakan24,
-                                                        string _tindakan25, string _tindakan26, string _tindakan27, string _tindakan28, string _tindakan29, string _tindakan30, string _tindakan31, string _tindakan32, Action _success, Action _error)
+                                                        string _tindakan25, string _tindakan26, string _tindakan27, string _tindakan28, string _tindakan29, string _tindakan30, string _tindakan31, string _tindakan32, string _skorPengetahuan, string _skorSikap, 
+                                                        string _skorTindakan, Action _success, Action _error)
     {
         WWWForm form = new WWWForm();
 
@@ -257,6 +258,9 @@ public static class Helper
         form.AddField("entry.703134618", _tindakan30);
         form.AddField("entry.1339464562", _tindakan31);
         form.AddField("entry.250074568", _tindakan32);
+        form.AddField("entry.94854912", _skorPengetahuan);
+        form.AddField("entry.46003329", _skorSikap);
+        form.AddField("entry.274418371", _skorTindakan);
         #endregion
 
         UnityWebRequest www = UnityWebRequest.Post(UrlFormRespondenDataPreTest, form);
