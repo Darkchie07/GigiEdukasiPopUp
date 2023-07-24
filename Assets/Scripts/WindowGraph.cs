@@ -14,13 +14,14 @@ public class WindowGraph : MonoBehaviour
     private RectTransform dashTemplateX;
     private RectTransform dashTemplateY;
 
-    public List<double> SkorPengetahuan = new List<double>();
-    public List<double> SkorSikap = new List<double>();
-    public List<double> SkorTindakan = new List<double>();
+    public List<float> SkorPengetahuan = new List<float>();
+    public List<float> SkorSikap = new List<float>();
+    public List<float> SkorTindakan = new List<float>();
     public List<int> SkorKontrol = new List<int>();
 
     private void Awake()
     {
+        loadSkor();
         graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
         labelTemplateX = graphContainer.Find("labelTemplateX").GetComponent<RectTransform>();
         labelTemplateY = graphContainer.Find("labelTemplateY").GetComponent<RectTransform>();
@@ -29,17 +30,17 @@ public class WindowGraph : MonoBehaviour
 
         if (transform.CompareTag("Pengetahuan"))
         {
-            List<float> value = new List<float>() { 5.64f, 8, 8, 6, 8 };
+            List<float> value = SkorPengetahuan;
             ShowGraph(value, 12f, 12, (int _i) => "PostTest " + (_i));
         }
         else if (transform.CompareTag("Sikap"))
         {
-            List<float> value = new List<float>() { 5.64f, 8, 8, 6, 8 };
+            List<float> value = SkorSikap;
             ShowGraph(value, 8f, 8, (int _i) => "PostTest " + (_i));
         }
         else if (transform.CompareTag("Tindakan"))
         {
-            List<float> value = new List<float>() { 5.64f, 8, 8, 6, 8 };
+            List<float> value = SkorTindakan;
             ShowGraph(value, 10f, 10, (int _i) => "PostTest " + (_i));
         }
         else if (transform.CompareTag("Kontrol"))
@@ -140,9 +141,9 @@ public class WindowGraph : MonoBehaviour
         Jawaban.Instance.LoadSkor();
         for (int i = 0; i < Jawaban.Instance.skorResponden.Count; i += 3)
         {
-            SkorPengetahuan.Add(Convert.ToDouble(Jawaban.Instance.skorResponden[i]));
-            SkorSikap.Add(Convert.ToDouble(Jawaban.Instance.skorResponden[i + 1]));
-            SkorTindakan.Add(Convert.ToDouble(Jawaban.Instance.skorResponden[i + 2]));
+            SkorPengetahuan.Add(float.Parse(Jawaban.Instance.skorResponden[i]));
+            SkorSikap.Add(float.Parse(Jawaban.Instance.skorResponden[i + 1]));
+            SkorTindakan.Add(float.Parse(Jawaban.Instance.skorResponden[i + 2]));
         }
     }
 
