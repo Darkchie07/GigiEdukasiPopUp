@@ -30,22 +30,22 @@ public class WindowGraph : MonoBehaviour
         if (transform.CompareTag("Pengetahuan"))
         {
             List<float> value = new List<float>() { 5.64f, 8, 8, 6, 8 };
-            ShowGraph(value, 12f, (int _i) => "PostTest " + (_i));
+            ShowGraph(value, 12f, 12, (int _i) => "PostTest " + (_i));
         }
         else if (transform.CompareTag("Sikap"))
         {
             List<float> value = new List<float>() { 5.64f, 8, 8, 6, 8 };
-            ShowGraph(value, 8f, (int _i) => "PostTest " + (_i));
+            ShowGraph(value, 8f, 8, (int _i) => "PostTest " + (_i));
         }
         else if (transform.CompareTag("Tindakan"))
         {
             List<float> value = new List<float>() { 5.64f, 8, 8, 6, 8 };
-            ShowGraph(value, 10f, (int _i) => "PostTest " + (_i));
+            ShowGraph(value, 10f, 10, (int _i) => "PostTest " + (_i));
         }
         else if (transform.CompareTag("Kontrol"))
         {
             List<float> value = new List<float>() { 3, 0, 2, 0, 1 };
-            ShowGraph(value, 3f, (int _i) => "PostTest " + (_i));
+            ShowGraph(value, 3f, 3, (int _i) => "PostTest " + (_i));
         }
 
     }
@@ -66,7 +66,7 @@ public class WindowGraph : MonoBehaviour
         return gameObject;
     }
 
-    private void ShowGraph(List<float> valueList, float yMaximum, Func<int, string> getAxisLabelX = null)
+    private void ShowGraph(List<float> valueList, float yMaximum, int separatorCount, Func<int, string> getAxisLabelX = null)
     {
         if (getAxisLabelX == null)
         {
@@ -101,7 +101,6 @@ public class WindowGraph : MonoBehaviour
             dashY.anchoredPosition = new Vector2(xPosition, 0);
         }
 
-        int separatorCount = 10;
         for (int i = 0; i <= separatorCount; i++)
         {
             RectTransform labelY = Instantiate(labelTemplateY);
