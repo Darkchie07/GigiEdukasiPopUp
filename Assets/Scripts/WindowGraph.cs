@@ -22,12 +22,13 @@ public class WindowGraph : MonoBehaviour
     public List<float> SkorTindakan = new List<float>();
     public List<float> SkorKontrol = new List<float>();
 
-    private void Awake()
+    private void Start()
     {
         if (Instance == null)
             Instance = this;
 
         LoadData();
+        LoadDataKontrol();
         graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
         labelTemplateX = graphContainer.Find("labelTemplateX").GetComponent<RectTransform>();
         labelTemplateY = graphContainer.Find("labelTemplateY").GetComponent<RectTransform>();
@@ -144,21 +145,19 @@ public class WindowGraph : MonoBehaviour
 
     public void LoadData()
     {
-        if (!transform.CompareTag("Kontrol"))
+        TestScript.Instance.LoadSkor(false);
+        for (int i = 0; i < Jawaban.Instance.skorResponden.Count; i += 3)
         {
-            TestScript.Instance.LoadSkor(false);
-            for (int i = 0; i < Jawaban.Instance.skorResponden.Count; i += 3)
-            {
-                SkorPengetahuan.Add(float.Parse(Jawaban.Instance.skorResponden[i]));
-                SkorSikap.Add(float.Parse(Jawaban.Instance.skorResponden[i + 1]));
-                SkorTindakan.Add(float.Parse(Jawaban.Instance.skorResponden[i + 2]));
-            }
+            SkorPengetahuan.Add(float.Parse(Jawaban.Instance.skorResponden[i]));
+            SkorSikap.Add(float.Parse(Jawaban.Instance.skorResponden[i + 1]));
+            SkorTindakan.Add(float.Parse(Jawaban.Instance.skorResponden[i + 2]));
         }
-        if (transform.CompareTag("Kontrol"))
-        {
-            TestScript.Instance.LoadSkor(true);
-            SkorKontrol.Add(Debris.Instance.skorKontrol[6] / 6);
-        }
+    }
+
+    public void LoadDataKontrol()
+    {
+        TestScript.Instance.LoadSkor(true); 
+        SkorKontrol.Add(Debris.Instance.skorKontrol[6] / 6);
     }
 }
 

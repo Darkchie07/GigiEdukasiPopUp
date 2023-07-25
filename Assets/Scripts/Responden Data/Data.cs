@@ -93,9 +93,13 @@ public class Data : MonoBehaviour
         {
             string _path = Application.persistentDataPath + "/saveSkorKontrol.json";
             File.WriteAllText(_path, json);
+        }else if (data == "SkorKontrolGrafik")
+        {
+            string _path = Application.persistentDataPath + "saveSkorKontrolGrafik.json";
+            File.WriteAllText(_path, json);
         }
     }
-
+    
     public bool HasFile(string data)
     {
         if (data == "Pengetahuan")
@@ -157,6 +161,14 @@ public class Data : MonoBehaviour
         else if (data == "SkorKontrol")
         {
             string _path = Application.persistentDataPath + "/saveSkorKontrol.json";
+            if (File.Exists(_path))
+            {
+                return true;
+            }
+        }
+        else if (data == "SkorKontrolGrafik")
+        {
+            string _path = Application.persistentDataPath + "/saveSkorKontrolGrafik.json";
             if (File.Exists(_path))
             {
                 return true;

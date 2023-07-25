@@ -329,6 +329,57 @@ public class RespondenData : MonoBehaviour
         }
     }
 
+    public void RemoveDataTest()
+    {
+        string _skorPengetahuan = Application.persistentDataPath + "/saveTestPengetahuan.json";
+        if (File.Exists(_skorPengetahuan))
+        {
+            File.Delete(_skorPengetahuan);
+        }
+
+        string _skorTestSikap = Application.persistentDataPath + "/saveTestSikap.json";
+        if (File.Exists(_skorTestSikap))
+        {
+            File.Delete(_skorTestSikap);
+        }
+        
+        string _skorTestTindakan = Application.persistentDataPath + "/saveTestTindakan.json";
+        if (File.Exists(_skorTestTindakan))
+        {
+            File.Delete(_skorTestTindakan);
+        }
+    }
+
+    public void RemoveDataKontrol()
+    {
+        string _fotoKontrol = Application.persistentDataPath + "/saveFotoKontrol.json";
+        if (File.Exists(_fotoKontrol))
+        {
+            File.Delete(_fotoKontrol);
+        }
+        
+        string _jawabanDebris = Application.persistentDataPath + "/saveDebris.json";
+        if (File.Exists(_jawabanDebris))
+        {
+            File.Delete(_jawabanDebris);
+        }
+        
+        string _skorKontrol = Application.persistentDataPath + "/saveSkorKontrol.json";
+        if (File.Exists(_skorKontrol))
+        {
+            File.Delete(_skorKontrol);
+        }
+    }
+
+    public void RemoveFotoTindakan()
+    {
+        string _fotoTindakan = Application.persistentDataPath + "/saveFotoTindakan.json";
+        if (File.Exists(_fotoTindakan))
+        {
+            File.Delete(_fotoTindakan);
+        }
+    }
+
     public void RemoveDebris()
     {
         string _path = Application.persistentDataPath + "/saveDebris.json";

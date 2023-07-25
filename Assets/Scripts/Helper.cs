@@ -386,6 +386,7 @@ public static class Helper
             }
             _onDoneAction(File);
         };
+        RespondenData.Instance.RemoveFotoTindakan();
     }
 
     #endregion
