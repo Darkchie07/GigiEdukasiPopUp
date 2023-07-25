@@ -19,7 +19,6 @@ public class Jawaban : MonoBehaviour
     public List<string> listFotoTindakan = new List<string>();
     public List<string> skorResponden;
     public List<string> skorTest = new List<string>(3);
-    public List<int> skorKontrolResponden;
 
     void Awake()
     {

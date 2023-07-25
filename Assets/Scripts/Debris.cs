@@ -11,6 +11,7 @@ public class Debris : MonoBehaviour
     public List<string> jawabanKontrol;
     public List<int> skorKontrol;
     public List<string> listFotoKontrol = new List<string>();
+    public List<int> skorKontrolResponden;
     void Awake()
     {
         if (Instance)

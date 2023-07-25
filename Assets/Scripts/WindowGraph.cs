@@ -16,11 +16,11 @@ public class WindowGraph : MonoBehaviour
     private RectTransform labelTemplateY;
     private RectTransform dashTemplateX;
     private RectTransform dashTemplateY;
-
     public List<float> SkorPengetahuan = new List<float>();
     public List<float> SkorSikap = new List<float>();
     public List<float> SkorTindakan = new List<float>();
     public List<float> SkorKontrol = new List<float>();
+    public Font arial;
 
     private void Start()
     {
@@ -58,7 +58,7 @@ public class WindowGraph : MonoBehaviour
 
     }
 
-    private GameObject CreateCircle(Vector2 anchoredPosition)
+    private GameObject CreateCircle(Vector2 anchoredPosition, float skor)
     {
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.AddComponent(typeof(Canvas));
@@ -71,6 +71,40 @@ public class WindowGraph : MonoBehaviour
         rectTransform.sizeDelta = new Vector2(20, 20);
         rectTransform.anchorMin = new Vector2(0, 0);
         rectTransform.anchorMax = new Vector2(0, 0);
+        if (transform.CompareTag("Kontrol"))
+        {
+            GameObject text = new GameObject("text");
+            text.AddComponent(typeof(Text));
+            text.AddComponent(typeof(Canvas));
+            gameObject.GetComponent<Canvas>().overrideSorting = true;
+            gameObject.GetComponent<Canvas>().sortingOrder = 2;
+            text.transform.SetParent(gameObject.transform);
+            text.transform.localPosition = new Vector3(0, 25, -9.5f);
+            RectTransform textRect = text.GetComponent<RectTransform>();
+            textRect.sizeDelta = new Vector2(30, 20);
+            textRect.anchorMin = new Vector2(0.5f, 0.5f);
+            textRect.anchorMax = new Vector2(0.5f, 0.5f);
+            text.GetComponent<Text>().font = arial;
+            text.GetComponent<Text>().fontSize = 15;
+            text.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
+            text.GetComponent<Text>().horizontalOverflow = HorizontalWrapMode.Overflow;
+            text.GetComponent<Text>().verticalOverflow = VerticalWrapMode.Overflow;
+            if (skor <= 0.6f)
+            {
+                text.GetComponent<Text>().text = "Baik";
+                text.GetComponent<Text>().color = Color.green;
+            }
+            else if (skor <= 1.8f)
+            {
+                text.GetComponent<Text>().text = "Sedang";
+                text.GetComponent<Text>().color = Color.yellow;
+            }
+            else if (skor <= 3f)
+            {
+                text.GetComponent<Text>().text = "Buruk";
+                text.GetComponent<Text>().color = Color.red;
+            }
+        }
         return gameObject;
     }
 
@@ -86,9 +120,10 @@ public class WindowGraph : MonoBehaviour
         GameObject lastCircleGameObject = null;
         for (int i = 0; i < valueList.Count; i++)
         {
+            float skor = valueList[i];
             float xPosition = xSize + i * xSize;
             float yPosition = (valueList[i] / yMaximum) * graphHeight;
-            GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition));
+            GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition), skor);
             if (lastCircleGameObject != null)
             {
                 CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
@@ -156,8 +191,13 @@ public class WindowGraph : MonoBehaviour
 
     public void LoadDataKontrol()
     {
-        TestScript.Instance.LoadSkor(true); 
-        SkorKontrol.Add(Debris.Instance.skorKontrol[6] / 6);
+        TestScript.Instance.LoadSkor(true);
+        for (int i = 0; i < Debris.Instance.skorKontrolResponden.Count; i += 2)
+        {
+            var skor = (float)Debris.Instance.skorKontrolResponden[i + 1] / (float)Debris.Instance.skorKontrolResponden[i];
+            SkorKontrol.Add(skor);
+            Debug.Log(skor);
+        }
     }
 }
 
