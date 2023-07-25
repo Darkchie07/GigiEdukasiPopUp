@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 8385b3d090cf89a4dbdfbf7e380c48f2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dental_1_0
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 2661
+        width: 1487
+        height: 1361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1288cc9eeb2fb47beb9b20455fe1a6
+      internalID: 2005974249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_1
+      rect:
+        serializedVersion: 2
+        x: 4024
+        y: 2994
+        width: 1423
+        height: 880
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960b7c17a878d2a4688b50620119563b
+      internalID: -1563973823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1053
+        width: 1350
+        height: 2730
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4950d020cca8c9741b0af9f966b60a9c
+      internalID: 1213947555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_98
+      rect:
+        serializedVersion: 2
+        x: 4024
+        y: 1920
+        width: 1423
+        height: 880
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d368c9016e648b459bbe307ef29f46e
+      internalID: -1803823472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_101
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 1909
+        width: 4117
+        height: 2113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f37d9b55d3f41844a8697fb85af31e7
+      internalID: 1487240985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_102
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 1947
+        width: 1777
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cdf3d5674211946a49292055bda3b7
+      internalID: -306957775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_103
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 1474
+        width: 1777
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb7fa7039b66ab4aa321fb78d419f85
+      internalID: 812306335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_104
+      rect:
+        serializedVersion: 2
+        x: 4024
+        y: 851
+        width: 1423
+        height: 875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c942070505c0dd94baf22bfe927767bb
+      internalID: 1986539602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_105
+      rect:
+        serializedVersion: 2
+        x: 5995
+        y: 0
+        width: 1436
+        height: 1501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9584fb4130db174da160111d16776a8
+      internalID: 1367977826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_106
+      rect:
+        serializedVersion: 2
+        x: 7783
+        y: 30
+        width: 1433
+        height: 1511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5319f30683ed6b84296d580e2d15079e
+      internalID: -1765909911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_107
+      rect:
+        serializedVersion: 2
+        x: 9565
+        y: 0
+        width: 1431
+        height: 1501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613e55d796583124bac19f69c05b189e
+      internalID: 1093455020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_108
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 1002
+        width: 1777
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118f89797f1c31b479609bc02406c372
+      internalID: -182736269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dental_1_109
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 530
+        width: 1777
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5494aec6ab5c54f8192fbf1969fede
+      internalID: -1566921245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b3880b2636a9b7940b807b3714e68bd0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dental_1_12: 292363910
+      dental_1_17: -2027655037
+      dental_1_61: 669327731
+      dental_1_91: -643201842
+      dental_1_46: -498663581
+      dental_1_16: -918799023
+      dental_1_44: -1969989825
+      dental_1_43: -1878045932
+      dental_1_57: 2132344228
+      dental_1_99: 1409601087
+      dental_1_11: -1979282011
+      dental_1_22: 852374829
+      dental_1_13: -55303127
+      dental_1_47: -494398412
+      dental_1_25: 1182935700
+      dental_1_94: 1560353621
+      dental_1_96: -1321782030
+      dental_1_83: 453150469
+      dental_1_36: -595184905
+      dental_1_102: -306957775
+      dental_1_100: -783820508
+      dental_1_27: -429062403
+      dental_1_50: 1479642663
+      dental_1_64: 1774507308
+      dental_1_65: -351241201
+      dental_1_68: -643490474
+      dental_1_20: -1956467784
+      dental_1_63: 1519642598
+      dental_1_35: -232404043
+      dental_1_86: 452514239
+      dental_1_33: -273239818
+      dental_1_40: -1131227806
+      dental_1_72: 735244781
+      dental_1_34: -94323217
+      dental_1_51: -1777255548
+      dental_1_70: 93662511
+      dental_1_52: -2096430471
+      dental_1_30: 220396963
+      dental_1_7: 1475592571
+      dental_1_62: -172924518
+      dental_1_15: -419369748
+      dental_1_69: -1651971032
+      dental_1_24: 1094727499
+      dental_1_39: 187667069
+      dental_1_109: -1566921245
+      dental_1_73: -144977494
+      dental_1_81: 1712071609
+      dental_1_104: 1986539602
+      dental_1_14: 152890289
+      dental_1_77: -685993265
+      dental_1_45: 720680987
+      dental_1_107: 1093455020
+      dental_1_71: -1258852172
+      dental_1_19: 2141984065
+      dental_1_78: -1051437301
+      dental_1_3: -235552657
+      dental_1_48: 242209784
+      dental_1_106: -1765909911
+      dental_1_93: 1504501055
+      dental_1_108: -182736269
+      dental_1_2: 1858116185
+      dental_1_54: 1307110568
+      dental_1_82: 1165774912
+      dental_1_10: 207484399
+      dental_1_95: 1357503883
+      dental_1_103: 812306335
+      dental_1_92: 1016846750
+      dental_1_31: 1164714653
+      dental_1_56: 575976333
+      dental_1_75: -629135447
+      dental_1_84: -723869206
+      dental_1_105: 1367977826
+      dental_1_53: -1500362043
+      dental_1_38: -1457811560
+      dental_1_23: -444929855
+      dental_1_60: 765569159
+      dental_1_37: -1926995034
+      dental_1_80: -1461149774
+      dental_1_98: -1803823472
+      dental_1_55: -1686603875
+      dental_1_76: -364332456
+      dental_1_5: 696538040
+      dental_1_21: -1332411032
+      dental_1_66: -1858849683
+      dental_1_42: 418938189
+      dental_1_26: -1435627558
+      dental_1_32: 379115979
+      dental_1_59: -1806967212
+      dental_1_74: 6282104
+      dental_1_49: -780036668
+      dental_1_4: -1794387844
+      dental_1_90: 1214207755
+      dental_1_67: 1033797602
+      dental_1_1: -1563973823
+      dental_1_41: 50988919
+      dental_1_9: 2026566059
+      dental_1_29: 969916764
+      dental_1_88: 1927937677
+      dental_1_8: 458662977
+      dental_1_0: 2005974249
+      dental_1_58: 365183234
+      dental_1_79: -184344884
+      dental_1_85: -1689724498
+      dental_1_87: 975039520
+      dental_1_89: 531698795
+      dental_1_6: -1931839150
+      dental_1_18: 1213947555
+      dental_1_97: 1860234610
+      dental_1_28: -1940234457
+      dental_1_101: 1487240985
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
