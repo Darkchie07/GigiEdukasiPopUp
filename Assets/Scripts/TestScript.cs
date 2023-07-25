@@ -41,9 +41,7 @@ public class TestScript : MonoBehaviour
     public List<string> listJawaban = new List<string>();
     private List<int> listJawabanYa = new List<int>();
     private List<int> listJawabanNo = new List<int>();
-    public List<int> listSkorDebris = new List<int>();
     public int Answered;
-    public int skor;
     public string next;
     public string prev;
     private bool isPengetahuan;
@@ -63,6 +61,10 @@ public class TestScript : MonoBehaviour
     public List<string> listpathFoto = new List<string>();
     public GameObject PanelImage;
     public List<Sprite> sprData = new List<Sprite>();
+
+    [Header("Skor")]
+    public int skor;
+    public List<int> listSkorDebris = new List<int>();
 
 
     void Awake()
@@ -166,7 +168,7 @@ public class TestScript : MonoBehaviour
                 {
                     Debug.Log("Upload weh");
                     Jawaban.Instance.UploadDataToDrive();
-                    Jawaban.Instance.SaveSkor();
+                    SaveSkor();
                 }
                 if (!isKontrol)
                     SceneManager.LoadScene(next);
@@ -476,6 +478,39 @@ public class TestScript : MonoBehaviour
             string json = JsonConvert.SerializeObject(listSkorDebris.ToArray());
             Data.Instance.SaveData("SkorKontrol", json);
         }
+        else
+        {
+            foreach (var a in Jawaban.Instance.skorTest)
+            {
+                Jawaban.Instance.skorResponden.Add(a);
+            }
+            string json = JsonConvert.SerializeObject(Jawaban.Instance.skorResponden.ToArray());
+            Data.Instance.SaveData("Skor", json);
+        }
+    }
+
+    public void LoadSkor(bool Kontrol)
+    {
+        if (!Kontrol && Data.Instance.HasFile("Skor"))
+        {
+            string filePath = "";
+            filePath = Application.persistentDataPath + "/saveSkor.json";
+            string json = File.ReadAllText(filePath);
+            List<string> jsonArray = JsonConvert.DeserializeObject<List<string>>(json);
+            Jawaban.Instance.skorResponden = jsonArray;
+        }
+        else if (Kontrol && Data.Instance.HasFile("SkorKontrol"))
+        {
+            string filePath = "";
+            filePath = Application.persistentDataPath + "/saveSkorKontrol.json";
+            string json = File.ReadAllText(filePath);
+            Debug.Log("json: " + json);
+            List<int> jsonArray = JsonConvert.DeserializeObject<List<int>>(json);
+            Debris.Instance.skorKontrol = jsonArray;
+        }
+        else
+            return;
+
     }
 
     #region Foto

@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using CodeMonkey.Utils;
+using Newtonsoft.Json;
+using System.IO;
 
 public class WindowGraph : MonoBehaviour
 {
+    public static WindowGraph Instance;
     [SerializeField] private Sprite circleSprite;
     private RectTransform graphContainer;
     private RectTransform labelTemplateX;
@@ -17,11 +20,14 @@ public class WindowGraph : MonoBehaviour
     public List<float> SkorPengetahuan = new List<float>();
     public List<float> SkorSikap = new List<float>();
     public List<float> SkorTindakan = new List<float>();
-    public List<int> SkorKontrol = new List<int>();
+    public List<float> SkorKontrol = new List<float>();
 
     private void Awake()
     {
-        loadSkor();
+        if (Instance == null)
+            Instance = this;
+
+        LoadData();
         graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
         labelTemplateX = graphContainer.Find("labelTemplateX").GetComponent<RectTransform>();
         labelTemplateY = graphContainer.Find("labelTemplateY").GetComponent<RectTransform>();
@@ -45,7 +51,7 @@ public class WindowGraph : MonoBehaviour
         }
         else if (transform.CompareTag("Kontrol"))
         {
-            List<float> value = new List<float>() { 3, 0, 2, 0, 1 };
+            List<float> value = SkorKontrol;
             ShowGraph(value, 3f, 3, (int _i) => "PostTest " + (_i));
         }
 
@@ -136,16 +142,23 @@ public class WindowGraph : MonoBehaviour
         rectTransform.localEulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(dir));
     }
 
-    public void loadSkor()
+    public void LoadData()
     {
-        Jawaban.Instance.LoadSkor();
-        for (int i = 0; i < Jawaban.Instance.skorResponden.Count; i += 3)
+        if (!transform.CompareTag("Kontrol"))
         {
-            SkorPengetahuan.Add(float.Parse(Jawaban.Instance.skorResponden[i]));
-            SkorSikap.Add(float.Parse(Jawaban.Instance.skorResponden[i + 1]));
-            SkorTindakan.Add(float.Parse(Jawaban.Instance.skorResponden[i + 2]));
+            TestScript.Instance.LoadSkor(false);
+            for (int i = 0; i < Jawaban.Instance.skorResponden.Count; i += 3)
+            {
+                SkorPengetahuan.Add(float.Parse(Jawaban.Instance.skorResponden[i]));
+                SkorSikap.Add(float.Parse(Jawaban.Instance.skorResponden[i + 1]));
+                SkorTindakan.Add(float.Parse(Jawaban.Instance.skorResponden[i + 2]));
+            }
+        }
+        if (transform.CompareTag("Kontrol"))
+        {
+            TestScript.Instance.LoadSkor(true);
+            SkorKontrol.Add(Debris.Instance.skorKontrol[6] / 6);
         }
     }
-
-
 }
+

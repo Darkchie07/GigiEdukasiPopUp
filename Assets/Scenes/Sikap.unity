@@ -719,6 +719,8 @@ MonoBehaviour:
   - soal: Jika saya sakit gigi saya tidak pergi ke poli gigi/ klinik gigi
   - soal: Ketika malam hari saya langsung tidur tanpa menggosok gigi
   - soal: Memeriksa gigi minimal 6 bulan sekali secara berkala
+  yes: []
+  no: []
   foto: []
   NextButton: {fileID: 1940868842}
   PrevButton: {fileID: 1631628564}
@@ -740,20 +742,18 @@ MonoBehaviour:
   - '-'
   - '-'
   - '-'
-  listSkorDebris: 
   Answered: 0
-  skor: 0
   next: Tindakan
   prev: Pengetahuan
   image: []
   totalText: {fileID: 0}
-  nilai: 0
-  listnilai: 
   subField: {fileID: 0}
   liststringFoto: []
   listpathFoto: []
   PanelImage: {fileID: 0}
   sprData: []
+  skor: 0
+  listSkorDebris: 
 --- !u!4 &287130760
 Transform:
   m_ObjectHideFlags: 0
@@ -2523,7 +2523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1800488801, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93c09f63152d6e849abf4a5260898602, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2853,9 +2853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e93de5b867624daff372896665e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statusPengetahuan: 
-  statusSikap: 
-  statusTindakan: 
 --- !u!4 &1625971804
 Transform:
   m_ObjectHideFlags: 0
@@ -3293,6 +3290,15 @@ MonoBehaviour:
   jawabanPengetahuan: []
   jawabanSikap: []
   jawabanTindakan: []
+  skorPengetahuan: 
+  skorSikap: 
+  skorTindakan: 
+  listFotoTindakan: []
+  skorResponden: []
+  skorTest:
+  - 
+  - 
+  - 
 --- !u!4 &1785265254
 Transform:
   m_ObjectHideFlags: 0

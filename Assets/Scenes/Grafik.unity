@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -255,7 +255,7 @@ MonoBehaviour:
   SkorPengetahuan: []
   SkorSikap: []
   SkorTindakan: []
-  SkorKontrol: 
+  SkorKontrol: []
 --- !u!1 &169215923
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,8 +580,11 @@ GameObject:
   m_Component:
   - component: {fileID: 342706839}
   - component: {fileID: 342706838}
+  - component: {fileID: 342706841}
+  - component: {fileID: 342706842}
+  - component: {fileID: 342706843}
   m_Layer: 0
-  m_Name: Jawaban
+  m_Name: Instance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,6 +626,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342706841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342706837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454e93de5b867624daff372896665e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &342706842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342706837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae989cf6d2128f4f94a06c6bbcb6c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jawabanKontrol: []
+  skorKontrol: 
+  listFotoKontrol: []
+--- !u!114 &342706843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342706837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c066b93e75b995e48a6cfeb6d8e844fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jawaban: {fileID: 0}
+  index: []
+  listSoal: []
+  yes: []
+  no: []
+  foto: []
+  NextButton: {fileID: 0}
+  PrevButton: {fileID: 0}
+  listtxtSoal: []
+  listJawaban: []
+  Answered: 0
+  next: 
+  prev: 
+  image: []
+  totalText: {fileID: 0}
+  subField: {fileID: 0}
+  liststringFoto: []
+  listpathFoto: []
+  PanelImage: {fileID: 0}
+  sprData: []
+  skor: 0
+  listSkorDebris: 
 --- !u!1 &349829123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1241,7 @@ MonoBehaviour:
   SkorPengetahuan: []
   SkorSikap: []
   SkorTindakan: []
-  SkorKontrol: 
+  SkorKontrol: []
 --- !u!1 &594506443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,7 +1450,7 @@ MonoBehaviour:
   SkorPengetahuan: []
   SkorSikap: []
   SkorTindakan: []
-  SkorKontrol: 
+  SkorKontrol: []
 --- !u!1 &681902026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2974,7 +3038,7 @@ MonoBehaviour:
   SkorPengetahuan: []
   SkorSikap: []
   SkorTindakan: []
-  SkorKontrol: 
+  SkorKontrol: []
 --- !u!1 &1681706362
 GameObject:
   m_ObjectHideFlags: 0
