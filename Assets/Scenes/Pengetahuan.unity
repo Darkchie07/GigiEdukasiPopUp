@@ -495,9 +495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c066b93e75b995e48a6cfeb6d8e844fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: {fileID: 0}
-  preTest: {fileID: 0}
-  postTest: {fileID: 0}
+  header: {fileID: 1450603397}
+  preTest: {fileID: 21300000, guid: 93c09f63152d6e849abf4a5260898602, type: 3}
+  postTest: {fileID: -1800488801, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   jawaban: {fileID: 0}
   index: []
   listSoal: []

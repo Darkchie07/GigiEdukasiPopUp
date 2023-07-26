@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 374077347}
   - component: {fileID: 374077349}
   - component: {fileID: 374077348}
+  - component: {fileID: 374077350}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -438,6 +439,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374077346}
   m_CullTransparentMesh: 1
+--- !u!210 &374077350
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374077346}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &641375236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1445,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 100}
+  m_SizeDelta: {x: 280.1536, y: 92.1053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805793328
 MonoBehaviour:
@@ -2355,6 +2367,7 @@ GameObject:
   - component: {fileID: 1178251002}
   - component: {fileID: 1178251004}
   - component: {fileID: 1178251003}
+  - component: {fileID: 1178251005}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -2479,6 +2492,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178251001}
   m_CullTransparentMesh: 1
+--- !u!210 &1178251005
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178251001}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
 --- !u!1 &1205995885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,14 +2783,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0

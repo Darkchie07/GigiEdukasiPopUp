@@ -109,6 +109,8 @@ public class LoginManager : MonoBehaviour
                 ErrorUploadFileResponden
                 ));
             Debug.Log("Berhasil");
+            Pengetahuan._typetest = "PreTest";
+            SceneManager.LoadScene("Pengetahuan");
         });
     }
 
