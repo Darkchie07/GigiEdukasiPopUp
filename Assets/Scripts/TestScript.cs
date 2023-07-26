@@ -12,6 +12,9 @@ using UnityEngine.Networking;
 
 public class TestScript : MonoBehaviour
 {
+	public Image header;
+	public Sprite preTest;
+	public Sprite postTest;
 	public static TestScript Instance { get; set; }
 	public GameObject jawaban;
 	public GameObject[] index;
@@ -92,6 +95,13 @@ public class TestScript : MonoBehaviour
 
 	private void Start()
 	{
+		if (Pengetahuan._typetest == "PreTest")
+		{
+			header.sprite = preTest;
+		}else if (Pengetahuan._typetest == "PostTest")
+		{
+			header.sprite = postTest;
+		}
 		if (isSikap)
 		{
 			if (Data.Instance.HasFile("Sikap"))

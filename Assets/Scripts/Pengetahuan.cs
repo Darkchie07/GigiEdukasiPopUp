@@ -11,6 +11,10 @@ using System.IO;
 
 public class Pengetahuan : MonoBehaviour
 {
+    public static string _typetest;
+    public Image header;
+    public Sprite preTest;
+    public Sprite postTest;
     public GameObject jawaban;
     [System.Serializable]
     public class SoalPengetahuan
@@ -42,6 +46,13 @@ public class Pengetahuan : MonoBehaviour
 
     void Start()
     {
+        if (_typetest == "PreTest")
+        {
+            header.sprite = preTest;
+        }else if (_typetest == "PostTest")
+        {
+            header.sprite = postTest;
+        }
         if (Data.Instance.HasFile("Pengetahuan"))
         {
             LoadJawaban();

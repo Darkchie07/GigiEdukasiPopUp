@@ -49,6 +49,7 @@ public class LoginManager : MonoBehaviour
         CheckInfo();
         if (!string.IsNullOrEmpty(RespondenData.Instance.currentDataSelected.nama))
         {
+            Pengetahuan._typetest = "PreTest";
             SceneManager.LoadScene("Pengetahuan");
         }
 
