@@ -24,6 +24,7 @@ public class Materi : MonoBehaviour
         anim = bookAnim.GetComponent<Animator>();
         GenerateSoal(idxSoal);
         GantiSoal();
+        PrevButton.gameObject.SetActive(false);
     }
 
     public void GenerateSoal(int idx)
@@ -44,6 +45,7 @@ public class Materi : MonoBehaviour
                 // if (isDone())
                 // {
                 //     CheckJawaban();
+                Screen.orientation = ScreenOrientation.Portrait;
                 SceneManager.LoadScene("Home");
                 // }
             }
