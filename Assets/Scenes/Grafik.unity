@@ -667,6 +667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c066b93e75b995e48a6cfeb6d8e844fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  header: {fileID: 0}
+  preTest: {fileID: 0}
+  postTest: {fileID: 0}
   jawaban: {fileID: 0}
   index: []
   listSoal: []
@@ -2858,6 +2861,7 @@ GameObject:
   - component: {fileID: 1631628562}
   - component: {fileID: 1631628561}
   - component: {fileID: 1631628564}
+  - component: {fileID: 1631628565}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -2986,7 +2990,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1631628562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1631628565}
+        m_TargetAssemblyTypeName: GoHome, Assembly-CSharp
+        m_MethodName: BackToHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1631628565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631628559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b614d7e001ccb67449e9cefc05bbc09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663235216
 GameObject:
   m_ObjectHideFlags: 0
