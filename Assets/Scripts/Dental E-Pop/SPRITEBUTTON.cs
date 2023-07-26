@@ -5,6 +5,7 @@ using System.Collections;
 public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
 {
     public GameObject[] spriteList;
+    public AnimationClip[] clipAnimation;
 
     void Start()
     {
@@ -16,15 +17,10 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        for (int i = 0; i < spriteList.Length; i++)
+        if (gameObject.transform.CompareTag("Tekun"))
         {
-            GameObject sprite = spriteList[i];
-            Animation spriteAnim = sprite.GetComponent<Animation>();
-
-            if (sprite.transform.CompareTag("Tekun"))
-            {
-                spriteAnim.Play("Tekun");
-            }
+            Debug.Log("Masok");
+            gameObject.GetComponent<Animation>().Play();
         }
     }
 

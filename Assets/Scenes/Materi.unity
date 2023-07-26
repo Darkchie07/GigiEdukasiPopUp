@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &114204127
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -631,6 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &136150731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -838,7 +840,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: a94fc6bf4fae5504b9b8a32ee37bed5a, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: a94fc6bf4fae5504b9b8a32ee37bed5a, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -856,6 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &186614053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1063,7 +1067,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: b84190f1afb2ae24cb031862cf124f62, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: b84190f1afb2ae24cb031862cf124f62, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1081,6 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &197935418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1335,6 +1341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &285145507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1476,6 +1483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &295593791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1716,6 +1724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &319645853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1926,6 +1935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &334543587
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2250,6 +2260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &461364626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2793,7 +2804,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 9e5d9e8fead3b224a8c0667b4b413a18, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 9e5d9e8fead3b224a8c0667b4b413a18, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2811,6 +2823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &741702794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3527,6 +3540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &985211967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4952,6 +4966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!111 &1646239606
 Animation:
   m_ObjectHideFlags: 0
@@ -5114,7 +5129,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: e462c4d87cc133b4fb3f2a78751cd7d6, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: e462c4d87cc133b4fb3f2a78751cd7d6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -5161,6 +5177,7 @@ MonoBehaviour:
   - {fileID: 1936551028}
   - {fileID: 1754150923}
   - {fileID: 1664191703}
+  clipAnimation: []
 --- !u!1 &1666068692
 GameObject:
   m_ObjectHideFlags: 0
@@ -5276,6 +5293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &1666068697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5468,7 +5486,7 @@ GameObject:
   - component: {fileID: 1754150927}
   m_Layer: 0
   m_Name: dental_1_98
-  m_TagString: Untagged
+  m_TagString: Teliti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5550,7 +5568,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 1bdc3c1535079e64abf0a82203421aa6, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 1bdc3c1535079e64abf0a82203421aa6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -5597,6 +5616,7 @@ MonoBehaviour:
   - {fileID: 1936551028}
   - {fileID: 1754150923}
   - {fileID: 1664191703}
+  clipAnimation: []
 --- !u!1 &1827563710
 GameObject:
   m_ObjectHideFlags: 0
@@ -6077,8 +6097,8 @@ GameObject:
   - component: {fileID: 1936551030}
   - component: {fileID: 1936551033}
   - component: {fileID: 1936551029}
-  - component: {fileID: 1936551031}
   - component: {fileID: 1936551032}
+  - component: {fileID: 1936551031}
   m_Layer: 0
   m_Name: dental_1_1
   m_TagString: Tekun
@@ -6163,9 +6183,10 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 9d2b23edcb6fd9e49965102384fae6e9, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 9d2b23edcb6fd9e49965102384fae6e9, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &1936551032
@@ -6184,6 +6205,8 @@ MonoBehaviour:
   - {fileID: 1936551028}
   - {fileID: 1754150923}
   - {fileID: 1664191703}
+  clipAnimation:
+  - {fileID: 7400000, guid: 9d2b23edcb6fd9e49965102384fae6e9, type: 2}
 --- !u!61 &1936551033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6283,6 +6306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!111 &1997475934
 Animation:
   m_ObjectHideFlags: 0
@@ -6413,6 +6437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &2046005276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6843,6 +6868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList: []
+  clipAnimation: []
 --- !u!61 &2120844770
 BoxCollider2D:
   m_ObjectHideFlags: 0
