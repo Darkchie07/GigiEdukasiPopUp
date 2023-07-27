@@ -49,8 +49,16 @@ public class LoginManager : MonoBehaviour
         CheckInfo();
         if (!string.IsNullOrEmpty(RespondenData.Instance.currentDataSelected.nama))
         {
-            Pengetahuan._typetest = "PreTest";
-            SceneManager.LoadScene("Pengetahuan");
+            Debug.Log(RespondenData.Instance.currentDataSelected.PreTest);
+            if (RespondenData.Instance.currentDataSelected.PreTest == "1")
+            {
+                SceneManager.LoadScene("Home");
+            }
+            else
+            {
+                Pengetahuan._typetest = "PreTest";
+                SceneManager.LoadScene("Pengetahuan");
+            }
         }
 
         // lanjut.btnLanjut.onClick.AddListener(() =>

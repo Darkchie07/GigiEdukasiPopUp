@@ -178,6 +178,9 @@ public class TestScript : MonoBehaviour
                     Jawaban.Instance.UploadDataToDrive();
                     SaveSkor(0);
                     RespondenData.Instance.RemoveDataTest();
+                    RespondenData.Instance.currentDataSelected.PreTest = "1";
+                    RespondenData.Instance.SaveDataResponden();
+                    Debug.Log(RespondenData.Instance.currentDataSelected.PreTest);
                 }
                 if (isKontrol)
                 {
@@ -186,6 +189,7 @@ public class TestScript : MonoBehaviour
                     SaveSkorKontrol();
                     RespondenData.Instance.RemoveDataKontrol();
                 }
+                
                 SceneManager.LoadScene(next);
             }
             else

@@ -24,11 +24,13 @@ public class RespondenData : MonoBehaviour
         public string umur;
         public string jenisKelamin;
         //public List<GambarGigi> daftarGambargigi = new List<GambarGigi>(7);
-        public string status; // 0 = still in, 1 = already logout
+        public string status;// 0 = still in, 1 = already logout
+        public string PreTest;// 0 = belum, 1 = sudah;
         public string statusDebris; // 0 belum membuat, 1 = sudah membuat debris
         public Responden()
         {
             status = "0";
+            PreTest = "0";
         }
 
         public void SetDataAwal(string _nama, string _umur, string _jenisKelamin)

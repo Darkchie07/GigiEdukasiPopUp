@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -481,7 +481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641375237}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Sliding Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 666855289}
   - component: {fileID: 666855291}
   - component: {fileID: 666855290}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 759685367}
   - component: {fileID: 759685366}
   - component: {fileID: 759685365}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Scrollbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 666855290}
   m_HandleRect: {fileID: 666855289}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1707,7 +1707,7 @@ GameObject:
   - component: {fileID: 931918471}
   - component: {fileID: 931918470}
   - component: {fileID: 931918469}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Dropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1844,7 +1844,7 @@ GameObject:
   - component: {fileID: 941677407}
   - component: {fileID: 941677409}
   - component: {fileID: 941677408}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Item Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.08627451, g: 0.07058824, b: 0.20000002, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2003,7 +2003,8 @@ GameObject:
   m_Component:
   - component: {fileID: 993529098}
   - component: {fileID: 993529099}
-  m_Layer: 5
+  - component: {fileID: 993529100}
+  m_Layer: 6
   m_Name: Jenis Kelamin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2058,6 +2059,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!210 &993529100
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993529097}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
 --- !u!1 &1005722225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,7 +2294,7 @@ GameObject:
   - component: {fileID: 1172673083}
   - component: {fileID: 1172673082}
   - component: {fileID: 1172673085}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2412,7 +2424,7 @@ GameObject:
   - component: {fileID: 1178251004}
   - component: {fileID: 1178251003}
   - component: {fileID: 1178251005}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2559,7 +2571,7 @@ GameObject:
   - component: {fileID: 1205995886}
   m_Layer: 0
   m_Name: Data
-  m_TagString: Untagged
+  m_TagString: Instance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2586,6 +2598,7 @@ MonoBehaviour:
     umur: 
     jenisKelamin: 
     status: 0
+    PreTest: 
     statusDebris: 
   doneLoadData: 0
   isDicari: 0
@@ -2925,7 +2938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250470627}
   - component: {fileID: 1250470628}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3013,7 +3026,7 @@ GameObject:
   - component: {fileID: 1253437405}
   - component: {fileID: 1253437407}
   - component: {fileID: 1253437406}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3205,7 +3218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482328889}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3231,7 +3244,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 100}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1524329440
 GameObject:
@@ -3320,7 +3333,7 @@ GameObject:
   - component: {fileID: 1578549785}
   - component: {fileID: 1578549787}
   - component: {fileID: 1578549786}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3396,7 +3409,7 @@ GameObject:
   - component: {fileID: 1694032927}
   - component: {fileID: 1694032929}
   - component: {fileID: 1694032928}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Item Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3831,7 +3844,7 @@ GameObject:
   - component: {fileID: 2074168381}
   - component: {fileID: 2074168380}
   - component: {fileID: 2074168379}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
