@@ -46,4 +46,9 @@ public class GoHome : MonoBehaviour
     {
         SceneManager.LoadScene("Grafik");
     }
+
+    public void KontrolDebris()
+    {
+        SceneManager.LoadScene("Kontrol");
+    } 
 }

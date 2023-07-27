@@ -148,7 +148,7 @@ public class Pengetahuan : MonoBehaviour
                 var colorsHighlight1 = jawaban1.GetComponent<Button>().colors;
                 var colorsHighlight2 = jawaban2.GetComponent<Button>().colors;
                 colorsHighlight2.normalColor = Color.white;
-                colorsHighlight1.normalColor = Color.red;
+                colorsHighlight1.normalColor = Color.green;
                 jawaban1.GetComponent<Button>().colors = colorsHighlight1;
                 jawaban2.GetComponent<Button>().colors = colorsHighlight2;
             }
@@ -157,7 +157,7 @@ public class Pengetahuan : MonoBehaviour
                 var colorsHighlight1 = jawaban1.GetComponent<Button>().colors;
                 var colorsHighlight2 = jawaban2.GetComponent<Button>().colors;
                 colorsHighlight2.normalColor = Color.white;
-                colorsHighlight1.normalColor = Color.red;
+                colorsHighlight1.normalColor = Color.green;
                 jawaban1.GetComponent<Button>().colors = colorsHighlight2;
                 jawaban2.GetComponent<Button>().colors = colorsHighlight1;
             }
@@ -182,7 +182,7 @@ public class Pengetahuan : MonoBehaviour
                 var colorsHighlight1 = jawaban1.GetComponent<Button>().colors;
                 var colorsHighlight2 = jawaban2.GetComponent<Button>().colors;
                 colorsHighlight2.normalColor = Color.white;
-                colorsHighlight1.selectedColor = Color.red;
+                colorsHighlight1.selectedColor = Color.green;
                 jawaban1.GetComponent<Button>().colors = colorsHighlight1;
                 jawaban2.GetComponent<Button>().colors = colorsHighlight2;
             }
@@ -195,7 +195,7 @@ public class Pengetahuan : MonoBehaviour
                 var colorsHighlight1 = jawaban1.GetComponent<Button>().colors;
                 var colorsHighlight2 = jawaban2.GetComponent<Button>().colors;
                 colorsHighlight1.normalColor = Color.white;
-                colorsHighlight2.selectedColor = Color.red;
+                colorsHighlight2.selectedColor = Color.green;
                 jawaban1.GetComponent<Button>().colors = colorsHighlight2;
                 jawaban2.GetComponent<Button>().colors = colorsHighlight1;
             }
