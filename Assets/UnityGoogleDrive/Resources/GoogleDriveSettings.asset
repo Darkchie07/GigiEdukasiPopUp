@@ -22,10 +22,10 @@ MonoBehaviour:
     redirect_uris:
     - http://localhost
   uriSchemeClientCredentials:
-    clientId: 
-    reversedClientId: 
-    plistVersion: 
-    bundleId: 
+    clientId: 59673991759-cs8fumnlvjuc1dvspd2hhrbu6cu8mnq7.apps.googleusercontent.com
+    reversedClientId: com.googleusercontent.apps.59673991759-cs8fumnlvjuc1dvspd2hhrbu6cu8mnq7
+    plistVersion: 1
+    bundleId: com.UnitySensei.DentalEPopUpBook
   accessScopes:
   - https://www.googleapis.com/auth/drive
   - https://www.googleapis.com/auth/drive.appdata
