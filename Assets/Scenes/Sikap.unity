@@ -728,6 +728,7 @@ MonoBehaviour:
   foto: []
   NextButton: {fileID: 1940868842}
   PrevButton: {fileID: 1631628564}
+  DoneButton: {fileID: 2099763143}
   listtxtSoal:
   - {fileID: 0}
   - {fileID: 0}
@@ -749,6 +750,7 @@ MonoBehaviour:
   Answered: 0
   next: Tindakan
   prev: Pengetahuan
+  Done: 0
   image: []
   totalText: {fileID: 0}
   subField: {fileID: 0}
@@ -3506,6 +3508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5b4ab683f6b5b4bbb1795e0c90f563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idx: 0
   jawabanPengetahuan: []
   jawabanSikap: []
   jawabanTindakan: []

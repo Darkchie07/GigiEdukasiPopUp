@@ -50,7 +50,7 @@ public class Pengetahuan : MonoBehaviour
 
     void Start()
     {
-        if (_typetest == "PreTest")
+        Debug.Log("Coba");        if (_typetest == "PreTest")
         {
             header.sprite = preTest;
         }else if (_typetest == "PostTest")
@@ -70,6 +70,13 @@ public class Pengetahuan : MonoBehaviour
         if (Instance == null)
             Instance = this;
 
+        if (Jawaban.Instance.skorTest.Count == 0)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Jawaban.Instance.skorTest.Add("-");
+            }
+        }
         TestScript.Instance.TagGObjects();
         // TestScript.Instance.LoadData();
         jawaban = GameObject.FindGameObjectWithTag("Jawaban");

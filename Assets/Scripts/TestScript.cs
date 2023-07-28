@@ -103,6 +103,7 @@ public class TestScript : MonoBehaviour
     {
         listJawabanYa = new List<int>();
         listJawabanNo = new List<int>();
+        Done = false;
         if (Pengetahuan._typetest == "PreTest")
         {
             header.sprite = preTest;
@@ -207,7 +208,6 @@ public class TestScript : MonoBehaviour
                 Debug.Log(!listpathFoto.Contains(""));
                 PopUpMessage("Masih ada soal yang belum terjawab");
             }
-
         });
         PrevButton.onClick.AddListener(() =>
         {
@@ -229,13 +229,16 @@ public class TestScript : MonoBehaviour
                     TakePic(a);
                 });
             }
+        }
+        
+        DoneButton.onClick.AddListener(() =>
+        {
             if (Done)
             {
-                TestScript.Instance.PopUpMessage("Data berhasil di upload");
-                DoneButton.onClick.AddListener(() => { Invoke("Home", 2f); });
+                SceneManager.LoadScene("Home");
             }
-
-        }
+        });
+        
         if (isKontrol)
         {
             for (int i = 0; i < drop.Length; i++)

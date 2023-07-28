@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Debris : MonoBehaviour
 {
+    private int Index;
     public static Debris Instance { get; set; }
     public List<string> jawabanKontrol;
     public List<int> skorKontrol;
@@ -40,6 +41,7 @@ public class Debris : MonoBehaviour
         string _skorgrahamKiriBawah = skorKontrol[5].ToString();
         string _skor = skorKontrol[6].ToString();
 
+        Index = 0;
         //API FORM
         StartCoroutine(Helper.CoroutineUploadFormGigiResponden(
         _grahamKananAtas, _depanAtas, _grahamKiriAtas, _grahamKiriBawah, _depanBawah, _grahamKananBawah, _skorgrahamKananAtas, _skordepanAtas, _skorgrahamKiriAtas,
@@ -59,8 +61,12 @@ public class Debris : MonoBehaviour
 
     private void _onDoneAction()
     {
-        RespondenData.Instance.RemoveDataKontrol();
-        TestScript.Instance.PopUpMessage("Data berhasil di upload");
+        Index += 1;
+        if (Index == 6)
+        {
+            RespondenData.Instance.RemoveDataKontrol();
+            TestScript.Instance.PopUpMessage("Data berhasil di upload");
+        }
         Debug.Log("Selesai");
     }
 

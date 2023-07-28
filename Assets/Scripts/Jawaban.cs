@@ -11,6 +11,7 @@ using UnityEngine.UI;
 
 public class Jawaban : MonoBehaviour
 {
+    public int idx;
     public static Jawaban Instance { get; set; }
     public List<string> jawabanPengetahuan;
     public List<string> jawabanSikap;
@@ -33,6 +34,11 @@ public class Jawaban : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    void Start()
+    {
+        
     }
 
     public void UploadDataToDrive()
@@ -94,6 +100,7 @@ public class Jawaban : MonoBehaviour
         string _skorSikap = skorSikap;
         string _skorTindakan = skorTindakan;
 
+        idx = 0;
         StartCoroutine(Helper.CoroutineUploadFormTest(
             _pengetahuan1, _pengetahuan2, _pengetahuan3, _pengetahuan4, _pengetahuan5, _pengetahuan6, _pengetahuan7, _pengetahuan8, _pengetahuan9, _pengetahuan10,
             _pengetahuan11, _pengetahuan12, _sikap1, _sikap2, _sikap3, _sikap4, _sikap5, _sikap6, _sikap7, _sikap8, _tindakan1, _tindakan2, _tindakan3, _tindakan4, _tindakan5,
@@ -116,10 +123,15 @@ public class Jawaban : MonoBehaviour
 
     private void _onDoneAction()
     {
-        RespondenData.Instance.RemoveFotoTindakan();
-        RespondenData.Instance.RemoveDataTest();
-        TestScript.Instance.Done = true;
-        Debug.Log("Selesai");
+        idx += 1;
+        if (idx == 32)
+        {
+            RespondenData.Instance.RemoveFotoTindakan();
+            RespondenData.Instance.RemoveDataTest();
+            TestScript.Instance.Done = true;
+            TestScript.Instance.PopUpMessage("Data berhasil di upload");
+            Debug.Log("Selesai");
+        }
     }
 
     void ErrorUploadFileResponden()
