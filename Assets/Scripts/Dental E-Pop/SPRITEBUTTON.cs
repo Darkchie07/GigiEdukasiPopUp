@@ -4,40 +4,38 @@ using System.Collections;
 
 public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
 {
-    public GameObject[] spriteList;
-    public AnimationClip[] clipAnimation;
+    public Materi materiManager;
     public bool isAnim;
 
     void Start()
     {
         //Attach Physics2DRaycaster to the Camera
-        Screen.orientation = ScreenOrientation.LandscapeRight;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         Camera.main.gameObject.AddComponent<Physics2DRaycaster>();
-
         addEventSystem();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        var reverseAnim = gameObject.GetComponent<Animation>().clip.name;
+
         if (gameObject.transform.CompareTag("Dental") && gameObject.GetComponent<SPRITEBUTTON>().isAnim == false)
         {
-            Debug.Log("Masok");
-            var reverseAnim = gameObject.GetComponent<Animation>().clip.name;
             gameObject.GetComponent<Animation>()[reverseAnim].speed = 1;
             gameObject.GetComponent<Animation>().Play();
+            StartCoroutine(TimerCoroutine());
             gameObject.GetComponent<SPRITEBUTTON>().isAnim = true;
         }
         else if (gameObject.transform.CompareTag("Dental") && gameObject.GetComponent<SPRITEBUTTON>().isAnim == true)
         {
-            var reverseAnim = gameObject.GetComponent<Animation>().clip.name;
             gameObject.GetComponent<Animation>()[reverseAnim].time = gameObject.GetComponent<Animation>()[reverseAnim].length;
             gameObject.GetComponent<Animation>()[reverseAnim].speed = -1;
             gameObject.GetComponent<Animation>().Play();
+            StartCoroutine(TimerCoroutine());
             gameObject.GetComponent<SPRITEBUTTON>().isAnim = false;
         }
     }
 
-    //Add Event System to the Camera
     void addEventSystem()
     {
         GameObject eventSystem = null;
@@ -62,4 +60,14 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    IEnumerator TimerCoroutine()
+    {
+        materiManager.NextButton.enabled = false;
+        materiManager.PrevButton.enabled = false;
+
+        yield return new WaitForSeconds(2f);
+
+        materiManager.NextButton.enabled = true;
+        materiManager.PrevButton.enabled = true;
+    }
 }

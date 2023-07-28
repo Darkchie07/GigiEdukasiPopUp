@@ -50,5 +50,5 @@ public class GoHome : MonoBehaviour
     public void KontrolDebris()
     {
         SceneManager.LoadScene("Kontrol");
-    } 
+    }
 }

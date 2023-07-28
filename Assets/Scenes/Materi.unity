@@ -390,8 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &114204127
 BoxCollider2D:
@@ -634,8 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &136150731
 BoxCollider2D:
@@ -862,8 +860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &186614053
 BoxCollider2D:
@@ -1090,8 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &197935418
 BoxCollider2D:
@@ -1346,8 +1342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &285145507
 BoxCollider2D:
@@ -1490,8 +1485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &295593791
 BoxCollider2D:
@@ -1734,8 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &319645853
 BoxCollider2D:
@@ -1946,8 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &334543587
 BoxCollider2D:
@@ -2274,8 +2266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &461364626
 BoxCollider2D:
@@ -2838,8 +2829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &741702794
 BoxCollider2D:
@@ -3556,8 +3546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &985211967
 BoxCollider2D:
@@ -4982,8 +4971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!111 &1646239606
 Animation:
@@ -5192,11 +5180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
-  - {fileID: 1936551028}
-  - {fileID: 1754150923}
-  - {fileID: 1664191703}
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!1 &1666068692
 GameObject:
@@ -5313,8 +5297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &1666068697
 BoxCollider2D:
@@ -5634,11 +5617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
-  - {fileID: 1936551028}
-  - {fileID: 1754150923}
-  - {fileID: 1664191703}
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!1 &1827563710
 GameObject:
@@ -6119,8 +6098,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1936551030}
   - component: {fileID: 1936551033}
-  - component: {fileID: 1936551029}
   - component: {fileID: 1936551032}
+  - component: {fileID: 1936551029}
   - component: {fileID: 1936551031}
   m_Layer: 0
   m_Name: dental_1_1
@@ -6224,12 +6203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
-  - {fileID: 1936551028}
-  - {fileID: 1754150923}
-  - {fileID: 1664191703}
-  clipAnimation:
-  - {fileID: 7400000, guid: 9d2b23edcb6fd9e49965102384fae6e9, type: 2}
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &1936551033
 BoxCollider2D:
@@ -6331,8 +6305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!111 &1997475934
 Animation:
@@ -6465,8 +6438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &2046005276
 BoxCollider2D:
@@ -6898,8 +6870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f049ba300097604c8214ef04750e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  clipAnimation: []
+  materiManager: {fileID: 797588245}
   isAnim: 0
 --- !u!61 &2120844770
 BoxCollider2D:
