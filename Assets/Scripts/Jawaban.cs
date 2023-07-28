@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Jawaban : MonoBehaviour
 {
@@ -115,6 +117,8 @@ public class Jawaban : MonoBehaviour
     private void _onDoneAction()
     {
         RespondenData.Instance.RemoveFotoTindakan();
+        RespondenData.Instance.RemoveDataTest();
+        TestScript.Instance.Done = true;
         Debug.Log("Selesai");
     }
 

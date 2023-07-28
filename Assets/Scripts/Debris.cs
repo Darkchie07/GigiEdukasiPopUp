@@ -60,6 +60,7 @@ public class Debris : MonoBehaviour
     private void _onDoneAction()
     {
         RespondenData.Instance.RemoveDataKontrol();
+        TestScript.Instance.PopUpMessage("Data berhasil di upload");
         Debug.Log("Selesai");
     }
 

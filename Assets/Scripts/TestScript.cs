@@ -40,6 +40,7 @@ public class TestScript : MonoBehaviour
     [Header("Mount")]
     public Button NextButton;
     public Button PrevButton;
+    public Button DoneButton;
     public List<GameObject> listtxtSoal;
     public List<string> listJawaban = new List<string>();
     private List<int> listJawabanYa = new List<int>();
@@ -51,6 +52,7 @@ public class TestScript : MonoBehaviour
     private bool isSikap;
     private bool isTindakan;
     private bool isKontrol;
+    public bool Done;
 
     [Header("Kontrol")]
     public List<Sprite> image = new List<Sprite>();
@@ -179,25 +181,26 @@ public class TestScript : MonoBehaviour
             {
                 FillJawaban();
                 SaveTest();
+                if (isSikap)
+                {
+                    SceneManager.LoadScene(next);
+                }
                 if (isTindakan)
                 {
                     Debug.Log("Upload weh");
                     Debug.Log(!listpathFoto.Contains(""));
-                    Jawaban.Instance.UploadDataToDrive();
                     SaveSkor(0);
-                    RespondenData.Instance.RemoveDataTest();
                     RespondenData.Instance.currentDataSelected.PreTest = "1";
                     RespondenData.Instance.SaveDataResponden();
                     Debug.Log(RespondenData.Instance.currentDataSelected.PreTest);
+                    Jawaban.Instance.UploadDataToDrive();
                 }
                 if (isKontrol)
                 {
-                    Debris.Instance.UploadDebrisToDrive();
                     SaveSkor(skor);
                     SaveSkorKontrol();
-                    PopUpMessage("Data berhasil di upload");
+                    Debris.Instance.UploadDebrisToDrive();
                 }
-                SceneManager.LoadScene(next);
             }
             else
             {
@@ -212,14 +215,9 @@ public class TestScript : MonoBehaviour
             {
                 SaveFoto();
             }
-            if (isDone())
-            {
-                FillJawaban();
-                SaveTest();
-                SceneManager.LoadScene(prev);
-            }
-            else
-                Debug.Log("Masih ada yg kurang " + Answered.ToString());
+            FillJawaban();
+            SaveTest();
+            SceneManager.LoadScene(prev);
         });
         if (isTindakan)
         {
@@ -231,8 +229,13 @@ public class TestScript : MonoBehaviour
                     TakePic(a);
                 });
             }
-        }
+            if (Done)
+            {
+                TestScript.Instance.PopUpMessage("Data berhasil di upload");
+                DoneButton.onClick.AddListener(() => { Invoke("Home", 2f); });
+            }
 
+        }
         if (isKontrol)
         {
             for (int i = 0; i < drop.Length; i++)
@@ -643,5 +646,10 @@ public class TestScript : MonoBehaviour
     {
         _popUpPanel.SetActive(true);
         _textPopUp.SetText(message);
+    }
+
+    void Home()
+    {
+        SceneManager.LoadScene("Home");
     }
 }

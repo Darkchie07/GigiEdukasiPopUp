@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2708,7 +2708,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1770934739}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.21917807
+  m_Size: 0.21917808
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3998,6 +3998,7 @@ MonoBehaviour:
   foto: []
   NextButton: {fileID: 1940868842}
   PrevButton: {fileID: 1631628564}
+  DoneButton: {fileID: 1514903238}
   listtxtSoal:
   - {fileID: 0}
   - {fileID: 0}
@@ -4067,6 +4068,7 @@ MonoBehaviour:
   Answered: 0
   next: Home
   prev: Sikap
+  Done: 0
   image: []
   totalText: {fileID: 0}
   subField: {fileID: 2367809950697934749, guid: 9f8797911393a034d85a32085243c07a, type: 3}
@@ -4511,9 +4513,10 @@ GameObject:
   - component: {fileID: 1514903240}
   - component: {fileID: 1514903239}
   - component: {fileID: 1514903238}
+  - component: {fileID: 1514903241}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Done
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4632,6 +4635,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514903236}
   m_CullTransparentMesh: 1
+--- !u!114 &1514903241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514903236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b614d7e001ccb67449e9cefc05bbc09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1576424367
 GameObject:
   m_ObjectHideFlags: 0

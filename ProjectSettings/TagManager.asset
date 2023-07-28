@@ -23,6 +23,7 @@ TagManager:
   - Pengetahuan
   - Dental
   - Instance
+  - Done
   layers:
   - Default
   - TransparentFX
