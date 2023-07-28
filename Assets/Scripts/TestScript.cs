@@ -68,6 +68,10 @@ public class TestScript : MonoBehaviour
     [Header("Skor")]
     public int skor;
     public List<int> listSkorDebris = new List<int>();
+    
+    [Header("Pop Up")] 
+    public GameObject _popUpPanel;
+    public TMP_Text _textPopUp;
 
 
     void Awake()
@@ -152,6 +156,7 @@ public class TestScript : MonoBehaviour
         {
             content = GameObject.FindGameObjectWithTag("Tindakan").gameObject;
             isTindakan = true;
+            Debug.Log(!listpathFoto.Contains(""));
         }
         else if (GameObject.FindGameObjectWithTag("Kontrol") != null)
         {
@@ -175,6 +180,7 @@ public class TestScript : MonoBehaviour
                 if (isTindakan)
                 {
                     Debug.Log("Upload weh");
+                    Debug.Log(!listpathFoto.Contains(""));
                     Jawaban.Instance.UploadDataToDrive();
                     SaveSkor(0);
                     RespondenData.Instance.RemoveDataTest();
@@ -188,12 +194,16 @@ public class TestScript : MonoBehaviour
                     SaveSkor(skor);
                     SaveSkorKontrol();
                     RespondenData.Instance.RemoveDataKontrol();
+                    PopUpMessage("Data berhasil di upload");
                 }
                 
                 SceneManager.LoadScene(next);
             }
             else
-                Debug.Log("Masih ada yg kurang " + Answered.ToString());
+            {
+                Debug.Log(!listpathFoto.Contains(""));
+                PopUpMessage("Masih ada soal yang belum terjawab");
+            }
 
         });
         PrevButton.onClick.AddListener(() =>
@@ -373,6 +383,7 @@ public class TestScript : MonoBehaviour
 
     private bool isDone()
     {
+        Answered = 0;
         for (int i = 0; i < yes.Length; i++)
         {
             if (yes[i].GetComponent<Toggle>().isOn)
@@ -394,9 +405,25 @@ public class TestScript : MonoBehaviour
                 listJawabanNo.Add(i);
             }
         }
-        if (Answered == listSoal.Count)
+
+        if (isSikap)
         {
-            return true;
+            if (Answered == listSoal.Count)
+            {
+                return true;
+            }
+        }else if (isTindakan)
+        {
+            if (Answered == listSoal.Count && !listpathFoto.Contains(""))
+            {
+                return true;
+            }
+        }else if (isKontrol)
+        {
+            if (Answered == listSoal.Count && !listpathFoto.Contains(""))
+            {
+                return true;
+            }
         }
 
         return false;
@@ -609,4 +636,10 @@ public class TestScript : MonoBehaviour
         }
     }
     #endregion
+    
+    public void PopUpMessage(string message)
+    {
+        _popUpPanel.SetActive(true);
+        _textPopUp.SetText(message);
+    }
 }

@@ -41,6 +41,10 @@ public class Pengetahuan : MonoBehaviour
     public List<string> listJawabanBenar = new List<string>();
     public int skor;
 
+    [Header("Pop Up")] 
+    public GameObject _popUpPanel;
+    public TMP_Text _textPopUp;
+
     public static Pengetahuan Instance;
 
 
@@ -95,7 +99,7 @@ public class Pengetahuan : MonoBehaviour
                         SceneManager.LoadScene("Sikap");
                     }
                     else
-                        Debug.Log("Masih ada yg kurang");
+                        PopUpMessage("Masih ada soal yang belum terjawab");
 
                 }
                 else if (0 < idxSoal && idxSoal < listsoal.Count)
@@ -234,4 +238,10 @@ public class Pengetahuan : MonoBehaviour
         return true;
     }
     #endregion
+
+    public void PopUpMessage(string message)
+    {
+        _popUpPanel.SetActive(true);
+        _textPopUp.SetText(message);
+    }
 }

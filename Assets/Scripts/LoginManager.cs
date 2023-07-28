@@ -39,6 +39,10 @@ public class LoginManager : MonoBehaviour
     private GameObject txtPrefab;
     private Transform contentParentTxt;
     private Canvas canvas;
+    
+    [Header("Pop Up")] 
+    public GameObject _popUpPanel;
+    public TMP_Text _textPopUp;
 
     private IEnumerator Start()
     {
@@ -84,13 +88,13 @@ public class LoginManager : MonoBehaviour
             if (string.IsNullOrEmpty(login.inputNama.text))
             {
                 //munculkan popup nama kosong
-                SetTextMessage("Data Nama tidak boleh kosong");
+                PopUpMessage("Data Nama tidak boleh kosong");
                 return;
             }
             if (string.IsNullOrEmpty(login.inputUmur.text))
             {
                 //munculkan popup umur kosong
-                SetTextMessage("Data Umur tidak boleh kosong");
+                PopUpMessage("Data Umur tidak boleh kosong");
                 return;
             }
 
@@ -148,6 +152,12 @@ public class LoginManager : MonoBehaviour
         GameObject msg = Instantiate(txtPrefab, contentParentTxt);
         // msg.GetComponent<PemantauanMessage>().SetText(_txt, canvas);
         msg.SetActive(true);
+    }
+    
+    public void PopUpMessage(string message)
+    {
+        _popUpPanel.SetActive(true);
+        _textPopUp.SetText(message);
     }
 
     private GoogleDriveAbout.GetRequest request;
