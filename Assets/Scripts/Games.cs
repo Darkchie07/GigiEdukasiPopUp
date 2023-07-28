@@ -85,14 +85,12 @@ public class Games : MonoBehaviour
 
             if (isCorrect == true)
             {
-                listGambarSoal[idxSoal].gambarSoal.SetActive(false);
-
                 if (idxSoal >= listGambarSoal.Count - 1)
                 {
                     // if (isDone())
                     // {
                     //     CheckJawaban();
-                    SceneManager.LoadScene("PemeliharaanGigi");
+                    SceneManager.LoadScene("Home");
                     // }
                 }
                 else if (0 < idxSoal && idxSoal < listGambarSoal.Count)
@@ -108,6 +106,7 @@ public class Games : MonoBehaviour
                     ResetHighlight();
                     PrevButton.gameObject.SetActive(true);
                 }
+                listGambarSoal[idxSoal].gambarSoal.SetActive(false);
             }
             PlayerPrefs.SetInt("IdxLevel", idxSoal);
         });

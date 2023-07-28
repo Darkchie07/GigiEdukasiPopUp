@@ -190,16 +190,12 @@ public class TestScript : MonoBehaviour
                 {
                     Debug.Log("Upload weh");
                     Debug.Log(!listpathFoto.Contains(""));
-                    SaveSkor(0);
-                    RespondenData.Instance.currentDataSelected.PreTest = "1";
-                    RespondenData.Instance.SaveDataResponden();
                     Debug.Log(RespondenData.Instance.currentDataSelected.PreTest);
                     Jawaban.Instance.UploadDataToDrive();
+
                 }
                 if (isKontrol)
                 {
-                    SaveSkor(skor);
-                    SaveSkorKontrol();
                     Debris.Instance.UploadDebrisToDrive();
                 }
             }
@@ -230,15 +226,15 @@ public class TestScript : MonoBehaviour
                 });
             }
         }
-        
+
         DoneButton.onClick.AddListener(() =>
         {
             if (Done)
             {
-                SceneManager.LoadScene("Home");
+                SceneManager.LoadScene(next);
             }
         });
-        
+
         if (isKontrol)
         {
             for (int i = 0; i < drop.Length; i++)

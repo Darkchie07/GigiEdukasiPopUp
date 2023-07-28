@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5b4ab683f6b5b4bbb1795e0c90f563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idx: 0
   jawabanPengetahuan: []
   jawabanSikap: []
   jawabanTindakan: []
@@ -2708,7 +2709,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1770934739}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.21917808
+  m_Size: 0.2191781
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4520,7 +4521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1514903237
 RectTransform:
   m_ObjectHideFlags: 0

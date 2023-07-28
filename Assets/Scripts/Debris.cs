@@ -41,6 +41,7 @@ public class Debris : MonoBehaviour
         string _skorgrahamKiriBawah = skorKontrol[5].ToString();
         string _skor = skorKontrol[6].ToString();
 
+        TestScript.Instance.PopUpMessage("Proses Upload..");
         Index = 0;
         //API FORM
         StartCoroutine(Helper.CoroutineUploadFormGigiResponden(
@@ -64,15 +65,17 @@ public class Debris : MonoBehaviour
         Index += 1;
         if (Index == 6)
         {
+            TestScript.Instance.SaveSkor(TestScript.Instance.skor);
+            TestScript.Instance.SaveSkorKontrol();
             RespondenData.Instance.RemoveDataKontrol();
-            TestScript.Instance.PopUpMessage("Data berhasil di upload");
+            TestScript.Instance.PopUpMessage("Data Berhasil diUpload");
+            TestScript.Instance.DoneButton.gameObject.SetActive(true);
         }
         Debug.Log("Selesai");
     }
 
     void ErrorUploadFileResponden()
     {
-        // CloseLoading();
-        Debug.Log("isi kuota deck");
+        TestScript.Instance.PopUpMessage("Data Gagal diUpload");
     }
 }
