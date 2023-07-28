@@ -43,6 +43,12 @@ public class Games : MonoBehaviour
     [Header("Particle")]
     ParticleSystem bubble;
 
+    [Header("AudioSFX")]
+    public GameObject audioSFX;
+    AudioSource audioSource;
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
+
     void Start()
     {
         LoadList();
@@ -53,6 +59,8 @@ public class Games : MonoBehaviour
 
         if (PlayerPrefs.HasKey("IdxLevel"))
             HighlightJawaban();
+
+        audioSource = audioSFX.GetComponent<AudioSource>();
     }
 
     public void GenerateSoal(int idx)
@@ -273,14 +281,17 @@ public class Games : MonoBehaviour
 
         if (listJawaban[idxSoal] == listJawabanBenar[idxSoal])
         {
+            audioSource.clip = correctSFX;
+            audioSource.Play();
             isCorrect = true;
             // listJawaban[idxSoal] = buttonValue;
         }
         else
         {
+            audioSource.clip = wrongSFX;
+            audioSource.Play();
             isCorrect = false;
         }
-        Debug.Log("isCorrect " + isCorrect);
     }
 
     // private bool isDone()
