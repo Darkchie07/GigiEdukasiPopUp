@@ -68,8 +68,8 @@ public class TestScript : MonoBehaviour
     [Header("Skor")]
     public int skor;
     public List<int> listSkorDebris = new List<int>();
-    
-    [Header("Pop Up")] 
+
+    [Header("Pop Up")]
     public GameObject _popUpPanel;
     public TMP_Text _textPopUp;
 
@@ -78,7 +78,7 @@ public class TestScript : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        
+
         TagGObjects();
         if (!isPengetahuan)
         {
@@ -179,10 +179,6 @@ public class TestScript : MonoBehaviour
             {
                 FillJawaban();
                 SaveTest();
-                if (isSikap)
-                {
-                    SceneManager.LoadScene(next); 
-                }
                 if (isTindakan)
                 {
                     Debug.Log("Upload weh");
@@ -199,10 +195,9 @@ public class TestScript : MonoBehaviour
                     Debris.Instance.UploadDebrisToDrive();
                     SaveSkor(skor);
                     SaveSkorKontrol();
-                    RespondenData.Instance.RemoveDataKontrol();
                     PopUpMessage("Data berhasil di upload");
-                    SceneManager.LoadScene(next); 
                 }
+                SceneManager.LoadScene(next);
             }
             else
             {
@@ -417,13 +412,15 @@ public class TestScript : MonoBehaviour
             {
                 return true;
             }
-        }else if (isTindakan)
+        }
+        else if (isTindakan)
         {
             if (Answered == listSoal.Count && !listpathFoto.Contains(""))
             {
                 return true;
             }
-        }else if (isKontrol)
+        }
+        else if (isKontrol)
         {
             if (Answered == listSoal.Count && !listpathFoto.Contains(""))
             {
@@ -641,7 +638,7 @@ public class TestScript : MonoBehaviour
         }
     }
     #endregion
-    
+
     public void PopUpMessage(string message)
     {
         _popUpPanel.SetActive(true);

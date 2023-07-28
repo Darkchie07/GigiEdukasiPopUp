@@ -59,6 +59,7 @@ public class Debris : MonoBehaviour
 
     private void _onDoneAction()
     {
+        RespondenData.Instance.RemoveDataKontrol();
         Debug.Log("Selesai");
     }
 

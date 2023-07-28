@@ -114,8 +114,8 @@ public class Jawaban : MonoBehaviour
 
     private void _onDoneAction()
     {
-        RespondenData.Instance.RemoveFotoTindakan();;
-        SceneManager.LoadScene("Home");
+        RespondenData.Instance.RemoveFotoTindakan();
+        Debug.Log("Selesai");
     }
 
     void ErrorUploadFileResponden()
