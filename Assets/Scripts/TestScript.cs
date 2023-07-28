@@ -78,7 +78,7 @@ public class TestScript : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-
+        
         TagGObjects();
         if (!isPengetahuan)
         {
@@ -99,6 +99,8 @@ public class TestScript : MonoBehaviour
 
     private void Start()
     {
+        listJawabanYa = new List<int>();
+        listJawabanNo = new List<int>();
         if (Pengetahuan._typetest == "PreTest")
         {
             header.sprite = preTest;
@@ -177,6 +179,10 @@ public class TestScript : MonoBehaviour
             {
                 FillJawaban();
                 SaveTest();
+                if (isSikap)
+                {
+                    SceneManager.LoadScene(next); 
+                }
                 if (isTindakan)
                 {
                     Debug.Log("Upload weh");
@@ -195,9 +201,8 @@ public class TestScript : MonoBehaviour
                     SaveSkorKontrol();
                     RespondenData.Instance.RemoveDataKontrol();
                     PopUpMessage("Data berhasil di upload");
+                    SceneManager.LoadScene(next); 
                 }
-                
-                SceneManager.LoadScene(next);
             }
             else
             {

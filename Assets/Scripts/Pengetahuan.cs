@@ -57,6 +57,11 @@ public class Pengetahuan : MonoBehaviour
         {
             header.sprite = postTest;
         }
+        listJawaban = new List<string>(12);
+        for (int i = 0; i < 12; i++)
+        {
+            listJawaban.Add("-");
+        }
         if (Data.Instance.HasFile("Pengetahuan"))
         {
             LoadJawaban();
@@ -64,6 +69,7 @@ public class Pengetahuan : MonoBehaviour
         }
         if (Instance == null)
             Instance = this;
+
         TestScript.Instance.TagGObjects();
         // TestScript.Instance.LoadData();
         jawaban = GameObject.FindGameObjectWithTag("Jawaban");
