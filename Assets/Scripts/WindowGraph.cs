@@ -194,7 +194,7 @@ public class WindowGraph : MonoBehaviour
         TestScript.Instance.LoadSkor(true);
         for (int i = 0; i < Debris.Instance.skorKontrolResponden.Count; i += 2)
         {
-            var skor = (float)Debris.Instance.skorKontrolResponden[i + 1] / (float)Debris.Instance.skorKontrolResponden[i];
+            var skor = (float)Debris.Instance.skorKontrolResponden[i+1] / (float)Debris.Instance.skorKontrolResponden[i];
             SkorKontrol.Add(skor);
             Debug.Log(skor);
         }

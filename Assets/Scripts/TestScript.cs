@@ -205,16 +205,20 @@ public class TestScript : MonoBehaviour
                 DoneButton.gameObject.SetActive(true);
             }
         });
+
         PrevButton.onClick.AddListener(() =>
         {
             if (isTindakan || isKontrol)
             {
                 SaveFoto();
             }
+            if (isKontrol)
+                SaveSkorKontrol();
             FillJawaban();
             SaveTest();
             SceneManager.LoadScene(prev);
         });
+
         if (isTindakan)
         {
             for (int i = 0; i < foto.Length; i++)
@@ -280,6 +284,7 @@ public class TestScript : MonoBehaviour
             else
             {
                 int valtemp = drop[i].GetComponent<TMP_Dropdown>().value;
+                listSkorDebris[i] = valtemp - 1;
                 temp += valtemp;
             }
         }
@@ -462,10 +467,13 @@ public class TestScript : MonoBehaviour
         else if (isKontrol)
         {
             filePath = Application.persistentDataPath + "/saveDebris.json";
-            LoadSkorKontrol();
-            for (int i = 0; i < drop.Length - 1; i++)
+            if (Data.Instance.HasFile("SkorKontrol"))
             {
-                drop[i].GetComponent<TMP_Dropdown>().value = Debris.Instance.skorKontrol[i] + 1;
+                LoadSkorKontrol();
+                for (int i = 0; i < drop.Length; i++)
+                {
+                    drop[i].GetComponent<TMP_Dropdown>().value = Debris.Instance.skorKontrol[i] + 1;
+                }
             }
         }
         string json = File.ReadAllText(filePath);
@@ -584,7 +592,7 @@ public class TestScript : MonoBehaviour
         //create sprite
         if (_tex != null)
         {
-            foto[i].GetComponent<Button>().image.color = Color.red;
+            foto[i].GetComponent<Button>().image.color = Color.green;
             Sprite spriteFoto = Helper.TextureToSprite(_tex);
             sprData[i] = spriteFoto;
         }
@@ -630,7 +638,7 @@ public class TestScript : MonoBehaviour
         for (int i = 0; i < foto.Length; i++)
         {
             if (!string.IsNullOrEmpty(liststringFoto[i]))
-                foto[i].GetComponent<Button>().image.color = Color.red;
+                foto[i].GetComponent<Button>().image.color = Color.green;
             else
                 return;
         }
@@ -641,10 +649,5 @@ public class TestScript : MonoBehaviour
     {
         _popUpPanel.SetActive(true);
         _textPopUp.SetText(message);
-    }
-
-    void Home()
-    {
-        SceneManager.LoadScene("Home");
     }
 }
