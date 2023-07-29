@@ -21,7 +21,7 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
 
         if (gameObject.transform.CompareTag("Dental") && gameObject.GetComponent<SPRITEBUTTON>().isAnim == false)
         {
-            gameObject.GetComponent<Animation>()[reverseAnim].speed = 1;
+            gameObject.GetComponent<Animation>()[reverseAnim].speed = 2;
             gameObject.GetComponent<Animation>().Play();
             StartCoroutine(TimerCoroutine());
             gameObject.GetComponent<SPRITEBUTTON>().isAnim = true;
@@ -29,7 +29,7 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
         else if (gameObject.transform.CompareTag("Dental") && gameObject.GetComponent<SPRITEBUTTON>().isAnim == true)
         {
             gameObject.GetComponent<Animation>()[reverseAnim].time = gameObject.GetComponent<Animation>()[reverseAnim].length;
-            gameObject.GetComponent<Animation>()[reverseAnim].speed = -1;
+            gameObject.GetComponent<Animation>()[reverseAnim].speed = -2;
             gameObject.GetComponent<Animation>().Play();
             StartCoroutine(TimerCoroutine());
             gameObject.GetComponent<SPRITEBUTTON>().isAnim = false;
@@ -62,12 +62,12 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
 
     IEnumerator TimerCoroutine()
     {
-        materiManager.NextButton.enabled = false;
-        materiManager.PrevButton.enabled = false;
+        materiManager.NextButton.interactable = false;
+        materiManager.PrevButton.interactable = false;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
 
-        materiManager.NextButton.enabled = true;
-        materiManager.PrevButton.enabled = true;
+        materiManager.NextButton.interactable = true;
+        materiManager.PrevButton.interactable = true;
     }
 }
