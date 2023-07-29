@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Palmmedia.ReportGenerator.Core.Parser.Analysis;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -41,6 +42,7 @@ public class Debris : MonoBehaviour
 		string _skorgrahamKiriBawah = skorKontrol[5].ToString();
 		string _skor = skorKontrol[6].ToString();
 
+		TestScript.Instance.DoneButton.gameObject.SetActive(false);
 		TestScript.Instance.PopUpMessage("Proses Upload..");
 		Index = 0;
 		//API FORM

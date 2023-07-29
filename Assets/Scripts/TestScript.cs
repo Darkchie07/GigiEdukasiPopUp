@@ -192,7 +192,6 @@ public class TestScript : MonoBehaviour
                     Debug.Log(!listpathFoto.Contains(""));
                     Debug.Log(RespondenData.Instance.currentDataSelected.PreTest);
                     Jawaban.Instance.UploadDataToDrive();
-
                 }
                 if (isKontrol)
                 {
@@ -203,6 +202,7 @@ public class TestScript : MonoBehaviour
             {
                 Debug.Log(!listpathFoto.Contains(""));
                 PopUpMessage("Masih ada soal yang belum terjawab");
+                DoneButton.gameObject.SetActive(true);
             }
         });
         PrevButton.onClick.AddListener(() =>

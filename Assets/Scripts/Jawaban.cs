@@ -99,7 +99,7 @@ public class Jawaban : MonoBehaviour
 		string _skorPengetahuan = skorPengetahuan;
 		string _skorSikap = skorSikap;
 		string _skorTindakan = skorTindakan;
-
+		TestScript.Instance.DoneButton.gameObject.SetActive(false);
 		TestScript.Instance.PopUpMessage("Proses Upload..");
 		idx = 0;
 		StartCoroutine(Helper.CoroutineUploadFormTest(
