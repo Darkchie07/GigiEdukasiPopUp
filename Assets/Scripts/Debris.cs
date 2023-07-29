@@ -67,6 +67,7 @@ public class Debris : MonoBehaviour
 		Index += 1;
 		if (Index == 6)
 		{
+			TestScript.Instance.SaveSkor(TestScript.Instance.listJawabanYa.Count);
 			TestScript.Instance.SaveSkor(TestScript.Instance.skor);
 			TestScript.Instance.SaveSkorKontrol();
 			RespondenData.Instance.RemoveDataKontrol();

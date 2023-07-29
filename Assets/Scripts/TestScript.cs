@@ -43,7 +43,7 @@ public class TestScript : MonoBehaviour
     public Button DoneButton;
     public List<GameObject> listtxtSoal;
     public List<string> listJawaban = new List<string>();
-    private List<int> listJawabanYa = new List<int>();
+    public List<int> listJawabanYa = new List<int>();
     private List<int> listJawabanNo = new List<int>();
     public int Answered;
     public string next;
@@ -394,10 +394,6 @@ public class TestScript : MonoBehaviour
                 listJawabanYa.Add(i);
 
             }
-        }
-        if (isKontrol)
-        {
-            SaveSkor(listJawabanYa.Count);
         }
         for (int i = 0; i < no.Length; i++)
         {
