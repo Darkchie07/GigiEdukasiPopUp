@@ -476,31 +476,31 @@ MonoBehaviour:
   postTest: {fileID: -1800488801, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   jawaban: {fileID: 1066195300}
   listsoal:
-  - soal: 1. Berapa kali menggosok gigi dalam sehari
+  - soal: 1. Berapa kali menggosok gigi dalam sehari?
     jawabanA: {fileID: 823814215, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: 733465859, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 2. Apa itu menggosok gigi?
     jawabanA: {fileID: -1340050364, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1025752304, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-  - soal: 3. Apa tujuan menggosok gigi
+  - soal: 3. Apa tujuan menggosok gigi?
     jawabanA: {fileID: -256972349, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1406129849, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 4. Kapan saja waktu menggosok gigi?
     jawabanA: {fileID: -1443434096, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1787064039, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-  - soal: 5. Bagaimana penggunaan sikat gigi yang benar?
+  - soal: 5. Bagaimana penggunaan pasta gigi yang benar?
     jawabanA: {fileID: -980157107, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -432907498, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 6. Apakah penyebab bila mengabaikan menggosok gigi?
     jawabanA: {fileID: 547920454, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: 1435950607, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-  - soal: 7. Bagaimana gerakan menggosok gigi bagian bibir
+  - soal: 7. Bagaimana gerakan menggosok gigi bagian bibir?
     jawabanA: {fileID: -1381976918, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1284313667, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-  - soal: 8. Bagaimana gerakan menggosok gigi bagian pipi
+  - soal: 8. Bagaimana gerakan menggosok gigi bagian pipi?
     jawabanA: {fileID: -177215352, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1344158366, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-  - soal: 9. Bagaimana gerakan menggosok gigi bagian pengunyahan
+  - soal: 9. Bagaimana gerakan menggosok gigi bagian pengunyahan?
     jawabanA: {fileID: -621108094, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1350387630, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 10. Apakah tindakan yang dilakukan untuk membersihkan gigi selain menggosok
@@ -510,7 +510,7 @@ MonoBehaviour:
   - soal: 11. Bagaimana cara menyimpan sikat gigi yang benar?
     jawabanA: {fileID: 523617342, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -118041285, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-  - soal: 12. Apakah makanan yang menyehatkan gigi
+  - soal: 12. Apakah makanan yang menyehatkan gigi?
     jawabanA: {fileID: -1594817962, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: 861609574, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   txtSoal: {fileID: 1216481438}
@@ -587,11 +587,14 @@ MonoBehaviour:
   foto: []
   NextButton: {fileID: 0}
   PrevButton: {fileID: 0}
+  DoneButton: {fileID: 0}
   listtxtSoal: []
   listJawaban: []
+  listJawabanYa: 
   Answered: 0
   next: 
   prev: 
+  Done: 0
   image: []
   totalText: {fileID: 0}
   subField: {fileID: 0}
@@ -1267,6 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5b4ab683f6b5b4bbb1795e0c90f563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idx: 0
   jawabanPengetahuan: []
   jawabanSikap: []
   jawabanTindakan: []
