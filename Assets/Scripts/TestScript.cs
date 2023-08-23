@@ -26,6 +26,8 @@ public class TestScript : MonoBehaviour
     public class SoalSikap
     {
         public string soal;
+
+        public Sprite gambar;
         // public Button yes;
         // public Button no;
     }
@@ -300,6 +302,7 @@ public class TestScript : MonoBehaviour
             int no = i + 1;
             index[i].transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = no.ToString();
             index[i].transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = listSoal[i].soal;
+            index[i].transform.GetChild(1).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = listSoal[i].gambar;
         }
 
         if (content.CompareTag("Kontrol"))

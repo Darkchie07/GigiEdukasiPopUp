@@ -1,0 +1,712 @@
+fileFormatVersion: 2
+guid: e917f0d7bc26ab247a23f48bcd008a59
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rev Pengetahuan_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8054
+        width: 1200
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6fc99b60d05a74aacedf0862e5a859
+      internalID: 1123083363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7337
+        width: 893
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14f9244baf234d4d99263e323e06064
+      internalID: 226325753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_6
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 7337
+        width: 893
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7c5adb349a4ee4ebcc6caa472bdd95
+      internalID: 307497193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 6693
+        width: 802
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4934b15946d435d40ad5b5f34339692f
+      internalID: 1348979188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_8
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 6693
+        width: 806
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8b0a6192e38ad429352b157b898133
+      internalID: 1094406400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_9
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 6021
+        width: 802
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7f5a14d16606941964a4e98b281b0a
+      internalID: -1616293694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_10
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 6021
+        width: 803
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8d09e0103700e4ba21508d840ed369
+      internalID: -182469713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_11
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 5349
+        width: 804
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ad017a85b3ed643b783683777883e7
+      internalID: 26096612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_12
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 5349
+        width: 803
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024c99047df0d9547b5754f423c3d7c3
+      internalID: -1835598786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_14
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 4680
+        width: 800
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b238f18bab801244f877696ad99b75b0
+      internalID: -448702181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_15
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 4678
+        width: 804
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee216d5e474aef745a826b4a0226665e
+      internalID: 336736115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_19
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 4035
+        width: 802
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd670d1162d72143b2f07051289b517
+      internalID: 99071787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_20
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 4035
+        width: 803
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b0170952d98354e802c82fddc173d4
+      internalID: -1988954654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_24
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 3385
+        width: 802
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051199b87e4987345812932ccbc82501
+      internalID: 321396106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_25
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 3385
+        width: 803
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e200bbfb1ef9d046a708d06d37296aa
+      internalID: 302925468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_27
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 2721
+        width: 803
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61636f3444dcbc243a91deb1db3ee085
+      internalID: -2031724736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_28
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 2721
+        width: 803
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508f1228ea7897642a88df2583ebdf03
+      internalID: 693238325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_30
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 2057
+        width: 802
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e559ac04e5041a24fbb8a5350da4a632
+      internalID: -2113902069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_31
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 2057
+        width: 803
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb5787218e43c848afef7fd5016b418
+      internalID: -2044588443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_33
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1371
+        width: 803
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edc3654746340f4e89069acfdb91892
+      internalID: -1542977111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_34
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1371
+        width: 803
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582c6919fe6563144a8a8340ed41415b
+      internalID: 20503316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_35
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 684
+        width: 802
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042cfb8b431acca4a8ba1313d6334d61
+      internalID: 1932557819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_36
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 684
+        width: 803
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a605aaeb5be4a4e8234cdf7368f2b1
+      internalID: 1543410123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_39
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 805
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d257d6b1372f6849868807dac0e0b6a
+      internalID: -1066964193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rev Pengetahuan_40
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 0
+        width: 803
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf267b4ab938914d814b0a5933796a8
+      internalID: -1156951271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Rev Pengetahuan_9: -1616293694
+      Rev Pengetahuan_6: 307497193
+      Rev Pengetahuan_11: 26096612
+      Rev Pengetahuan_19: 99071787
+      Rev Pengetahuan_36: 1543410123
+      Rev Pengetahuan_10: -182469713
+      Rev Pengetahuan_7: 1348979188
+      Rev Pengetahuan_4: 38931029
+      Rev Pengetahuan_28: 693238325
+      Rev Pengetahuan_14: -448702181
+      Rev Pengetahuan_40: -1156951271
+      Rev Pengetahuan_17: -1191209882
+      Rev Pengetahuan_13: -1081725635
+      Rev Pengetahuan_15: 336736115
+      Rev Pengetahuan_33: -1542977111
+      Rev Pengetahuan_29: -1476868661
+      Rev Pengetahuan_31: -2044588443
+      Rev Pengetahuan_27: -2031724736
+      Rev Pengetahuan_39: -1066964193
+      Rev Pengetahuan_22: 177830718
+      Rev Pengetahuan_35: 1932557819
+      Rev Pengetahuan_25: 302925468
+      Rev Pengetahuan_32: 1546283587
+      Rev Pengetahuan_3: -650960254
+      Rev Pengetahuan_2: 944611834
+      Rev Pengetahuan_5: 226325753
+      Rev Pengetahuan_21: -1588974073
+      Rev Pengetahuan_0: 1123083363
+      Rev Pengetahuan_8: 1094406400
+      Rev Pengetahuan_1: 1752779777
+      Rev Pengetahuan_38: -945485573
+      Rev Pengetahuan_12: -1835598786
+      Rev Pengetahuan_20: -1988954654
+      Rev Pengetahuan_37: 68472589
+      Rev Pengetahuan_23: 1206449448
+      Rev Pengetahuan_18: 287177057
+      Rev Pengetahuan_26: -863290826
+      Rev Pengetahuan_24: 321396106
+      Rev Pengetahuan_34: 20503316
+      Rev Pengetahuan_30: -2113902069
+      Rev Pengetahuan_16: -549738002
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

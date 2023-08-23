@@ -195,9 +195,7 @@ public static class Helper
                                                         string _pengetahuan7, string _pengetahuan8, string _pengetahuan9, string _pengetahuan10, string _pengetahuan11, string _pengetahuan12,
                                                         string _sikap1, string _sikap2, string _sikap3, string _sikap4, string _sikap5, string _sikap6, string _sikap7, string _sikap8,
                                                         string _tindakan1, string _tindakan2, string _tindakan3, string _tindakan4, string _tindakan5, string _tindakan6, string _tindakan7, string _tindakan8,
-                                                        string _tindakan9, string _tindakan10, string _tindakan11, string _tindakan12, string _tindakan13, string _tindakan14, string _tindakan15, string _tindakan16,
-                                                        string _tindakan17, string _tindakan18, string _tindakan19, string _tindakan20, string _tindakan21, string _tindakan22, string _tindakan23, string _tindakan24,
-                                                        string _tindakan25, string _tindakan26, string _tindakan27, string _tindakan28, string _tindakan29, string _tindakan30, string _tindakan31, string _tindakan32, string _skorPengetahuan, string _skorSikap,
+                                                        string _tindakan9, string _tindakan10, string _skorPengetahuan, string _skorSikap,
                                                         string _skorTindakan, Action _success, Action _error)
     {
         WWWForm form = new WWWForm();
@@ -236,28 +234,6 @@ public static class Helper
         form.AddField("entry.728273302", _tindakan8);
         form.AddField("entry.1091682822", _tindakan9);
         form.AddField("entry.1515630106", _tindakan10);
-        form.AddField("entry.220797466", _tindakan11);
-        form.AddField("entry.125281289", _tindakan12);
-        form.AddField("entry.1643425419", _tindakan13);
-        form.AddField("entry.391668054", _tindakan14);
-        form.AddField("entry.2028582010", _tindakan15);
-        form.AddField("entry.1871008435", _tindakan16);
-        form.AddField("entry.412249163", _tindakan17);
-        form.AddField("entry.364643505", _tindakan18);
-        form.AddField("entry.1232366264", _tindakan19);
-        form.AddField("entry.173037941", _tindakan20);
-        form.AddField("entry.1284230937", _tindakan21);
-        form.AddField("entry.1858128209", _tindakan22);
-        form.AddField("entry.997858969", _tindakan23);
-        form.AddField("entry.1422154499", _tindakan24);
-        form.AddField("entry.1353601833", _tindakan25);
-        form.AddField("entry.1320732202", _tindakan26);
-        form.AddField("entry.1943190957", _tindakan27);
-        form.AddField("entry.630684707", _tindakan28);
-        form.AddField("entry.1163226300", _tindakan29);
-        form.AddField("entry.703134618", _tindakan30);
-        form.AddField("entry.1339464562", _tindakan31);
-        form.AddField("entry.250074568", _tindakan32);
         form.AddField("entry.94854912", _skorPengetahuan);
         form.AddField("entry.46003329", _skorSikap);
         form.AddField("entry.274418371", _skorTindakan);

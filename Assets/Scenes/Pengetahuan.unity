@@ -492,8 +492,8 @@ MonoBehaviour:
     jawabanA: {fileID: -980157107, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -432907498, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 6. Apakah penyebab bila mengabaikan menggosok gigi?
-    jawabanA: {fileID: 547920454, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-    jawabanB: {fileID: 1435950607, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
+    jawabanA: {fileID: 99071787, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
+    jawabanB: {fileID: -1988954654, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
   - soal: 7. Bagaimana gerakan menggosok gigi bagian bibir?
     jawabanA: {fileID: -1381976918, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1284313667, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
@@ -508,11 +508,11 @@ MonoBehaviour:
     jawabanA: {fileID: 105047858, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -223476077, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 11. Bagaimana cara menyimpan sikat gigi yang benar?
-    jawabanA: {fileID: 523617342, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-    jawabanB: {fileID: -118041285, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
+    jawabanA: {fileID: 1932557819, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
+    jawabanB: {fileID: 1543410123, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
   - soal: 12. Apakah makanan yang menyehatkan gigi?
-    jawabanA: {fileID: -1594817962, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-    jawabanB: {fileID: 861609574, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
+    jawabanA: {fileID: -1066964193, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
+    jawabanB: {fileID: -1156951271, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
   txtSoal: {fileID: 1216481438}
   jawaban1: {fileID: 622810974}
   jawaban2: {fileID: 1294003359}
