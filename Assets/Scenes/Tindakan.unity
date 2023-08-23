@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Content: {fileID: 1133074078}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 0
+  m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 0
   m_DecelerationRate: 0.135
@@ -783,7 +783,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 200}
+  m_SizeDelta: {x: 1000, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &124310708
 MonoBehaviour:
@@ -1750,7 +1750,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 200}
+  m_SizeDelta: {x: 300, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535365877
 MonoBehaviour:
@@ -1989,7 +1989,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 200}
+  m_SizeDelta: {x: 500, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678200816
 MonoBehaviour:
@@ -2059,9 +2059,9 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 10
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -2106,7 +2106,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692809493
 MonoBehaviour:
@@ -2128,9 +2128,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2813,7 +2813,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1770934739}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.21917807
+  m_Size: 0.114285715
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3223,7 +3223,6 @@ GameObject:
   - component: {fileID: 1133074079}
   - component: {fileID: 1133074082}
   - component: {fileID: 1133074081}
-  - component: {fileID: 1133074080}
   m_Layer: 5
   m_Name: Content
   m_TagString: Tindakan
@@ -3250,7 +3249,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2850}
+  m_SizeDelta: {x: 0, y: 6200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1133074079
 MonoBehaviour:
@@ -3278,20 +3277,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1133074080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133074077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a3a8bfe2dd482241acbe7b748729b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: {fileID: 704463773}
-  scrollBar: {fileID: 1035484214}
 --- !u!114 &1133074081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3815,7 +3800,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 200}
+  m_SizeDelta: {x: 100, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371269331
 MonoBehaviour:
@@ -3975,7 +3960,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 200}
+  m_SizeDelta: {x: 100, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382212354
 MonoBehaviour:
@@ -4065,70 +4050,28 @@ MonoBehaviour:
   jawaban: {fileID: 0}
   index: []
   listSoal:
-  - soal: Ambil pasta gigi dari tempatnya
-    gambar: {fileID: 0}
-  - soal: Buka tutup pasta gigi
-    gambar: {fileID: 0}
-  - soal: Taruh tutup pasta gigi
-    gambar: {fileID: 0}
-  - soal: Ambil sikat gigi dari tempatnya
-    gambar: {fileID: 0}
-  - soal: Tuang pasta gigi diatas sikat gigi
-    gambar: {fileID: 0}
-  - soal: Taruh pasta gigi
-    gambar: {fileID: 0}
-  - soal: Ambil tutup pasta gigi
-    gambar: {fileID: 0}
-  - soal: Tutup pasta gigi
-    gambar: {fileID: 0}
-  - soal: Ambil gelas kumur
-    gambar: {fileID: 0}
-  - soal: Isi gelas kumur dengan air
-    gambar: {fileID: 0}
-  - soal: Kumur-kumur
-    gambar: {fileID: 0}
-  - soal: Buang air kumur
-    gambar: {fileID: 0}
-  - soal: Ambil sikat gigi
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RA dengan naik turun
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RB dengan naik turun
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RA kanan dengan memutar
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RB kanan dengan memutar
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RA kiri dengan memutar
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RB kiri dengan memutar
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RB kanan dengan mencongkel ke atas
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RB kiri dengan mencongkel ke atas
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RA kanan dengan mencongkel ke bawah
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RA kiri dengan mencongkel ke bawah
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RA kanan dengan maju mundur
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RA kiri dengan maju mundur
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RB kanan dengan maju mundur
-    gambar: {fileID: 0}
-  - soal: Gosok gigi RB kiri dengan maju mundur
-    gambar: {fileID: 0}
-  - soal: Bersihkan lidah dengan cara menarik sikat ke arah luar (gerakan menyapu)
-    gambar: {fileID: 0}
-  - soal: Ambil gelas kumur
-    gambar: {fileID: 0}
-  - soal: Kumur dengan air bersih sebanyak 1 kali
-    gambar: {fileID: 0}
+  - soal: 'Menyiapkan alat dan bahan yaitu :'
+    gambar: {fileID: 997847823, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+  - soal: Tuangkan pasta gigi kurang lebih sebesar sebutir kacang polong
+    gambar: {fileID: -521842417, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+  - soal: Berkumur-kumur dengan air bersih sebelum menggosok gigi
+    gambar: {fileID: 167556715, guid: cb509a13819cd5a4d9f9191d5f8bc576, type: 3}
+  - soal: Gosok bagian depan dengan gerakan atas bawah sebanyak 8 kali
+    gambar: {fileID: -582461722, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+  - soal: Gosok bagian samping pipi sebelah kiri dan kanan dengan gerakan memutar
+      sebanyak 8 kali
+    gambar: {fileID: 1001138154, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+  - soal: Gosok bagian pengunyahan dengan gerakan maju mundur sebanyak 8 kali
+    gambar: {fileID: -1541621631, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+  - soal: 'Gosok bagian atas dekat langit-langit dengan gerakan mencongkel sebanyak
+      8 kali '
+    gambar: {fileID: 1208487154, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+  - soal: Gosok bagian dalam gigi dengan gerakan mencongkel sebanyak 8 kali
+    gambar: {fileID: -1948262039, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+  - soal: Setelah selesai menggosok gigi, kembali berkumur
+    gambar: {fileID: 167556715, guid: cb509a13819cd5a4d9f9191d5f8bc576, type: 3}
   - soal: Membersihkan sikat gigi
-    gambar: {fileID: 0}
-  - soal: Meletakkan kepala sikat gigi di atas/berdiri
-    gambar: {fileID: 0}
+    gambar: {fileID: -1865650366, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
   yes: []
   no: []
   drop: []
@@ -4147,51 +4090,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   listJawaban:
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
-  - '-'
   - '-'
   - '-'
   - '-'
@@ -4221,51 +4120,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   listpathFoto:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
@@ -4278,28 +4133,6 @@ MonoBehaviour:
   - 
   PanelImage: {fileID: 117981439}
   sprData:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
