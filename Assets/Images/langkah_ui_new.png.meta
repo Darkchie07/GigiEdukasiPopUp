@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: cb509a13819cd5a4d9f9191d5f8bc576
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: langkah_ui_new_0
+      rect:
+        serializedVersion: 2
+        x: 3788
+        y: 10713
+        width: 1779
+        height: 331
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0cd4dd2814eeb459d7a857d86d590f
+      internalID: 1473123335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8949
+        width: 1609
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d069031a1bf31a2479de4deeb7ce4182
+      internalID: 7012760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_2
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 8922
+        width: 1612
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9510e9cd7d7b8a44fb9ef2247fc7c79b
+      internalID: -169131930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_3
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 8922
+        width: 1612
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169c14387fcb3014aaa83deba138f39a
+      internalID: -1912172030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_4
+      rect:
+        serializedVersion: 2
+        x: 5843
+        y: 8922
+        width: 1617
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382fc47a07e0ef14db1451f8b247b007
+      internalID: 1572220277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_5
+      rect:
+        serializedVersion: 2
+        x: 7795
+        y: 8922
+        width: 1607
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a68b8c700b4e24fb62e4f85e311b99
+      internalID: -375008336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7126
+        width: 1609
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfd240a6ed425040ac4976976d0773f
+      internalID: 1293793937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_7
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 7126
+        width: 1612
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085b6ddc5e82fbb4495ae443c32a2259
+      internalID: -1161382387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_8
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 7126
+        width: 1612
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f62ddc35f6499d4ab45bc9c7f360162
+      internalID: -657720756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_9
+      rect:
+        serializedVersion: 2
+        x: 5843
+        y: 7126
+        width: 1617
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de205770ef4e04d48b024d828583afef
+      internalID: -1595341745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_10
+      rect:
+        serializedVersion: 2
+        x: 7795
+        y: 7126
+        width: 1606
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30707d8285952594a8ec02ad56512921
+      internalID: -302663616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5177
+        width: 1609
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfe0f209843468459d6e1ed227a7831
+      internalID: 1729753247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_12
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 5177
+        width: 1612
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2b3cdeb7a06f744a437ace8483ba08
+      internalID: -2066772479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_13
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 5177
+        width: 1612
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d703051f976ef4f875d805fc33bb2c
+      internalID: -1602672860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_14
+      rect:
+        serializedVersion: 2
+        x: 5870
+        y: 5177
+        width: 1612
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe71c8997f36b904cb74b54f37fec3cb
+      internalID: 1702497515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_15
+      rect:
+        serializedVersion: 2
+        x: 7989
+        y: 5147
+        width: 1610
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab92598d0172ff449aab65f81cc4a89
+      internalID: 1604149762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3352
+        width: 1609
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7453854a0cfc44f865b38d62058e1d
+      internalID: 217419615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_17
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 3352
+        width: 1612
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6b85e84fb47c84e924a0e23757768f
+      internalID: -1005049618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_18
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 3352
+        width: 1612
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcac5f326cddad44832e28ec9d19128
+      internalID: 482355512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_19
+      rect:
+        serializedVersion: 2
+        x: 5870
+        y: 3352
+        width: 1612
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3622425af60a8d49a21c4b7b6955ee5
+      internalID: -17569792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_20
+      rect:
+        serializedVersion: 2
+        x: 7989
+        y: 3325
+        width: 1610
+        height: 1590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965af1bc9134f0648895ff603185543e
+      internalID: -862752297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 844
+        height: 2108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb853930d8b80e44ab4d15adf572260
+      internalID: 810580591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_22
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 111
+        width: 1197
+        height: 1806
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9f787dbc285524bbf993e05cf5270f
+      internalID: 919759099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_23
+      rect:
+        serializedVersion: 2
+        x: 3190
+        y: 0
+        width: 2469
+        height: 849
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e8eba41c3881d418d5cc7ff1ef51fa
+      internalID: 23068838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_24
+      rect:
+        serializedVersion: 2
+        x: 6231
+        y: 111
+        width: 1402
+        height: 2712
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8223a330bbc281a45999185f175ca0a3
+      internalID: 167556715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: langkah_ui_new_25
+      rect:
+        serializedVersion: 2
+        x: 8248
+        y: 24
+        width: 1690
+        height: 1412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577a37ff1bbb2ef46b9a5d52d8c39af0
+      internalID: -1682067597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 26f831fe080286942af9d575e893af9d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      langkah_ui_new_4: 1572220277
+      langkah_ui_new_5: -375008336
+      langkah_ui_new_16: 217419615
+      langkah_ui_new_1: 7012760
+      langkah_ui_new_19: -17569792
+      langkah_ui_new_14: 1702497515
+      langkah_ui_new_10: -302663616
+      langkah_ui_new_0: 1473123335
+      langkah_ui_new_24: 167556715
+      langkah_ui_new_11: 1729753247
+      langkah_ui_new_18: 482355512
+      langkah_ui_new_12: -2066772479
+      langkah_ui_new_17: -1005049618
+      langkah_ui_new_8: -657720756
+      langkah_ui_new_6: 1293793937
+      langkah_ui_new_23: 23068838
+      langkah_ui_new_22: 919759099
+      langkah_ui_new_21: 810580591
+      langkah_ui_new_9: -1595341745
+      langkah_ui_new_15: 1604149762
+      langkah_ui_new_20: -862752297
+      langkah_ui_new_13: -1602672860
+      langkah_ui_new_2: -169131930
+      langkah_ui_new_3: -1912172030
+      langkah_ui_new_25: -1682067597
+      langkah_ui_new_7: -1161382387
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

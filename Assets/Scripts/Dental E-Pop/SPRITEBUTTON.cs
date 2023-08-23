@@ -6,10 +6,10 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
 {
     public Materi materiManager;
     public bool isAnim;
+    public bool isClicked;
 
     void Start()
     {
-        //Attach Physics2DRaycaster to the Camera
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         Camera.main.gameObject.AddComponent<Physics2DRaycaster>();
         addEventSystem();
@@ -25,6 +25,7 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
             gameObject.GetComponent<Animation>().Play();
             StartCoroutine(TimerCoroutine());
             gameObject.GetComponent<SPRITEBUTTON>().isAnim = true;
+            gameObject.GetComponent<SPRITEBUTTON>().isClicked = true;
         }
         else if (gameObject.transform.CompareTag("Dental") && gameObject.GetComponent<SPRITEBUTTON>().isAnim == true)
         {
@@ -62,12 +63,12 @@ public class SPRITEBUTTON : MonoBehaviour, IPointerClickHandler
 
     IEnumerator TimerCoroutine()
     {
-        materiManager.NextButton.interactable = false;
-        materiManager.PrevButton.interactable = false;
+        materiManager.NextButton.enabled = false;
+        materiManager.PrevButton.enabled = false;
 
         yield return new WaitForSeconds(0.5f);
 
-        materiManager.NextButton.interactable = true;
-        materiManager.PrevButton.interactable = true;
+        materiManager.NextButton.enabled = true;
+        materiManager.PrevButton.enabled = true;
     }
 }
