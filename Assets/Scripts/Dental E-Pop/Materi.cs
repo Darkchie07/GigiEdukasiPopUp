@@ -26,6 +26,7 @@ public class Materi : MonoBehaviour
         GenerateSoal(idxSoal);
         GantiSoal();
         PrevButton.gameObject.SetActive(false);
+        checkButton();
     }
 
     // private void Update()
@@ -137,7 +138,7 @@ public class Materi : MonoBehaviour
     IEnumerator TimerCoroutine(int i)
     {
         listImages[i].GetComponent<SpriteRenderer>().color = new Color(1, 0.4117647058823529f, 0.4117647058823529f);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         listImages[i].GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
