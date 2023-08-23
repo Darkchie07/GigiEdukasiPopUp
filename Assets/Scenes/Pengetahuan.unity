@@ -499,7 +499,7 @@ MonoBehaviour:
     jawabanB: {fileID: -1284313667, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 8. Bagaimana gerakan menggosok gigi bagian pipi?
     jawabanA: {fileID: -177215352, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-    jawabanB: {fileID: -1344158366, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
+    jawabanB: {fileID: 21300000, guid: 4b1271d0f60393947a71342cad0b506f, type: 3}
   - soal: 9. Bagaimana gerakan menggosok gigi bagian pengunyahan?
     jawabanA: {fileID: -621108094, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -1350387630, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}

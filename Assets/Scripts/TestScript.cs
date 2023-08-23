@@ -428,7 +428,7 @@ public class TestScript : MonoBehaviour
 		}
 		else if (isKontrol)
 		{
-			if (Answered == listSoal.Count && !listpathFoto.Contains(""))
+			if (Answered == listSoal.Count)
 			{
 				return true;
 			}

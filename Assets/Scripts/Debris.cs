@@ -53,26 +53,27 @@ public class Debris : MonoBehaviour
 
     void SuccessUploadFormRespondenDebris()
     {
-        listFotoKontrol = Data.Instance.dataFoto.foto.PathFoto.ToList();
-        Debug.Log(listFotoKontrol.Count);
-        for (int i = 0; i < listFotoKontrol.Count; i++)
-        {
-            Helper.UploadImageKontrolResponden((file) => { _onDoneAction(); }, i);
-        }
+        // listFotoKontrol = Data.Instance.dataFoto.foto.PathFoto.ToList();
+        // Debug.Log(listFotoKontrol.Count);
+        // for (int i = 0; i < listFotoKontrol.Count; i++)
+        // {
+        //     Helper.UploadImageKontrolResponden((file) => { _onDoneAction(); }, i);
+        // }
+        _onDoneAction();
     }
 
     private void _onDoneAction()
     {
-        Index += 1;
-        if (Index == 6)
-        {
-            TestScript.Instance.SaveSkor(TestScript.Instance.listJawabanYa.Count);
-            TestScript.Instance.SaveSkor(TestScript.Instance.skor);
-            RespondenData.Instance.RemoveDataKontrol();
-            TestScript.Instance.Done = true;
-            TestScript.Instance.PopUpMessage("Data Berhasil diUpload");
-            TestScript.Instance.DoneButton.gameObject.SetActive(true);
-        }
+        // Index += 1;
+        // if (Index == 6)
+        // {
+        // }
+        TestScript.Instance.SaveSkor(TestScript.Instance.listJawabanYa.Count);
+        TestScript.Instance.SaveSkor(TestScript.Instance.skor);
+        RespondenData.Instance.RemoveDataKontrol();
+        TestScript.Instance.Done = true;
+        TestScript.Instance.PopUpMessage("Data Berhasil diUpload");
+        TestScript.Instance.DoneButton.gameObject.SetActive(true);
         Debug.Log("Selesai");
     }
 
