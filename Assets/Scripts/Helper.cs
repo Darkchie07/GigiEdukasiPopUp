@@ -350,7 +350,7 @@ public static class Helper
         Debug.Log(TestScript.Instance.listpathFoto.Count);
         if (content == null) return;
         indx += 1;
-        string _fileName = $"{RespondenData.Instance.currentDataSelected.nama} - " + "Tindakan - " + indx;
+        string _fileName = $"{RespondenData.Instance.currentDataSelected.nama} - " + "Keterampilan - " + indx;
         var file = new UnityGoogleDrive.Data.File() { Name = _fileName, Content = content };
 
         file.Parents = new List<string> { ParentFolderImageFormTindakanGigiResponden };

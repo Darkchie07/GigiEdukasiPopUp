@@ -74,28 +74,6 @@ public class Jawaban : MonoBehaviour
 		string _tindakan8 = (jawabanTindakan[7] == "0") ? "Tidak" : "Ya";
 		string _tindakan9 = (jawabanTindakan[8] == "0") ? "Tidak" : "Ya";
 		string _tindakan10 = (jawabanTindakan[9] == "0") ? "Tidak" : "Ya";
-		string _tindakan11 = (jawabanTindakan[10] == "0") ? "Tidak" : "Ya";
-		string _tindakan12 = (jawabanTindakan[11] == "0") ? "Tidak" : "Ya";
-		string _tindakan13 = (jawabanTindakan[12] == "0") ? "Tidak" : "Ya";
-		string _tindakan14 = (jawabanTindakan[13] == "0") ? "Tidak" : "Ya";
-		string _tindakan15 = (jawabanTindakan[14] == "0") ? "Tidak" : "Ya";
-		string _tindakan16 = (jawabanTindakan[15] == "0") ? "Tidak" : "Ya";
-		string _tindakan17 = (jawabanTindakan[16] == "0") ? "Tidak" : "Ya";
-		string _tindakan18 = (jawabanTindakan[17] == "0") ? "Tidak" : "Ya";
-		string _tindakan19 = (jawabanTindakan[18] == "0") ? "Tidak" : "Ya";
-		string _tindakan20 = (jawabanTindakan[19] == "0") ? "Tidak" : "Ya";
-		string _tindakan21 = (jawabanTindakan[20] == "0") ? "Tidak" : "Ya";
-		string _tindakan22 = (jawabanTindakan[21] == "0") ? "Tidak" : "Ya";
-		string _tindakan23 = (jawabanTindakan[22] == "0") ? "Tidak" : "Ya";
-		string _tindakan24 = (jawabanTindakan[23] == "0") ? "Tidak" : "Ya";
-		string _tindakan25 = (jawabanTindakan[24] == "0") ? "Tidak" : "Ya";
-		string _tindakan26 = (jawabanTindakan[25] == "0") ? "Tidak" : "Ya";
-		string _tindakan27 = (jawabanTindakan[26] == "0") ? "Tidak" : "Ya";
-		string _tindakan28 = (jawabanTindakan[27] == "0") ? "Tidak" : "Ya";
-		string _tindakan29 = (jawabanTindakan[28] == "0") ? "Tidak" : "Ya";
-		string _tindakan30 = (jawabanTindakan[29] == "0") ? "Tidak" : "Ya";
-		string _tindakan31 = (jawabanTindakan[30] == "0") ? "Tidak" : "Ya";
-		string _tindakan32 = (jawabanTindakan[31] == "0") ? "Tidak" : "Ya";
 		string _skorPengetahuan = skorPengetahuan;
 		string _skorSikap = skorSikap;
 		string _skorTindakan = skorTindakan;
@@ -123,7 +101,7 @@ public class Jawaban : MonoBehaviour
 	private void _onDoneAction()
 	{
 		idx += 1;
-		if (idx == 32)
+		if (idx == 10)
 		{
 			TestScript.Instance.SaveSkor(0);
             RespondenData.Instance.currentDataSelected.PreTest = "1";

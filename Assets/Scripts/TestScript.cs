@@ -297,12 +297,25 @@ public class TestScript : MonoBehaviour
 	#region Set Soal Awal
 	public void SetSoal()
 	{
-		for (int i = 0; i < index.Length; i++)
+		if (isSikap)
 		{
-			int no = i + 1;
-			index[i].transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = no.ToString();
-			index[i].transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = listSoal[i].soal;
-			index[i].transform.GetChild(1).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = listSoal[i].gambar;
+			for (int i = 0; i < index.Length; i++)
+			{
+				int no = i + 1;
+				index[i].transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = no.ToString();
+				index[i].transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = listSoal[i].soal;
+			}
+		}
+
+		if (isTindakan)
+		{
+			for (int i = 0; i < index.Length; i++)
+			{
+				int no = i + 1;
+				index[i].transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = no.ToString();
+				index[i].transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text = listSoal[i].soal;
+				index[i].transform.GetChild(1).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = listSoal[i].gambar;
+			}
 		}
 
 		if (content.CompareTag("Kontrol"))
