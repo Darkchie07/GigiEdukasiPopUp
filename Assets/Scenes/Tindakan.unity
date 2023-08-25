@@ -4057,17 +4057,17 @@ MonoBehaviour:
   - soal: Berkumur-kumur dengan air bersih sebelum menggosok gigi
     gambar: {fileID: 167556715, guid: cb509a13819cd5a4d9f9191d5f8bc576, type: 3}
   - soal: Gosok bagian depan dengan gerakan atas bawah sebanyak 8 kali
-    gambar: {fileID: -582461722, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+    gambar: {fileID: -1948262039, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
   - soal: Gosok bagian samping pipi sebelah kiri dan kanan dengan gerakan memutar
       sebanyak 8 kali
-    gambar: {fileID: 1001138154, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+    gambar: {fileID: 1208487154, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
   - soal: Gosok bagian pengunyahan dengan gerakan maju mundur sebanyak 8 kali
     gambar: {fileID: -1541621631, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
   - soal: 'Gosok bagian atas dekat langit-langit dengan gerakan mencongkel sebanyak
       8 kali '
-    gambar: {fileID: 1208487154, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+    gambar: {fileID: -582461722, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
   - soal: Gosok bagian dalam gigi dengan gerakan mencongkel sebanyak 8 kali
-    gambar: {fileID: -1948262039, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
+    gambar: {fileID: 1001138154, guid: 1a0ff83e73a7fed4288880098f1b4beb, type: 3}
   - soal: Setelah selesai menggosok gigi, kembali berkumur
     gambar: {fileID: 167556715, guid: cb509a13819cd5a4d9f9191d5f8bc576, type: 3}
   - soal: Membersihkan sikat gigi

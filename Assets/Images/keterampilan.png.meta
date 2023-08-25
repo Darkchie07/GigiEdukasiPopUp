@@ -124,6 +124,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -131,10 +143,10 @@ TextureImporter:
       name: keterampilan_0
       rect:
         serializedVersion: 2
-        x: 2100
-        y: 3503
-        width: 54
-        height: 78
+        x: 1897
+        y: 1560
+        width: 999
+        height: 2123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,10 +166,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1987
         y: 3773
-        width: 909
-        height: 1426
+        width: 734
+        height: 487
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,7 +190,7 @@ TextureImporter:
         width: 887
         height: 624
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,10 +206,10 @@ TextureImporter:
       name: keterampilan_3
       rect:
         serializedVersion: 2
-        x: 1231
-        y: 455
-        width: 556
-        height: 557
+        x: 0
+        y: 4910
+        width: 1791
+        height: 623
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +227,10 @@ TextureImporter:
       name: keterampilan_4
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1314
-        width: 1156
-        height: 1343
+        x: 20
+        y: 4086
+        width: 1767
+        height: 632
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +248,10 @@ TextureImporter:
       name: keterampilan_5
       rect:
         serializedVersion: 2
-        x: 77
-        y: 2790
-        width: 964
-        height: 1140
+        x: 0
+        y: 2792
+        width: 1796
+        height: 1144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +269,10 @@ TextureImporter:
       name: keterampilan_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4910
-        width: 1114
-        height: 597
+        x: 6
+        y: 1311
+        width: 1781
+        height: 1340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +290,10 @@ TextureImporter:
       name: keterampilan_7
       rect:
         serializedVersion: 2
-        x: 77
-        y: 4092
-        width: 1037
-        height: 624
+        x: 0
+        y: 69
+        width: 1787
+        height: 1204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,972 +303,6 @@ TextureImporter:
       bones: []
       spriteID: 43d10dc225490b545864e9735d21e6cc
       internalID: 1001138154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_8
-      rect:
-        serializedVersion: 2
-        x: 1231
-        y: 4981
-        width: 556
-        height: 552
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65becc082a32596458bf1ca4eb2ca1f8
-      internalID: -1316540021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_9
-      rect:
-        serializedVersion: 2
-        x: 1231
-        y: 4168
-        width: 556
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35f9e05a480506842ac4c9d99aedc4c6
-      internalID: 1458279448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_10
-      rect:
-        serializedVersion: 2
-        x: 1231
-        y: 3138
-        width: 556
-        height: 557
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50884211abf1e4d449182c8f4836c745
-      internalID: -1678899669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_11
-      rect:
-        serializedVersion: 2
-        x: 2160
-        y: 3565
-        width: 19
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8aa73e97357826c46b08a13f29cb2756
-      internalID: 83030791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_12
-      rect:
-        serializedVersion: 2
-        x: 2184
-        y: 3503
-        width: 49
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ce49ed8ba8ffb64080a441fa755d4e2
-      internalID: -1796442345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_13
-      rect:
-        serializedVersion: 2
-        x: 2287
-        y: 3503
-        width: 32
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bce2916341f0be4459921d3eafc5c84c
-      internalID: -1230418312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_14
-      rect:
-        serializedVersion: 2
-        x: 2411
-        y: 3565
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aabf24ded0f9e2e45bf6abe6079e617e
-      internalID: 1279878062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_15
-      rect:
-        serializedVersion: 2
-        x: 2492
-        y: 3565
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c276c4b3e1ff036438c89c9b65c9f0e0
-      internalID: -723243981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_16
-      rect:
-        serializedVersion: 2
-        x: 1990
-        y: 3503
-        width: 48
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 271f7b7b40faa8b449aee867419a1b2e
-      internalID: 1969265774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_17
-      rect:
-        serializedVersion: 2
-        x: 2046
-        y: 3503
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2be1ae35344d6c4408a279ce59433597
-      internalID: -1533233884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_18
-      rect:
-        serializedVersion: 2
-        x: 2163
-        y: 3503
-        width: 13
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5eb761fdec9eb84bac874eeb35b12ba
-      internalID: 1251481106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_19
-      rect:
-        serializedVersion: 2
-        x: 2233
-        y: 3503
-        width: 51
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33701dfe7c3d21949a91a67b08e17465
-      internalID: -1466851099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_20
-      rect:
-        serializedVersion: 2
-        x: 2352
-        y: 3481
-        width: 51
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2d3ee20ae78cc341b1bab565e21a39a
-      internalID: -1371761796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_21
-      rect:
-        serializedVersion: 2
-        x: 2411
-        y: 3503
-        width: 14
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b60f44cd7e8dc9c46a590ee0aabdcc2a
-      internalID: 1476232412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_22
-      rect:
-        serializedVersion: 2
-        x: 2433
-        y: 3481
-        width: 51
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20539d7344f5a1e4580151d72ba73a5b
-      internalID: -1944924843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_23
-      rect:
-        serializedVersion: 2
-        x: 2492
-        y: 3503
-        width: 16
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85f57521087a0c54696f5d8ff46e007b
-      internalID: -1671110151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_24
-      rect:
-        serializedVersion: 2
-        x: 1984
-        y: 3157
-        width: 719
-        height: 292
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad33f08e081f7684a95385d1a11e7c2a
-      internalID: -1363200470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_25
-      rect:
-        serializedVersion: 2
-        x: 1995
-        y: 2911
-        width: 54
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78777f74ac453364ebf600044f2f042f
-      internalID: 1714808435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_26
-      rect:
-        serializedVersion: 2
-        x: 2109
-        y: 2914
-        width: 54
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2677cd481939094c95341e571ed27e7
-      internalID: -661583681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_27
-      rect:
-        serializedVersion: 2
-        x: 2268
-        y: 2911
-        width: 35
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68917169445bea84581f9387501e5122
-      internalID: -1421280674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_28
-      rect:
-        serializedVersion: 2
-        x: 2446
-        y: 2973
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e592cbcdbb7eee47bf87f48af692785
-      internalID: 99941620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_29
-      rect:
-        serializedVersion: 2
-        x: 2527
-        y: 2973
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f2f218beab452243af93066498acaef
-      internalID: -320074635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_30
-      rect:
-        serializedVersion: 2
-        x: 2054
-        y: 2911
-        width: 17
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73944350212dd8e40a1f00d8941dea2c
-      internalID: 904398760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_31
-      rect:
-        serializedVersion: 2
-        x: 2165
-        y: 2911
-        width: 49
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88a3194c1b938dd4cafe779451463b93
-      internalID: 369935872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_32
-      rect:
-        serializedVersion: 2
-        x: 2219
-        y: 2911
-        width: 46
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbfcdaec6b1833044b98b6a50e5b248d
-      internalID: -964325266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_33
-      rect:
-        serializedVersion: 2
-        x: 2306
-        y: 2911
-        width: 46
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a447b0b7538f7fb41b4290ed0ad4d54a
-      internalID: 327094482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_34
-      rect:
-        serializedVersion: 2
-        x: 2387
-        y: 2892
-        width: 51
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ceb88303363e314cbc32721a3b05dcc
-      internalID: -1047389119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_35
-      rect:
-        serializedVersion: 2
-        x: 2446
-        y: 2914
-        width: 16
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3761f37e10d57534c8dd0ab6343071b5
-      internalID: -1831067671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_36
-      rect:
-        serializedVersion: 2
-        x: 2468
-        y: 2892
-        width: 51
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d765af6467c8e2645a1da2f38c64adc1
-      internalID: -1539712826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_37
-      rect:
-        serializedVersion: 2
-        x: 2527
-        y: 2914
-        width: 16
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75398fe048a851e4fbf380cf95deacf7
-      internalID: 1068840117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_38
-      rect:
-        serializedVersion: 2
-        x: 1986
-        y: 2587
-        width: 838
-        height: 251
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4af1c23698372c34ab4c645cee5968d3
-      internalID: -1764680375
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_39
-      rect:
-        serializedVersion: 2
-        x: 1231
-        y: 1822
-        width: 556
-        height: 557
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb04e81622e19144fa4cd160bda76373
-      internalID: 1317788049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_40
-      rect:
-        serializedVersion: 2
-        x: 1992
-        y: 2341
-        width: 49
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5df353c1a452e6f49a0220afa602a48a
-      internalID: 1005478804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_41
-      rect:
-        serializedVersion: 2
-        x: 2046
-        y: 2341
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 949bcda714643114da397b3086a86993
-      internalID: 1485949789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_42
-      rect:
-        serializedVersion: 2
-        x: 2100
-        y: 2341
-        width: 65
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3d0109ae1b2ce44fa0906ac5469b00e
-      internalID: -1915250785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_43
-      rect:
-        serializedVersion: 2
-        x: 2171
-        y: 2341
-        width: 51
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 881417b64d21ff04392383eaa3930061
-      internalID: -7494743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_44
-      rect:
-        serializedVersion: 2
-        x: 2227
-        y: 2344
-        width: 17
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d91b539ed2952ca4da08c656ad435ff9
-      internalID: -468672369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_45
-      rect:
-        serializedVersion: 2
-        x: 2249
-        y: 2341
-        width: 49
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13d02e84765f04249b961b65f0792765
-      internalID: 248813792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_46
-      rect:
-        serializedVersion: 2
-        x: 2303
-        y: 2341
-        width: 46
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ad12ce7e1a8d2145b84d91694dd3714
-      internalID: 798629094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_47
-      rect:
-        serializedVersion: 2
-        x: 2381
-        y: 2344
-        width: 49
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99957f7cf7c667a40a192927d192901b
-      internalID: 1960631351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_48
-      rect:
-        serializedVersion: 2
-        x: 2435
-        y: 2341
-        width: 46
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 568873d8c1a9660488034f6a80392982
-      internalID: 1293593813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_49
-      rect:
-        serializedVersion: 2
-        x: 2489
-        y: 2344
-        width: 76
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 641fbc3bc7432e64b80d02eb24709bc7
-      internalID: -866694129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_50
-      rect:
-        serializedVersion: 2
-        x: 2573
-        y: 2341
-        width: 49
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbb2033346e948043bb0d679cb1e3327
-      internalID: -357165248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_51
-      rect:
-        serializedVersion: 2
-        x: 2630
-        y: 2344
-        width: 32
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49843a31bdd029c41a3aee0814c0d5dc
-      internalID: 687696651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_52
-      rect:
-        serializedVersion: 2
-        x: 2141
-        y: 1655
-        width: 408
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f53af4fc5f5b89d4891a5d488b76801e
-      internalID: 1231509958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keterampilan_53
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 66
-        width: 1064
-        height: 1214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a112af4e7505514ebcc0b48d4055374
-      internalID: -818900139
       vertices: []
       indices: 
       edges: []
@@ -1272,60 +318,60 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      keterampilan_17: -1533233884
-      keterampilan_51: 687696651
-      keterampilan_25: 1714808435
-      keterampilan_5: -1541621631
-      keterampilan_7: 1001138154
-      keterampilan_44: -468672369
-      keterampilan_29: -320074635
-      keterampilan_16: 1969265774
-      keterampilan_24: -1363200470
-      keterampilan_15: -723243981
-      keterampilan_43: -7494743
-      keterampilan_0: 997847823
-      keterampilan_22: -1944924843
-      keterampilan_32: -964325266
-      keterampilan_47: 1960631351
-      keterampilan_11: 83030791
-      keterampilan_35: -1831067671
-      keterampilan_10: -1678899669
-      keterampilan_53: -818900139
-      keterampilan_3: -1948262039
-      keterampilan_46: 798629094
-      keterampilan_2: -521842417
-      keterampilan_23: -1671110151
-      keterampilan_42: -1915250785
-      keterampilan_20: -1371761796
-      keterampilan_14: 1279878062
-      keterampilan_49: -866694129
-      keterampilan_13: -1230418312
-      keterampilan_38: -1764680375
-      keterampilan_45: 248813792
-      keterampilan_41: 1485949789
-      keterampilan_4: 1208487154
-      keterampilan_28: 99941620
-      keterampilan_50: -357165248
-      keterampilan_6: -582461722
-      keterampilan_27: -1421280674
-      keterampilan_31: 369935872
-      keterampilan_33: 327094482
-      keterampilan_52: 1231509958
-      keterampilan_37: 1068840117
-      keterampilan_39: 1317788049
-      keterampilan_8: -1316540021
-      keterampilan_9: 1458279448
-      keterampilan_19: -1466851099
-      keterampilan_34: -1047389119
-      keterampilan_1: -1865650366
-      keterampilan_21: 1476232412
-      keterampilan_36: -1539712826
+      keterampilan_17: 997847823
+      keterampilan_51: -1865650366
+      keterampilan_25: -521842417
+      keterampilan_5: -1948262039
+      keterampilan_7: 1208487154
+      keterampilan_44: -1541621631
+      keterampilan_29: -582461722
+      keterampilan_16: 1001138154
+      keterampilan_24: -1316540021
+      keterampilan_15: 1458279448
+      keterampilan_43: -1678899669
+      keterampilan_0: 83030791
+      keterampilan_22: -1796442345
+      keterampilan_32: -1230418312
+      keterampilan_47: 1279878062
+      keterampilan_11: -723243981
+      keterampilan_35: 1969265774
+      keterampilan_10: -1533233884
+      keterampilan_53: 1251481106
+      keterampilan_3: -1466851099
+      keterampilan_46: -1371761796
+      keterampilan_2: 1476232412
+      keterampilan_23: -1944924843
+      keterampilan_42: -1671110151
+      keterampilan_20: -1363200470
+      keterampilan_14: 1714808435
+      keterampilan_49: -661583681
+      keterampilan_13: -1421280674
+      keterampilan_38: 99941620
+      keterampilan_45: -320074635
+      keterampilan_41: 904398760
+      keterampilan_4: 369935872
+      keterampilan_28: -964325266
+      keterampilan_50: 327094482
+      keterampilan_6: -1047389119
+      keterampilan_27: -1831067671
+      keterampilan_31: -1539712826
+      keterampilan_33: 1068840117
+      keterampilan_52: -1764680375
+      keterampilan_37: 1317788049
+      keterampilan_39: 1005478804
+      keterampilan_8: 1485949789
+      keterampilan_9: -1915250785
+      keterampilan_19: -7494743
+      keterampilan_34: -468672369
+      keterampilan_1: 248813792
+      keterampilan_21: 798629094
+      keterampilan_36: 1960631351
       keterampilan_48: 1293593813
-      keterampilan_12: -1796442345
-      keterampilan_40: 1005478804
-      keterampilan_18: 1251481106
-      keterampilan_26: -661583681
-      keterampilan_30: 904398760
+      keterampilan_12: -866694129
+      keterampilan_40: -357165248
+      keterampilan_18: 687696651
+      keterampilan_26: 1231509958
+      keterampilan_30: -818900139
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
