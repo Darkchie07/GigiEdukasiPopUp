@@ -76,6 +76,7 @@ public class TestScript : MonoBehaviour
 	[Header("Pop Up")]
 	public GameObject _popUpPanel;
 	public TMP_Text _textPopUp;
+	public TMP_Text _counter;
 
 
 	void Awake()
@@ -321,7 +322,12 @@ public class TestScript : MonoBehaviour
 		if (content.CompareTag("Kontrol"))
 		{
 			for (int i = 0; i < index.Length; i++)
+			{
+				int no = i + 1;
+				index[i].transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<TMP_Text>().text =
+					no.ToString();
 				index[i].transform.GetChild(1).gameObject.transform.GetChild(1).GetComponent<Image>().sprite = image[i];
+			}
 		}
 	}
 	#endregion

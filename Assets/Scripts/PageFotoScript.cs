@@ -105,9 +105,10 @@ public class PageFotoScript : MonoBehaviour
             print("token empty");
             return;
         }
-        PostImageHarianToDrive(_path, _tex);
+        CreateImage(_tex, true);
+        // PostImageHarianToDrive(_path, _tex);
     }
-
+    
     public void PostImageHarianToDrive(string _path, Texture2D _tex)
     {
         //tampilkan loading
