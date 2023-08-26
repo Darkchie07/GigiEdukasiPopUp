@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using System.IO;
+using TMPro;
 
 public class PageFotoScript : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class PageFotoScript : MonoBehaviour
     [SerializeField] private List<string> listUsed;
 
     public RespondenData.DataGambarGigi targetGigi;
+    
+    [Header("Pop Up")]
+    public GameObject _popUpPanel;
+    public TMP_Text _textPopUp;
+    public Button DoneButton;
+    
     #region MONOBEHAVIOUR FUNCTION
 
     public void OpenFoto(string _status)
@@ -105,13 +112,14 @@ public class PageFotoScript : MonoBehaviour
             print("token empty");
             return;
         }
-        CreateImage(_tex, true);
-        // PostImageHarianToDrive(_path, _tex);
+        PostImageHarianToDrive(_path, _tex);
     }
     
     public void PostImageHarianToDrive(string _path, Texture2D _tex)
     {
         //tampilkan loading
+        DoneButton.gameObject.SetActive(false);
+        PopUpMessage("Proses Upload..");
 
         string _fileName = "";
         string _time = (statusTime == StatusFotoGigi.PAGI) ? "Pagi" : "Malam";
@@ -120,6 +128,8 @@ public class PageFotoScript : MonoBehaviour
 
         Helper.UploadImageHarianResponden((file) =>
         {
+            PopUpMessage("Data berhasil diUpload");
+            DoneButton.gameObject.SetActive(true);
             CreateImage(_tex, true);
         }, () => { Debug.Log("Error"); }, _path, _fileName, _pagi);
         //StartCoroutine(UploadImageHarianResponden(
@@ -219,4 +229,10 @@ public class PageFotoScript : MonoBehaviour
     //}
     #endregion
 
+    public void PopUpMessage(string message)
+    {
+        _popUpPanel.SetActive(true);
+        _textPopUp.SetText(message);
+    }
+    
 }
