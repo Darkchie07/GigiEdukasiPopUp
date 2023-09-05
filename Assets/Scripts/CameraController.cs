@@ -5,60 +5,88 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Camera cam;
-    private float frustumScale;
+	public float zoomSpeed = 2.0f;
+	public float minFOV = 10.0f;
+	public float maxFOV = 60.0f;
+	public float dragSpeed = 1.0f;
+	private Vector2 dragLimitMin;
+	private Vector2 dragLimitMax;
 
-    private void Start()
-    {
-        cam = Camera.main;
-        var camDistance = cam.transform.position.y;
-        var frustumHeight = 2 * camDistance * Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad);
-        frustumScale = frustumHeight / Screen.height;
-    }
+	private Camera mainCamera;
+	private Vector2 lastTouchPosition;
+	private bool isDragging;
 
-    void Update()
-    {
-        var touches = Input.touches;
+	private void Start()
+	{
+		mainCamera = Camera.main;
+		dragLimitMin = new Vector2(-5f, -5f);
+		dragLimitMax = new Vector2(5f, 5f);
+	}
 
-        switch (touches.Length)
-        {
-            case 1:
-                Drag(touches);
-                break;
-            case >= 2:
-                Zoom(touches);
-                break;
-        }
-    }
+	private void Update()
+	{
+		// Detect pinch gesture for zooming.
+		if (Input.touchCount == 2)
+		{
+			Touch touch0 = Input.GetTouch(0);
+			Touch touch1 = Input.GetTouch(1);
 
-    private void Drag(Touch[] touches)
-    {
-        var touch = Input.GetTouch(0);
-        transform.position -= new Vector3(touch.deltaPosition.x, 0, touch.deltaPosition.y) * frustumScale;
-    }
+			// Calculate the initial and current distance between the touches.
+			Vector2 touch0PrevPos = touch0.position - touch0.deltaPosition;
+			Vector2 touch1PrevPos = touch1.position - touch1.deltaPosition;
+			float prevTouchDeltaMag = (touch0PrevPos - touch1PrevPos).magnitude;
+			float touchDeltaMag = (touch0.position - touch1.position).magnitude;
 
-    private void Zoom(Touch[] touches)
-    {
-        var prevPos0 = touches[0].position - touches[0].deltaPosition;
-        var prevPos1 = touches[1].position - touches[1].deltaPosition;
-        var previousDistance = Vector2.Distance(prevPos0, prevPos1);
-        var currentDistance = Vector2.Distance(touches[0].position, touches[1].position);
-        var deltaDistance = currentDistance - previousDistance;
+			// Calculate the change in distance.
+			float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
-        if (cam.orthographic)
-        {
-            cam.orthographicSize -= deltaDistance * 0.1f;
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, 2, 15);
-        }
-        else
-        {
-            var camDistance = cam.transform.position.y;
-            var frustumHeight = 2 * camDistance * Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            frustumScale = frustumHeight / Screen.height;
+			// Adjust the camera's field of view based on the pinch gesture.
+			float newFOV = mainCamera.fieldOfView + deltaMagnitudeDiff * zoomSpeed;
 
-            cam.transform.position -= Vector3.up * deltaDistance * frustumScale;
-            var y = Mathf.Clamp(cam.transform.position.y, 10, 100);
-            cam.transform.position = new Vector3(cam.transform.position.x, y, cam.transform.position.z);
-        }
-    }
+			// Clamp the FOV within the minFOV and maxFOV range.
+			newFOV = Mathf.Clamp(newFOV, minFOV, maxFOV);
+
+			// Set the camera's field of view to the new value.
+			mainCamera.fieldOfView = newFOV;
+		}
+		else if (Input.touchCount == 1)
+		{
+			Touch touch = Input.GetTouch(0);
+
+			switch (touch.phase)
+			{
+				case TouchPhase.Began:
+					lastTouchPosition = touch.position;
+					isDragging = true;
+					break;
+
+				case TouchPhase.Moved:
+					if (isDragging)
+					{
+						// Calculate the delta position of the touch.
+						Vector2 deltaPosition = touch.position - lastTouchPosition;
+
+						// Convert Vector2 to Vector3 and specify the Z component as 0.
+						Vector3 deltaPosition3D = new Vector3(deltaPosition.x, deltaPosition.y, 0);
+
+						// Apply drag speed.
+						Vector3 newPosition = mainCamera.transform.position - deltaPosition3D * dragSpeed * Time.deltaTime;
+
+						// Clamp the camera position within the specified limits.
+						newPosition.x = Mathf.Clamp(newPosition.x, dragLimitMin.x, dragLimitMax.x);
+						newPosition.y = Mathf.Clamp(newPosition.y, dragLimitMin.y, dragLimitMax.y);
+
+						// Update the camera position.
+						mainCamera.transform.position = newPosition;
+
+						lastTouchPosition = touch.position;
+					}
+					break;
+
+				case TouchPhase.Ended:
+					isDragging = false;
+					break;
+			}
+		}
+	}
 }
