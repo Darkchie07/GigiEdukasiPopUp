@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -712,16 +712,24 @@ MonoBehaviour:
   index: []
   listSoal:
   - soal: Saya rajin menggosok gigi supaya gigi saya bersih
+    gambar: {fileID: 0}
   - soal: Ketika bulu sikat saya melebar, saya tetap memakainya
+    gambar: {fileID: 0}
   - soal: Kesehatan gigi sangat diperhatikan karena sangat berpengaruh terhadap kesehatan
       pada keseluruhan
+    gambar: {fileID: 0}
   - soal: Saya mengurangi makanan yang manis dan lengket sebagai penyebab lubang
       gigi
+    gambar: {fileID: 0}
   - soal: Mengkonsumsi makanan berserat dan berair (sayur dan buah-buahan) perlu
       saya tingkatkan untuk menjaga kesehatan gigi
+    gambar: {fileID: 0}
   - soal: Jika saya sakit gigi saya tidak pergi ke poli gigi/ klinik gigi
+    gambar: {fileID: 0}
   - soal: Ketika malam hari saya langsung tidur tanpa menggosok gigi
+    gambar: {fileID: 0}
   - soal: Memeriksa gigi minimal 6 bulan sekali secara berkala
+    gambar: {fileID: 0}
   yes: []
   no: []
   drop: []
@@ -747,6 +755,7 @@ MonoBehaviour:
   - '-'
   - '-'
   - '-'
+  listJawabanYa: 
   Answered: 0
   next: Tindakan
   prev: Pengetahuan
@@ -762,6 +771,7 @@ MonoBehaviour:
   listSkorDebris: 
   _popUpPanel: {fileID: 433547248}
   _textPopUp: {fileID: 1208218813}
+  _counter: {fileID: 0}
 --- !u!4 &287130760
 Transform:
   m_ObjectHideFlags: 0
@@ -3936,6 +3946,7 @@ GameObject:
   - component: {fileID: 2068036688}
   - component: {fileID: 2068036687}
   - component: {fileID: 2068036686}
+  - component: {fileID: 2068036689}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4009,6 +4020,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2068036689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068036685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0b14cec1db56c409c365a5b91abc2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2085851431
 GameObject:
   m_ObjectHideFlags: 0
