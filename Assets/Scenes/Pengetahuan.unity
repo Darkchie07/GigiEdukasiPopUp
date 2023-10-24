@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -491,7 +491,7 @@ MonoBehaviour:
   - soal: 5. Bagaimana penggunaan pasta gigi yang benar?
     jawabanA: {fileID: -980157107, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
     jawabanB: {fileID: -432907498, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-  - soal: 6. Apakah penyebab bila mengabaikan menggosok gigi?
+  - soal: 6. Apakah akibat menggosok gigi?
     jawabanA: {fileID: 99071787, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
     jawabanB: {fileID: -1988954654, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
   - soal: 7. Bagaimana gerakan menggosok gigi bagian bibir?
@@ -499,14 +499,14 @@ MonoBehaviour:
     jawabanB: {fileID: -1284313667, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
   - soal: 8. Bagaimana gerakan menggosok gigi bagian pipi?
     jawabanA: {fileID: -177215352, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-    jawabanB: {fileID: 21300000, guid: 4b1271d0f60393947a71342cad0b506f, type: 3}
+    jawabanB: {fileID: 21300000, guid: 896366e9e1455e445a0a5ac4b8b0a7a6, type: 3}
   - soal: 9. Bagaimana gerakan menggosok gigi bagian pengunyahan?
     jawabanA: {fileID: -621108094, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-    jawabanB: {fileID: -1350387630, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
+    jawabanB: {fileID: 21300000, guid: ffbda394710f9f645be49108b262bd42, type: 3}
   - soal: 10. Apakah tindakan yang dilakukan untuk membersihkan gigi selain menggosok
       gigi?
-    jawabanA: {fileID: 105047858, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
-    jawabanB: {fileID: -223476077, guid: a59b0ce97a1788c47ad1a4d7adacfe51, type: 3}
+    jawabanA: {fileID: 21300000, guid: 845fea3372a540f4cba17a782c38b081, type: 3}
+    jawabanB: {fileID: 21300000, guid: c9f494a9a50e27848b651b3f27a20555, type: 3}
   - soal: 11. Bagaimana cara menyimpan sikat gigi yang benar?
     jawabanA: {fileID: 1932557819, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}
     jawabanB: {fileID: 1543410123, guid: e917f0d7bc26ab247a23f48bcd008a59, type: 3}

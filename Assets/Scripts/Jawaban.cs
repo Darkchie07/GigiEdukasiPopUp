@@ -94,15 +94,21 @@ public class Jawaban : MonoBehaviour
 		Debug.Log(listFotoTindakan.Count);
 		for (int i = 0; i < listFotoTindakan.Count; i++)
 		{
-			Debug.Log("foto" + i);
-			Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, i);
+			if(listFotoTindakan[i] != "")
+            {
+				Debug.Log("foto" + i);
+				Helper.UploadImageTindakanResponden((file) => { _onDoneAction(); }, i);
+            }
 		}
+		Debug.Log("selesai");
+		_onDoneAction();
 	}
 
 	private void _onDoneAction()
 	{
-		idx += 1;
-		if (idx == 10)
+		Debug.Log(idx);
+		Debug.Log(listFotoTindakan.Count(n => n != ""));
+		if (idx == listFotoTindakan.Count(n => n != ""))
 		{
 			TestScript.Instance.SaveSkor(0);
             RespondenData.Instance.currentDataSelected.PreTest = "1";
@@ -114,6 +120,7 @@ public class Jawaban : MonoBehaviour
 			TestScript.Instance.DoneButton.gameObject.SetActive(true);
 			Debug.Log("Selesai");
 		}
+		idx += 1;
 	}
 
 	void ErrorUploadFileResponden()

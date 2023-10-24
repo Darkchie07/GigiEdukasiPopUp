@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -748,7 +748,6 @@ GameObject:
   - component: {fileID: 374077349}
   - component: {fileID: 374077348}
   - component: {fileID: 374077350}
-  - component: {fileID: 374077351}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -825,27 +824,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!223 &374077351
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374077346}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 2
-  m_TargetDisplay: 0
 --- !u!1 &577164468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,6 +5269,7 @@ GameObject:
   - component: {fileID: 1935978379}
   - component: {fileID: 1935978378}
   - component: {fileID: 1935978377}
+  - component: {fileID: 1935978380}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -5356,6 +5335,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -150, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!210 &1935978380
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935978376}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
 --- !u!1 &1945119722
 GameObject:
   m_ObjectHideFlags: 0

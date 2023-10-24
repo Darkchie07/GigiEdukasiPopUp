@@ -440,7 +440,7 @@ public class TestScript : MonoBehaviour
 		}
 		else if (isTindakan)
 		{
-			if (Answered == listSoal.Count && !listpathFoto.Contains(""))
+			if (Answered == listSoal.Count)
 			{
 				return true;
 			}

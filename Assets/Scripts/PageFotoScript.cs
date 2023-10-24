@@ -41,7 +41,9 @@ public class PageFotoScript : MonoBehaviour
 
     private void OnEnable()
     {
-        GetListImage();
+        _objCameraTengah.SetActive(true);
+        _scrollViewImage.SetActive(false);
+        ClearDataImage();
     }
 
     #endregion
@@ -53,7 +55,7 @@ public class PageFotoScript : MonoBehaviour
 
         listUsed = (statusTime == StatusFotoGigi.PAGI) ? targetGigi.listImageGigiPagi : targetGigi.listImageGigiMalam;
 
-        if (listUsed.Count == 0) // datanya kosong
+        /*if (listUsed.Count == 0) // datanya kosong
         {
             _objCameraTengah.SetActive(true);
             _scrollViewImage.SetActive(false);
@@ -72,7 +74,7 @@ public class PageFotoScript : MonoBehaviour
                 CreateImage(tex);
             }
 
-        }
+        }*/
     }
 
     void ClearDataImage()
@@ -175,7 +177,7 @@ public class PageFotoScript : MonoBehaviour
         if (save)
         {
             string _imageSaved = Helper.TextureToBase64(_tex);
-            RespondenData.Instance.dataGambarGigi.SaveGambar(_imageSaved, statusTime);
+            /*RespondenData.Instance.dataGambarGigi.SaveGambar(_imageSaved, statusTime);*/
         }
     }
 

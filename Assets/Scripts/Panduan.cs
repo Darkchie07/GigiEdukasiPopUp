@@ -40,9 +40,9 @@ public class Panduan : MonoBehaviour
     public void Before()
     {
         index -= 1;
-        if (index <= 0)
+        if (index <= -1)
         {
-            index = listPanduan.Count;
+            index = listPanduan.Count - 1;
         }
 
         PanelPanduan.sprite = listPanduan[index];

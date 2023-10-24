@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5434,11 +5434,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelPanduan: {fileID: 1914571506}
   listPanduan:
-  - {fileID: 21300000, guid: 417fdfd16d9c84140add4ed11923095b, type: 3}
-  - {fileID: 21300000, guid: 60a9f82f89e768244a4ede73a22b57db, type: 3}
-  - {fileID: 21300000, guid: 0d4ce5350f3a57840a79d3ac189316b9, type: 3}
-  - {fileID: 21300000, guid: 7f38732cbeaafe5419680e0710728b26, type: 3}
-  - {fileID: 21300000, guid: 862879f3adb25c644bf01c44e6704a64, type: 3}
+  - {fileID: 21300000, guid: aecc49b4f56ca0d43a98fd07b022d05b, type: 3}
+  - {fileID: 21300000, guid: 3f02cb562050206408cdd0f8cb91f8e0, type: 3}
+  - {fileID: 21300000, guid: ba7a3f597b75fd740ac8890d75565736, type: 3}
+  - {fileID: 21300000, guid: be2c73f0f37ee9f499f5bca8d7f13eca, type: 3}
+  - {fileID: 21300000, guid: 47e402cd4b1623541905e2c817c5cebe, type: 3}
   counter: {fileID: 975345242}
   maxCounter: {fileID: 1132326629}
   index: 0

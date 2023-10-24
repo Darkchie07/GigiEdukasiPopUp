@@ -51,14 +51,16 @@ public class Games : MonoBehaviour
 
     void Start()
     {
-        LoadList();
+        /*LoadList();*/
+        idxSoal = 0;
+        GenerateSoal(idxSoal);
         GantiSoal();
         AddJawaban();
-        if (PlayerPrefs.GetInt("IdxLevel") == 0)
-            PrevButton.gameObject.SetActive(false);
+        /*if (PlayerPrefs.GetInt("IdxLevel") == 0)
+            PrevButton.gameObject.SetActive(false);*/
 
-        if (PlayerPrefs.HasKey("IdxLevel"))
-            HighlightJawaban();
+        /*if (PlayerPrefs.HasKey("IdxLevel"))
+            HighlightJawaban();*/
 
         audioSource = audioSFX.GetComponent<AudioSource>();
     }
@@ -109,7 +111,7 @@ public class Games : MonoBehaviour
                     PrevButton.gameObject.SetActive(true);
                 }
             }
-            PlayerPrefs.SetInt("IdxLevel", idxSoal);
+            /*PlayerPrefs.SetInt("IdxLevel", idxSoal);*/
         });
 
         PrevButton.onClick.AddListener(() =>
@@ -135,7 +137,7 @@ public class Games : MonoBehaviour
                 HighlightJawaban();
                 PrevButton.gameObject.SetActive(false);
             }
-            PlayerPrefs.SetInt("IdxLevel", idxSoal);
+            /*PlayerPrefs.SetInt("IdxLevel", idxSoal);*/
         });
     }
     #endregion
