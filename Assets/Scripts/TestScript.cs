@@ -353,9 +353,8 @@ public class TestScript : MonoBehaviour
 		}
 		else if (isTindakan)
 		{
-			float temp = (listJawabanYa.Count / 32f) * 10f;
-			Jawaban.Instance.skorTindakan = temp.ToString("F2");
-			Jawaban.Instance.skorTest[2] = temp.ToString("F2");
+			Jawaban.Instance.skorTindakan = listJawabanYa.Count.ToString();
+			Jawaban.Instance.skorTest[2] = listJawabanYa.Count.ToString();
 			Jawaban.Instance.jawabanTindakan = listJawaban;
 		}
 		else if (isKontrol)
